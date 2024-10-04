@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.listeners.TestListener"/>
+	</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+	 <!-- 	<class name="TestCases.LoginPage_TestCase"/>
+		<class name="TestCases.SS_MediaPageTestCases"/>
+		<class name="TestCases.SS_ProfilePageTestCases"/>
+		<class name="TestCases.SS_NotificationsPageTestCases"/>
+		<class name="TestCases.SS_SearchPeoplePageTestCases"/>
+		<class name="TestCases.SS_PlayListPageTestCases"/>  -->
+	    	 <class name="TestCases.LoginPage_TestCase">
+		  <methods>
+  		  <include name="LoginValidation()"/> 
+  		 <!--  <include name="LandingOnLoginPageValidation()"/>   -->
+		  </methods>
+	  </class>
+	  	    	<!-- <class name="TestCases.OrderPage_TestCase">
+		  <methods>
+  		  <include name="ValidationOfACompleteOrderofAnItem()"/>    
+		  </methods>
+	  </class>-->
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
