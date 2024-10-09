@@ -42,7 +42,9 @@ public class OrderPage extends BaseClass {
 	private static final By OrderDetails(String heading, int index) {return AppiumBy.xpath("(//android.widget.TextView[starts-with(@text,'"+heading+"')]/following-sibling::android.widget.TextView)["+index+"]");}
 	private static final By OrderDetailsHeader = AppiumBy.xpath("//android.widget.TextView[starts-with(@text,'Order details')]");
 	private static final By OrderPrices(String typOfAmount) {return AppiumBy.xpath("(//android.widget.TextView[starts-with(@text,'"+typOfAmount+"')]//following-sibling::android.widget.TextView)[1]");}
-	
+	private static final By AvailbleCoupnBtn = AppiumBy.xpath("//android.widget.TextView[starts-with(@text,'Available Coupons')]");
+	private static final By ApplyCouponBtn(String couponName) {return AppiumBy.xpath("//android.widget.TextView[starts-with(@text,'"+couponName+"')]//following-sibling::android.view.ViewGroup[@content-desc='Apply']");}
+
 	//methods
 	
 	private void adjustQtyToOne(String itemName) {
@@ -288,7 +290,73 @@ public class OrderPage extends BaseClass {
 		
 		MobWebAssertion.assertContains(actualDiscount, "$"+discountedPriceString);
 
+	}
+	
+public void ClickedOnAvailableButton() throws InterruptedException {
+		
+		Waits.waitForGivenTime(3);
+		Waits.waitUntilElementIsVisible(AvailbleCoupnBtn);
+		MouseActions.clickElement(AvailbleCoupnBtn, "Clicked on AvailbleCoupnBtn");
 		
 	}
+	public void ClickedOnApplyCouponButton(String couponName) throws InterruptedException {
+		
+		Waits.waitForGivenTime(3);
+		Waits.waitUntilElementIsVisible(ApplyCouponBtn(couponName));
+		MouseActions.clickElement(ApplyCouponBtn(couponName), "Clicked on ApplyCouponBtn(couponName)");
+		
+	}
+	
+	public void AppliedDiscountFoerTheOder(String couponName) throws InterruptedException {
+		
+		ClickedOnAvailableButton();
+		ClickedOnApplyCouponButton(couponName);
+		Waits.waitForGivenTime(4);
+	}
+	
+	public void ValidatedOrderedProductPricesAfterSuccessfulOrderAfterApplyingDiscount() {
+		String expectedDiscountedString=null ;
+		String expectedTotalPriceString=null;
+	//	String expectedSubTotal = searchPage.getItemListPrice();
+	//	String expectedTotalPaid = searchPage.getItemOurPrice();
+		MouseActions.ScrollUsingUiAutomator("Total paid: ");
+		String actualSubTotal = GenericActions.getElements(OrderPrices("Subtotal"), "Getting the text value").get(0).getText();
+		String actualtotalpaid = GenericActions.getElements(OrderPrices("Total paid"), "Getting the text value").get(0).getText();
+		String actualDiscount = GenericActions.getElements(OrderPrices("Total discount"), "Getting the text value").get(0).getText();
+		
+		try {
+		    // Convert the prices to double (you can also use BigDecimal for better precision)
+		    double subTotal = Double.parseDouble(actualSubTotal.replaceAll("[^\\d.]", ""));  // Remove any non-numeric characters
+		    double totalDiscount = Double.parseDouble(actualDiscount.replaceAll("[^\\d.]", ""));
+
+		    // Calculate the total price
+		    double expectedDiscountedTotalPrice = subTotal - totalDiscount;
+
+		    // Format the discounted price to 2 decimal places
+		    expectedTotalPriceString = String.format("%.2f", expectedDiscountedTotalPrice);
+
+		} catch (NumberFormatException e) {
+		    System.err.println("Error parsing price: " + e.getMessage());
+		}
+
+		//MobWebAssertion.assertContains(actualSubTotal, expectedSubTotal);
+		MobWebAssertion.assertContains(actualtotalpaid, "$"+expectedTotalPriceString);
+		
+		try {
+		    double subTotal = Double.parseDouble(actualSubTotal.replaceAll("[^\\d.]", "")); 
+		    double totalPaid = Double.parseDouble(actualtotalpaid.replaceAll("[^\\d.]", ""));
+
+		    double expectedDiscountedPrice = subTotal - totalPaid;
+
+		    expectedDiscountedString = String.format("%.2f", expectedDiscountedPrice);
+
+		} catch (NumberFormatException e) {
+		    System.err.println("Error parsing price: " + e.getMessage());
+		}
+		
+		MobWebAssertion.assertContains(actualDiscount, "$"+expectedDiscountedString);
+
+	}
+
 	
 }
