@@ -1,6 +1,7 @@
 package com.pageObjects;
-
+import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import com.actions.GenericActions;
 import com.actions.MouseActions;
@@ -24,6 +25,7 @@ public class ProductDetailsPage extends BaseClass {
 	private static final By viewCartBtInProdDetailsPgae =AppiumBy.id("android:id/button2");
 	private static final By BuyNowSuccesfulModal =AppiumBy.id("android:id/message");
 	private static final By BuyNowTitlefulModal =AppiumBy.id("android:id/alertTitle");
+	private static final By wishListItemBtn = AppiumBy.xpath("(//android.widget.TextView[@text='Product Details']/following-sibling::android.widget.ScrollView//com.horcrux.svg.SvgView)[1]");
 	
 	
 	//Methods
@@ -94,5 +96,15 @@ public class ProductDetailsPage extends BaseClass {
 		MouseActions.clickElement(viewCartBtInProdDetailsPgae, "Clicked on viewCartbtInProdDetailsPgae button");
 		
 	}
+	
+	public void ClickedOnAddTowishListItemBtnInProductDetailsPage() throws InterruptedException {
+		
+		Waits.waitForGivenTime(3);
+		Waits.waiForAnElement(wishListItemBtn, "Wait for search btn");
+		MouseActions.clickElement(wishListItemBtn, "Clicked on wishListItemBtn button");
+		
+	}
+	
+
 
 }

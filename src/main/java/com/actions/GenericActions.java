@@ -114,15 +114,15 @@ public class GenericActions extends BaseClass{
             // Check if the keyboard is displayed, and then hide it
             if (driver.isKeyboardShown()) {
                 driver.hideKeyboard();
-                System.out.println("Keyboard hidden successfully.");
+                logger.info("Keyboard hidden successfully.");
             } else {
-                System.out.println("Keyboard is not visible.");
+            	logger.info("Keyboard is not visible.");
             }
         } catch (NoSuchElementException e) {
-            System.out.println("No keyboard present to hide.");
+        	logger.info("No keyboard present to hide.");
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("Error occurred while trying to hide the keyboard.");
+            logger.info("Error occurred while trying to hide the keyboard.");
         }
     }
 	

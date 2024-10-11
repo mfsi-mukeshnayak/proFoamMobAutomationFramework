@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.Random;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -35,6 +38,14 @@ public class GenericMethods extends BaseClass {
 
 	public static Log logger = new Log();
 	WebDriverWait wait;
+		// Create a date object for the current USA date and time
+	public static String getCurrentTimeInUS() {
+        
+        Date currentDate = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd, yyyy-HH:mm a");
+        dateFormat.setTimeZone(TimeZone.getTimeZone("America/New_York"));
+        return dateFormat.format(currentDate);
+    }
 	
 	
 	 public static String generateExpiryDateOfCard() {
@@ -47,10 +58,8 @@ public class GenericMethods extends BaseClass {
 	        // Add the random number of years to the current date
 	        LocalDate expiryDate = currentDate.plusYears(randomYearsToAdd);
 
-	        // Define the desired format
 	        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/yy");
 
-	        // Return the formatted expiry date
 	        return expiryDate.format(formatter);
 	    }
 

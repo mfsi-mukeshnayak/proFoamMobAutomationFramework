@@ -16,10 +16,26 @@ import com.utills.BaseClass;
 import com.waits.Waits;
 
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.LongPressOptions;
 import io.appium.java_client.touch.offset.ElementOption;
+import io.appium.java_client.touch.offset.PointOption;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
+import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.Dimension;
+import java.time.Duration;
+import org.openqa.selenium.By;
+import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
+import java.time.Duration;
+import java.util.Arrays;
 
 public class MouseActions extends BaseClass{
 	
@@ -189,6 +205,79 @@ public class MouseActions extends BaseClass{
 
 	}
 	
+//	public void scrollSideMenuToElement( String elementText) {
+//	    Dimension size = driver.manage().window().getSize();
+//	    
+//	    int startX = (int) (size.width * 0.9); // Start swipe near the right edge
+//	    int endX = (int) (size.width * 0.1);   // End swipe near the left edge
+//	    int y = size.height / 2;               // Swipe at mid-height of the screen
+//	    
+//	    // Number of swipe attempts
+//	    int maxSwipes = 5;
+//
+//	    for (int i = 0; i < maxSwipes; i++) {
+//	        try {
+//	            // Try to find the element in the currently visible side menu
+//	            WebElement element = driver.findElement(By.xpath("//*[contains(@text, '" + elementText + "')]"));
+//	            if (element.isDisplayed()) {
+//	                System.out.println("Element found: " + elementText);
+//	                return;
+//	            }
+//	        } catch (Exception e) {
+//	            System.out.println("Element not found. Performing swipe: " + (i + 1));
+//	        }
+//	        
+//	        // Perform horizontal swipe (right to left)
+//	        new TouchAction<>(driver)
+//	            .press(PointOption.point(startX, y))
+//	            .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
+//	            .moveTo(PointOption.point(endX, y))
+//	            .release()
+//	            .perform();
+//	    }
+//	    
+//	    System.out.println("Element not found after " + maxSwipes + " swipes.");
+//	}
+	
+	public static void scrollSideMenuToElement(String elementText) {
+	    Dimension size = driver.manage().window().getSize();
+	    
+	    int x = size.width / 2;               // Swipe at the mid-width of the screen (center horizontally)
+	    int startY = (int) (size.height * 0.8); // Start swipe near the bottom edge (80% of screen height)
+	    int endY = (int) (size.height * 0.2);   // End swipe near the top edge (20% of screen height)
+	    
+	    // Number of swipe attempts
+	    int maxSwipes = 5;
+
+	    for (int i = 0; i < maxSwipes; i++) {
+	        try {
+	            // Try to find the element in the currently visible side menu
+	            WebElement element = driver.findElement(By.xpath("//*[contains(@text, '" + elementText + "')]"));
+	            if (element.isDisplayed()) {
+	            	logger.info("Element found: " + elementText);
+	                return;
+	            }
+	        } catch (Exception e) {
+	        	logger.info("Element not found. Performing swipe: " + (i + 1));
+	        }
+
+	        // Use the W3C Actions to perform vertical swipe action
+	        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+	        Sequence swipe = new Sequence(finger, 1);
+	        
+	        // Start swipe at the bottom (startY) and move towards the top (endY)
+	        swipe.addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), x, startY));
+	        swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+	        swipe.addAction(finger.createPointerMove(Duration.ofMillis(1000), PointerInput.Origin.viewport(), x, endY));
+	        swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+
+	        driver.perform(Arrays.asList(swipe));
+	    }
+
+	    logger.info("Element not found after " + maxSwipes + " swipes.");
+	    
+	}
+
 
 
 

@@ -7,6 +7,7 @@ import com.pageObjects.OrderPage;
 import com.pageObjects.ProductDetailsPage;
 import com.pageObjects.ProductPage;
 import com.pageObjects.SearchPage;
+import com.pageObjects.WishListPage;
 
 public class PageObjectManager {
 	//wrapper class that holds instances of all these pages as attributes.
@@ -18,6 +19,7 @@ public class PageObjectManager {
     private CommonActionsPage commonActionsPage;
     private SearchPage searchPage;
     private OrderPage orderPage;
+    private WishListPage wishList;
 	
 	// Constructor to initialize the page objects
     public PageObjectManager() {
@@ -28,6 +30,7 @@ public class PageObjectManager {
         commonActionsPage = new CommonActionsPage();
         searchPage = new SearchPage();
         orderPage = new OrderPage();
+        wishList = new WishListPage();
     }
 
     // Getter methods to access the page objects
@@ -56,6 +59,10 @@ public class PageObjectManager {
     }
     public OrderPage getOrderPage() {
         return orderPage;
+    }
+    
+    public WishListPage getWishListPage() {
+        return wishList;
     }
 
 }

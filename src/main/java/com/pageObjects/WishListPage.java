@@ -1,6 +1,11 @@
 package com.pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.WebElement;
 
 import com.actions.GenericActions;
 import com.actions.MouseActions;
@@ -12,6 +17,10 @@ import io.appium.java_client.AppiumBy;
 
 public class WishListPage extends BaseClass {
 	
+	CommonActionsPage commonAct = new CommonActionsPage();
+	SearchPage searchPage = new SearchPage();
+	
+	
 	//Locators
 	private static final By headerWishList = AppiumBy.xpath("//android.widget.TextView[starts-with(@text,'Wishlist')]");
 	private static final By myWishlistText = AppiumBy.xpath("(//android.widget.TextView[starts-with(@text,'Wishlist')]//following-sibling::android.view.ViewGroup//android.widget.TextView)[1]");
@@ -21,9 +30,11 @@ public class WishListPage extends BaseClass {
 //MyWishListPage	
 	private static final By selectBtnInWishlist = AppiumBy.accessibilityId("Select");
 	private static final By SharedBtn = AppiumBy.xpath("(//android.view.ViewGroup[@content-desc=\"Select\"]/preceding-sibling::android.view.ViewGroup)[2]");
-	private static final By WishListedItemText(String product) {return AppiumBy.xpath("//android.view.ViewGroup[@content-desc='"+product+"']/android.widget.TextView[1]");}
-	private static final By WishListedItemChekedBox(String product) {return AppiumBy.xpath("//android.view.ViewGroup[@content-desc='"+product+"']/android.view.ViewGroup[1]");}
+	private static final By WishListedItemText(String product) {return AppiumBy.xpath("//android.view.ViewGroup[contains(@content-desc,'"+product+"')]/android.widget.TextView[1]");}
+	private static final By WishListedItemWishListBtnChekedBox(String product) {return AppiumBy.xpath("//android.view.ViewGroup[contains(@content-desc,'"+product+"')]/android.view.ViewGroup/com.horcrux.svg.SvgView/com.horcrux.svg.v/com.horcrux.svg.d0");}
+	private static final By WishListedItemChekedBox(String product) {return AppiumBy.xpath("//android.view.ViewGroup[contains(@content-desc,'"+product+"')]/android.view.ViewGroup[1]");}
 	private static final By AddtoCartBtnInWishlistPage = AppiumBy.xpath("//android.view.ViewGroup[contains(@content-desc,'selected item to cart')]");
+	private static final By ListsOfWishListedBoxInWishListPage = AppiumBy.xpath("//android.widget.TextView[@text='My Wishlist']//following-sibling::android.widget.ScrollView//android.view.ViewGroup[contains(@content-desc,'')]//com.horcrux.svg.SvgView");
 	private static final By CancelBtnInWishlist = AppiumBy.accessibilityId("Cancel");
 	
 //sharedWishListPage
@@ -32,7 +43,7 @@ public class WishListPage extends BaseClass {
 	private static final By sharedWishlistedViewItemsBtn(int index) {return AppiumBy.xpath("(//android.view.ViewGroup[@content-desc='View Items'])["+index+"]");}
 	private static final By sharedWishlistedDeleteItemsBtn(int index) {return AppiumBy.xpath("(//android.view.ViewGroup[@content-desc='Delete'])["+index+"]");}
 	private static final By sharedWishlistedSharedAgainItemsBtn(int index) {return AppiumBy.xpath("(//android.view.ViewGroup[@content-desc='Share again'])["+index+"]");}
-	
+	private static final By ListsDeleteItemsBtnInsharedWishlist =AppiumBy.xpath("(//android.view.ViewGroup[@content-desc='Delete'])");
 	private static final By alertHeader = AppiumBy.id("android:id/alertTitle");
 	private static final By alertMessage = AppiumBy.id("android:id/message");
 	private static final By YesBtnForalertMessage = AppiumBy.id("android:id/button2");
@@ -40,6 +51,11 @@ public class WishListPage extends BaseClass {
 	private static final By Ok_BtnForalertMessage = AppiumBy.id("android:id/button1");
 	
 	//Methods
+	
+	public void ClickOnWishlistCategoryInSidemenu() throws InterruptedException {
+		MouseActions.scrollSideMenuToElement("Wishlist");
+		commonAct.selectCategoryInSideMenu("Wishlist");
+	}
 	
 	public  void ValidatingWishListPageHeader() throws InterruptedException {
 	Waits.waitForGivenTime(3);
@@ -72,7 +88,7 @@ public class WishListPage extends BaseClass {
 	
 	public void AddressDeletedConfirmationToastmsg() throws InterruptedException {
 		
-		Waits.waitUntilElementIsVisible(YesBtnForalertMessage);
+		Waits.waitUntilElementIsVisible(Ok_BtnForalertMessage);
 		MouseActions.clickElement(Ok_BtnForalertMessage, "Ok_BtnForalertMessage Button is clicked");
 	}
 	
@@ -88,5 +104,119 @@ public class WishListPage extends BaseClass {
 		String expectedText ="Delete Shared Wishlist";
 		MobWebAssertion.assertContains(actualtext, expectedText);
 	}
+	
+	public void NavigatingMyWishList() throws InterruptedException {
+		
+		Waits.waitUntilElementIsVisible(myWishlist);
+		MouseActions.clickElement(myWishlist, "myWishlist Button is clicked");
+		
+	} 
+	public void NavigatingSharedWishList() throws InterruptedException {
+		
+		Waits.waitUntilElementIsVisible(sharedWishlist);
+		MouseActions.clickElement(sharedWishlist, "sharedWishlist Button is clicked");
+		
+	} 
+	
+	public void ValidatingMyWishListPageButtonsAndLinks() throws InterruptedException {
+	Waits.waitForGivenTime(3);
+	Waits.waitUntilElementIsVisible(selectBtnInWishlist);
+	MobWebAssertion.elementDisplayed(selectBtnInWishlist, "selectBtnInWishlist is Displayed");
+	MobWebAssertion.elementDisplayed(SharedBtn, "SharedBtn is Displayed");
+
+	}
+	
+	public void ValidatingSharedWishListPage() throws InterruptedException {
+	Waits.waitForGivenTime(3);
+	Waits.waitUntilElementIsVisible(sharedWishlistPageHeader);
+	MobWebAssertion.elementDisplayed(sharedWishlistPageHeader, "sharedWishlistPageHeader is Displayed");
+
+	}
+	
+	public void ValidateItemDisplayedinWishListPage() throws InterruptedException {
+		Waits.waitForGivenTime(3);
+		String prod = searchPage.getItemName();
+		String actualtext = GenericActions.getElements(WishListedItemText(prod), "Getting the text value").get(0).getText();
+		MobWebAssertion.assertContains(actualtext, prod);
+	}
+	
+	public void ClickedOnSelectButtonAndCheckedTheTextBoxofItem() throws InterruptedException {
+		String prod = searchPage.getItemName();
+		Waits.waitUntilElementIsVisible(selectBtnInWishlist);
+		MouseActions.clickElement(selectBtnInWishlist, "selectBtnInWishlist Button is clicked");
+		Waits.waitForGivenTime(3);
+		MouseActions.clickElement(WishListedItemWishListBtnChekedBox(prod), "WishListedItemWishListBtnChekedBox(prod) Button is clicked");
+	}
+	
+	public void validatingSelectedIteToCartBtnAndCancelBtnIsDisplayed() throws InterruptedException {
+		Waits.waitForGivenTime(3);
+		Waits.waitUntilElementIsVisible(AddtoCartBtnInWishlistPage);
+		MobWebAssertion.elementDisplayed(AddtoCartBtnInWishlistPage, "AddtoCartBtnInWishlistPage is Displayed");
+		MobWebAssertion.elementDisplayed(CancelBtnInWishlist, "CancelBtnInWishlist is Displayed");
+	}
+	
+	public void ClickedOnSharedButtonInMyWishListPage() throws InterruptedException {
+		Waits.waitForGivenTime(3);
+		Waits.waitUntilElementIsVisible(SharedBtn);
+		MouseActions.clickElement(SharedBtn, "SharedBtn Button is clicked");
+	}
+	
+	public void ClearAllWishlistedItemIfItExistsInMyWishListPage() {
+	    try {
+	        Waits.waitForGivenTime(2);
+	        List<WebElement> deleteButtons = GenericActions.getElements(ListsOfWishListedBoxInWishListPage,"Fetching  WishListBoxes");
+	        
+	        // If the list is not empty, proceed to remove all addresses
+	        if (!deleteButtons.isEmpty() && deleteButtons.get(0).isDisplayed()) {
+	            int count = deleteButtons.size();
+	            
+	            // Loop through and click each delete button, updating the list after each click
+	            while (count > 0) {
+	            	deleteButtons.get(0).click();
+	                
+	                Waits.waitForGivenTime(5); 
+
+	                deleteButtons = GenericActions.getElements(ListsOfWishListedBoxInWishListPage," Fetching more WishListBoxes");
+	                count = deleteButtons.size();
+	            }
+	        }
+	    } catch (TimeoutException | InterruptedException | NoSuchElementException e) {
+	        logger.info("Exception occurred: Could not find or interact with the WishListBoxes Button. Error: " + e.getMessage());
+	    }
+	}
+	
+	public void ClickedOnViewItemsButtonInSharedWishListPage() throws InterruptedException {
+		Waits.waitForGivenTime(3);
+		Waits.waitUntilElementIsVisible(sharedWishlistedViewItemsBtn(1));
+		MouseActions.clickElement(sharedWishlistedViewItemsBtn(1), "ViewItemsBtn Button is clicked");
+	}
+	
+	public void ClearAllSharedWishlistedDetailsIfItExists() {
+	    try {
+	        Waits.waitForGivenTime(2);
+	        List<WebElement> deleteButtons = GenericActions.getElements(ListsDeleteItemsBtnInsharedWishlist,"Fetching  SharedListBoxes");
+	        
+	        // If the list is not empty, proceed to remove all addresses
+	        if (!deleteButtons.isEmpty() && deleteButtons.get(0).isDisplayed()) {
+	            int count = deleteButtons.size();
+	            
+	            // Loop through and click each delete button, updating the list after each click
+	            while (count > 0) {
+	            	deleteButtons.get(0).click();
+	                
+	            	Waits.waitForGivenTime(2); 
+	                confirmDeletingAddress();
+	                AddressDeletedConfirmationToastmsg();
+	                Waits.waitForGivenTime(2);
+
+	                deleteButtons = GenericActions.getElements(ListsDeleteItemsBtnInsharedWishlist," Fetching more SharedListBoxes");
+	                count = deleteButtons.size();
+	            }
+	        }
+	    } catch (TimeoutException | InterruptedException | NoSuchElementException e) {
+	        logger.info("Exception occurred: Could not find or interact with the SharedListBoxes Button. Error: " + e.getMessage());
+	    }
+	}
+
 
 }

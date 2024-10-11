@@ -4,8 +4,11 @@
 .project
 .settings/
 /target/
+/test-output/
 *.class
 *.jar
 .env
 Extent.html
 LogFile.txt
+/Screenshots/
+/test-output/
