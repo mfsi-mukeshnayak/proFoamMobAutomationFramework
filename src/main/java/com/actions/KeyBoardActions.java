@@ -2,6 +2,7 @@ package com.actions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
 import com.aventstack.extentreports.Status;
@@ -45,11 +46,24 @@ public class KeyBoardActions extends BaseClass{
 	/**
 	 * method to hide keyboard
 	 */
-	public void hideKeyboard() {
-		((AndroidDriver) driver).hideKeyboard();
-		logger.info("Keyboard is hidden");
-		ExtentReport.getTest().log(Status.INFO, "Keyboard is hidden now" );
-	}
+	// Method to hide the keyboard if it's visible
+    public static void hideKeyboardIfVisible() {
+        try {
+            // Check if the keyboard is displayed, and then hide it
+            if (driver.isKeyboardShown()) {
+                driver.hideKeyboard();
+                logger.info("Keyboard hidden successfully.");
+            } else {
+            	logger.info("Keyboard is not visible.");
+            }
+        } catch (NoSuchElementException e) {
+        	logger.info("No keyboard present to hide.");
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.info("Error occurred while trying to hide the keyboard.");
+        }
+    }
+	
 	
 	/**
 	 * method to go back by Android Native back click
@@ -58,9 +72,22 @@ public class KeyBoardActions extends BaseClass{
 		((AndroidDriver) driver).pressKey(new KeyEvent().withKey(AndroidKey.BACK));
 	}
 	
-	public void clearText(By ele) {
-		waitForVisibility(ele);
-		driver.findElement(ele).clear();
+	public void clearText(By ele, String LogMsg) {
+	    try {
+	        waitForVisibility(ele);
+	        WebElement webElement = driver.findElement(ele);
+	        webElement.clear();
+	        while (!webElement.getText().isEmpty()) {
+	            webElement.clear();  // Retry clearing if not fully cleared
+	        }
+	        logger.info("Cleared text in element: " + ele);
+	        ExtentReport.getTest().log(Status.INFO, "Cleared text in element: " + ele);
+
+	    } catch (Exception e) {
+	        logger.info("Failed to clear text in element: " + ele + ". Reason: " + e.getMessage());
+	        ExtentReport.getTest().log(Status.FAIL, "Failed to clear text in element: " + ele + ". Reason: " + e.getMessage());
+	    }	
+	      
+	    
 	}
-	
 }

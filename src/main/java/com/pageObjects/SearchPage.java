@@ -69,7 +69,7 @@ public class SearchPage extends BaseClass {
 	}
 	
 	public void ClickedOnProductInfromthesearchedList() throws InterruptedException {
-		GenericActions.hideKeyboardIfVisible();
+		KeyBoardActions.hideKeyboardIfVisible();
 		int productIndex =1;
 		Waits.waitForGivenTime(2);
 		//Waits.waiForAnElement(selectProductByIndex(productIndex), "Wait for search btn");
