@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Wait;
 
 import com.actions.GenericActions;
+import com.actions.JavascriptActions;
 import com.actions.KeyBoardActions;
 import com.actions.MouseActions;
 import com.assertions.MobWebAssertion;
@@ -34,17 +35,19 @@ public class SearchPage extends BaseClass {
 	private static final By productNameInSearchdPage(int index) { return AppiumBy.xpath("(((//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup)[1]/android.view.ViewGroup)[" + index + "]//android.widget.TextView)[1]");}
 	private static final By priductOurPriceInSearchdPage(int index) { return AppiumBy.xpath("(((//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup)[1]/android.view.ViewGroup)[" + index + "]//android.widget.TextView)[2]");}
 	private static final By priductListPriceInSearchdPage(int index) { return AppiumBy.xpath("(((//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup)[1]/android.view.ViewGroup)[" + index + "]//android.widget.TextView)[3]");}
-	private static final By searchBox = AppiumBy.xpath("//android.widget.EditText[starts-with(@text,'Search for Products')]");
+	private static final By searchBox = AppiumBy.xpath("//android.widget.TextView[starts-with(@text,'Search for Products')]");
+	private static final By searchTextBox = AppiumBy.xpath("//android.widget.EditText[starts-with(@text,'Search for Products')]");
 	
 	
 	//Methods
 	
 	public void inputProductNameAndSearchTheItem(String productNmae) throws InterruptedException {
-		
+		Waits.waitForGivenTime(5);
 		Waits.waiForAnElement(SearchTab, "Wait for search btn");
 		MouseActions.clickElement(SearchTab, "Clicked on search Button");
-		Waits.waiForAnElement(searchBox, "clicked on search button");
-		KeyBoardActions.enterText(searchBox, productNmae, productNmae+" is entered");
+		Waits.waitForGivenTime(3);
+		Waits.waiForAnElement(searchTextBox, "waiting for search button");
+		KeyBoardActions.enterText(searchTextBox, productNmae, productNmae+" is entered");
 		
 		
 	}

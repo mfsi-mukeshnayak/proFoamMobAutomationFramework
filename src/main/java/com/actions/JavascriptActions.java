@@ -18,13 +18,22 @@ public class JavascriptActions extends BaseClass {
 	 * @param locator
 	 * @param LogMsg
 	 	 */
-	public static void clickUsingJS(By locator , String LogMsg ) throws InterruptedException {	
-		WebElement element = driver.findElement(locator);
-		JavascriptExecutor jse = (JavascriptExecutor) driver;		
-		jse.executeScript("arguments[0].click();", element);
-		
-		logger.info(LogMsg +" with element : "+ locator);
-		ExtentReport.getTest().log(Status.INFO, LogMsg +" with element : "+ locator );
+	public static void clickUsingJS(By locator, String logMsg) throws InterruptedException {
+	    try {
+	        WebElement element = driver.findElement(locator);
+	        
+	        JavascriptExecutor jse = (JavascriptExecutor) driver;
+	        jse.executeScript("arguments[0].click();", element);
+	        logger.info(logMsg + " - Clicked on element: " + locator);
+	        ExtentReport.getTest().log(Status.INFO, logMsg + " - Clicked on element: " + locator);
+
+	    } catch (Exception e) {
+	        // Log error message if click fails
+	        logger.info("Failed to click using JS on element: " + locator + " - Error: " + e.getMessage());
+	        ExtentReport.getTest().log(Status.FAIL, "Failed to click using JS on element: " + locator + " - Error: " + e.getMessage());
+	        throw e;
+	    }
 	}
+
 
 }

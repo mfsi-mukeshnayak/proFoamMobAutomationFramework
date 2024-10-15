@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TestCases.WishListPage_TestCases">
+      <class name="TestCases.OrderPage_TestCase">
         <methods>
           <include name="initAndroidDriverAndApp"/>
           <include name="stopAppiumServer"/>
-          <include name="ValidationOfShringItemToSharedWishListFromMyWishListPageWhicAddedToWishList"/>
+          <include name="ValidationOfAnOrderAfterAddingTaxForAnItem"/>
         </methods>
-      </class> <!-- TestCases.WishListPage_TestCases -->
+      </class> <!-- TestCases.OrderPage_TestCase -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

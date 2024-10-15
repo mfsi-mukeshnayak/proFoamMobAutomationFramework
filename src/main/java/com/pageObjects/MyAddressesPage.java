@@ -196,6 +196,7 @@ public class MyAddressesPage extends BaseClass {
 		Waits.waitForGivenTime(2);
 		MouseActions.clickElement(stateDropDown, "stateDropDown Button is clicked");
 		Waits.waitForGivenTime(2);
+		MouseActions.swipeUntilElementIsVisible(SelectState(stateName));
 		MouseActions.clickElement(SelectState(stateName), stateName+" is selected as state");
 	}
 	
@@ -208,19 +209,21 @@ public class MyAddressesPage extends BaseClass {
 		Waits.waitForGivenTime(2);
 		KeyBoardActions.enterText(AddressTextBox("ZipCode"), zipcode , zipcode+" is entered");
 	}
-	public void AddedAnewAddressInMyAddress() throws InterruptedException {
-		
+	public void AddedAnewAddressInMyAddress(String State) throws InterruptedException {
+		 if (State == null || State.isEmpty()) {
+		        State = "Alaska";
+		    }
 		
 		Address = generic.generateRandomAddress();
 		MobNumber = generic.generateRandomMobileNumber();
-		City = generic.getRandomCityInAlaska();
-		ZipCode = generic.generateRandomAlaskaZipCode(); 
+		City = generic.getRandomCity(State);
+		ZipCode = generic.generateRandomZipCode(State); 
 		
 		FilledAddressTypeField("Home");
 		FilledMobileNumber(MobNumber);
 		FilledAddressLine(Address);
 		SelectCountryInAddressFieldDropDown("United States");
-		SelectStateInAddressFieldDropDown("Alaska");
+		SelectStateInAddressFieldDropDown(State);
 		FilledCityName(City);
 		FilledZipCode(ZipCode);
 		MouseActions.clickElement(saveBtnInAddresspage, "Save Button is Clicked");

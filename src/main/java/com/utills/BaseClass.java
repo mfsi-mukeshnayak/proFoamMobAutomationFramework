@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.DateFormat;
@@ -48,6 +49,7 @@ import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
+
 /**
  * contains all the methods to create/initialize a new session and stop the 
  * session after the test(s) execution is over. Each test extends
@@ -74,7 +76,7 @@ public class BaseClass {
 	public final int timeOut = 40;
 
 	
-	String ProFoamRelease =System.getProperty("user.dir")+ File.separator + "Resources"+ File.separator +"App"+ File.separator +"ProFoamApp-release.apk";
+	String ProFoamRelease =System.getProperty("user.dir")+ File.separator + "resources"+ File.separator +"App"+ File.separator +"ProFoamApp-release.apk";
 	//	static Logger logger = LogManager.getLogger(BaseClass.class.getName());
 	//	String packageName = driver.getCurrentPackage();
 	public static Log logger = new Log();
@@ -100,15 +102,17 @@ public class BaseClass {
 			builder = new AppiumServiceBuilder();
 			// Set the Appium server's capabilities
 
-			builder.withIPAddress("192.168.29.23");
+			builder.withIPAddress("192.168.29.24");
 			builder.usingPort(4723);
 			builder.withArgument(GeneralServerFlag.SESSION_OVERRIDE);
 			builder.withArgument(GeneralServerFlag.LOG_LEVEL, "info");
+			builder.withArgument(GeneralServerFlag.LOCAL_TIMEZONE);
+
 
 			// Start the Appium server
 			appiumService = AppiumDriverLocalService.buildService(builder);
 			appiumService.start();
-			logger.info("Server started Successfully");
+			//logger.info("Server started Successfully");
 
 
 		}else if (os.contains("mac")){
@@ -164,13 +168,18 @@ public class BaseClass {
 	 */
 	@BeforeMethod
 	public void initAndroidDriverAndApp() throws IOException {
-
 		//props = new Properties();
 		String propFileName = "config.properties";
 
 		inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
 		props.load(inputStream);
 		//		  setProps(props);
+		String automationName = props.getProperty("androidAutomationName");
+		if (automationName == null) {
+		    
+		} else {
+			logger.info("Automation name got found in properties file!");
+		}
 		
 		startAppiumServer("windows");
 		File app = new File(ProFoamRelease);
@@ -182,12 +191,13 @@ public class BaseClass {
 		capabilities.setCapability("automationName", props.getProperty("androidAutomationName"));
 		capabilities.setCapability("appPackage", props.getProperty("profoamAppPackage"));
 		capabilities.setCapability("appActivity", props.getProperty("proFoamAppActivity"));
+		capabilities.setCapability("newCommandTimeout", 3000); 
 		URL url = new URL(props.getProperty("appiumURL"));
 		driver = new AndroidDriver(url, capabilities);
+
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //		logger.info("Driver initiated");
-//		ExtentReport.getTest().log(Status.INFO,"Driver initiated" );
-		
+//		ExtentReport.getTest().log(Status.INFO,"Driver initiated" );}
 	}
 
 	

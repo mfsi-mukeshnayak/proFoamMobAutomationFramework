@@ -15,6 +15,17 @@ import com.reports.ExtentReport;
 import com.utills.BaseClass;
 import com.waits.Waits;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
+import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.PointerInput.Origin;
+import org.openqa.selenium.interactions.PointerInput.Kind;
+
+import java.time.Duration;
+import java.util.Arrays;
+
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
@@ -205,39 +216,6 @@ public class MouseActions extends BaseClass{
 
 	}
 	
-//	public void scrollSideMenuToElement( String elementText) {
-//	    Dimension size = driver.manage().window().getSize();
-//	    
-//	    int startX = (int) (size.width * 0.9); // Start swipe near the right edge
-//	    int endX = (int) (size.width * 0.1);   // End swipe near the left edge
-//	    int y = size.height / 2;               // Swipe at mid-height of the screen
-//	    
-//	    // Number of swipe attempts
-//	    int maxSwipes = 5;
-//
-//	    for (int i = 0; i < maxSwipes; i++) {
-//	        try {
-//	            // Try to find the element in the currently visible side menu
-//	            WebElement element = driver.findElement(By.xpath("//*[contains(@text, '" + elementText + "')]"));
-//	            if (element.isDisplayed()) {
-//	                System.out.println("Element found: " + elementText);
-//	                return;
-//	            }
-//	        } catch (Exception e) {
-//	            System.out.println("Element not found. Performing swipe: " + (i + 1));
-//	        }
-//	        
-//	        // Perform horizontal swipe (right to left)
-//	        new TouchAction<>(driver)
-//	            .press(PointOption.point(startX, y))
-//	            .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-//	            .moveTo(PointOption.point(endX, y))
-//	            .release()
-//	            .perform();
-//	    }
-//	    
-//	    System.out.println("Element not found after " + maxSwipes + " swipes.");
-//	}
 	
 	public static void scrollSideMenuToElement(String elementText) {
 	    Dimension size = driver.manage().window().getSize();
@@ -277,8 +255,115 @@ public class MouseActions extends BaseClass{
 	    logger.info("Element not found after " + maxSwipes + " swipes.");
 	    
 	}
+	
+	public static void scrollToElementUsingUIwithSwipe(By locator) {
+	    WebElement element = null;
+	    int maxScrolls = 5; // You can adjust this number as needed
+	    int currentScrolls = 0;
 
+	    while (currentScrolls < maxScrolls) {
+	        try {
+	            element = driver.findElement(locator);
+	            if (element.isDisplayed()) {
+	                // Element is found and displayed, exit the loop
+	                break;
+	            }
+	        } catch (NoSuchElementException e) {
+	            // Element not found yet, perform swipe
+	            verticalSwipeAction();
+	        }
+	        currentScrolls++;
+	    }
 
+	    if (element != null && element.isDisplayed()) {
+	    	logger.info("Element found: " + element);
+	    } else {
+	    	logger.info("Element not found after " + maxScrolls + " scrolls.");
+	    }
+	}
 
+	public static void verticalSwipeAction() {
+	    // Define input source for the touch
+	    PointerInput finger = new PointerInput(Kind.TOUCH, "finger");
 
+	    // Define screen height dimensions for swipe
+	    int screenHeight = driver.manage().window().getSize().getHeight();
+	    int screenWidth = driver.manage().window().getSize().getWidth();
+
+	    int startX = screenWidth / 2; // Horizontal center of the screen
+	    int startY = (int) (screenHeight * 0.8); // Starting point, lower part of the screen
+	    int endY = (int) (screenHeight * 0.2);   // End point, upper part of the screen
+
+	    // Create a swipe action using W3C Actions
+	    Sequence swipe = new Sequence(finger, 1)
+	            .addAction(finger.createPointerMove(Duration.ZERO, Origin.viewport(), startX, startY))
+	            .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
+	            .addAction(finger.createPointerMove(Duration.ofMillis(1000), Origin.viewport(), startX, endY))
+	            .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+
+	    // Perform the swipe action
+	    driver.perform(Arrays.asList(swipe));
+	}
+	
+	 public static void scrollFromBottomRight(int endYPercentage) {
+	        // Obtain screen dimensions
+	        Dimension size = driver.manage().window().getSize();
+	        int screenWidth = size.width;
+	        int screenHeight = size.height;
+
+	        // Define starting coordinates for scrolling from the right bottom corner
+	        int startX = (int) (screenWidth * 0.9); // 90% of the screen width (near the right edge)
+	        int startY = (int) (screenHeight * 0.9); // 90% of the screen height (near the bottom)
+	        int endY = (int) (screenHeight * (endYPercentage / 100.0)); // Convert percentage to pixel value
+
+	        // Perform the scroll action
+	        new TouchAction<>(driver)
+	                .press(PointOption.point(startX, startY)) // Start at the right bottom corner
+	                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(1000))) // Optional wait for smoother scroll
+	                .moveTo(PointOption.point(startX, endY)) // Move to the specified endY
+	                .release()
+	                .perform();
+	    }
+	 
+	 /**
+	     * Swipes from the specified bottom coordinates to the specified top coordinates.
+	     */
+	    public static void swipeBottomToTop() {
+	        // Define the coordinates for swiping
+	        int startX = 1196; // Bottom starting X coordinate
+	        int startY = 2854; // Bottom starting Y coordinate
+	        int endX = 1217;   // Top ending X coordinate (kept the same for vertical swipe)
+	        int endY = 2187;   // Top ending Y coordinate
+
+	        // Perform the swipe action
+	        new TouchAction<>(driver)
+	                .press(PointOption.point(startX, startY)) // Start at the specified bottom coordinates
+	                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(1000))) // Wait for smoother swipe
+	                .moveTo(PointOption.point(endX, endY)) // Move to the specified top coordinates
+	                .release()
+	                .perform();
+	    }
+	    
+	    /**
+	     * Swipes until the specified locator is displayed.
+	     * 
+	     * @param locator The locator to be checked for visibility.
+	     * @throws InterruptedException if the thread is interrupted while sleeping.
+	     */
+	    public static void swipeUntilElementIsVisible(By locator) throws InterruptedException {
+	        boolean isElementVisible = false;
+
+	        while (!isElementVisible) {
+	            try {
+	                // Check if the element is displayed
+	                WebElement element = driver.findElement(locator);
+	                isElementVisible = element.isDisplayed();
+	            } catch (NoSuchElementException e) {
+	                // Element not found, swipe up
+	                swipeBottomToTop();
+	            }
+	            Thread.sleep(5000);
+	        }
+	    }
+	
 }

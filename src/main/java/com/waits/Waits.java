@@ -130,14 +130,32 @@ public class Waits extends BaseClass {
         }
 	}
 	
-	public static boolean isElementVisible(By element, String message) {
+//	public static boolean isElementVisible(By element, String message) {
+//	    try {
+//	        return driver.findElement(element).isDisplayed();
+//	    } catch (NoSuchElementException e) {
+//	        System.out.println(message + ": Element not found.");
+//	        return false;
+//	        }
+//	    }
+	
+	public static boolean isElementVisible(By locator ,String message) {
 	    try {
-	        return driver.findElement(element).isDisplayed();
-	    } catch (NoSuchElementException e) {
-	        System.out.println(message + ": Element not found.");
+	        // Wait for the element to be present in the DOM and visible
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));  // Adjust the timeout as needed
+	        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	        
+	        // If the element is found and visible, return true
+	        return driver.findElement(locator).isDisplayed();
+	        //logger.info("Waiting for Element to be Clickable :" +locator );
+	        
+	    } catch (TimeoutException | NoSuchElementException e) {
+	        // Log that the element was not found or is not visible and return false
+	        logger.info("Element not visible: " + locator + ". Error: " + e.getMessage());
 	        return false;
-	        }
 	    }
+	}
+
 	
 	
 }

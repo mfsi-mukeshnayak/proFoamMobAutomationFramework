@@ -40,9 +40,18 @@ public class MobWebAssertion extends BaseClass{
 	 * @param expected
 	 *  */
 	public static void assertEquals(String actual, String expected) {
+		try {
 		Assert.assertEquals(actual, expected);
 		logger.info(actual +" matched with expected text :"+ expected);
 		ExtentReport.getTest().log(Status.INFO, actual +" matched with expected text :"+ expected);
+	 } catch (AssertionError e) {
+	        // Log actual and expected values if assertion fails
+	    	logger.info("Assertion failed. Actual: '" + actual + "', Expected: '" + expected + "'");
+	        ExtentReport.getTest().log(Status.INFO, "Assertion failed. Actual: '" + actual + "', Expected: '" + expected + "'");
+	        
+	        // Rethrow the exception to fail the test
+	        throw e;
+	    }
 	}
 	
 	/**
@@ -51,9 +60,21 @@ public class MobWebAssertion extends BaseClass{
 	 * @param expected
 	 *  */
 	public static void assertContains(String actual, String expected) {
-		Assert.assertTrue(actual.contains(expected));
-		logger.info(actual +" contains expected text :"+ expected);
-		ExtentReport.getTest().log(Status.INFO, actual +" matched with expected text :"+ expected);
+		 try {
+		        // Perform the assertion
+		        Assert.assertTrue(actual.contains(expected));
+		        
+		        // Log success if assertion passes
+		        logger.info(actual + " contains expected text: " + expected);
+		        ExtentReport.getTest().log(Status.INFO, actual + " matched with expected text: " + expected);
+		    } catch (AssertionError e) {
+		        // Log actual and expected values if assertion fails
+		    	logger.info("Assertion failed. Actual: '" + actual + "', Expected: '" + expected + "'");
+		        ExtentReport.getTest().log(Status.INFO, "Assertion failed. Actual: '" + actual + "', Expected: '" + expected + "'");
+		        
+		        // Rethrow the exception to fail the test
+		        throw e;
+		    }
 	}
 	
 	/**

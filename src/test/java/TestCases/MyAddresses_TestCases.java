@@ -42,7 +42,7 @@ public class MyAddresses_TestCases extends BaseClass {
 		pageManager.getMyAddressesPage().AddNewAddressBtnIsDisplayed();
 		pageManager.getMyAddressesPage().ClearAllAddressIfItExists();
 		pageManager.getMyAddressesPage().clickOnaddNewaddressButton();
-		pageManager.getMyAddressesPage().AddedAnewAddressInMyAddress();
+		pageManager.getMyAddressesPage().AddedAnewAddressInMyAddress("");
 	
 	}
 

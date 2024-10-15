@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-11T14:21:30 IST" name="Suite" finished-at="2024-10-11T14:24:53 IST" duration-ms="203600">
+  <suite started-at="2024-10-15T16:47:09 IST" name="Suite" finished-at="2024-10-15T16:52:43 IST" duration-ms="333305">
     <groups>
-      <group name="ValidationOfShringItemToSharedWishListFromMyWishListPageWhicAddedToWishList">
-        <method signature="WishListPage_TestCases.ValidationOfShringItemToSharedWishListFromMyWishListPageWhicAddedToWishList()[pri:0, instance:TestCases.WishListPage_TestCases@35a3d49f]" name="ValidationOfShringItemToSharedWishListFromMyWishListPageWhicAddedToWishList" class="TestCases.WishListPage_TestCases"/>
-      </group> <!-- ValidationOfShringItemToSharedWishListFromMyWishListPageWhicAddedToWishList -->
+      <group name="ValidationOfAnOrderAfterAddingTaxForAnItem">
+        <method signature="OrderPage_TestCase.ValidationOfAnOrderAfterAddingTaxForAnItem()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" name="ValidationOfAnOrderAfterAddingTaxForAnItem" class="TestCases.OrderPage_TestCase"/>
+      </group> <!-- ValidationOfAnOrderAfterAddingTaxForAnItem -->
       <group name="Regression">
-        <method signature="WishListPage_TestCases.ValidationOfShringItemToSharedWishListFromMyWishListPageWhicAddedToWishList()[pri:0, instance:TestCases.WishListPage_TestCases@35a3d49f]" name="ValidationOfShringItemToSharedWishListFromMyWishListPageWhicAddedToWishList" class="TestCases.WishListPage_TestCases"/>
+        <method signature="OrderPage_TestCase.ValidationOfAnOrderAfterAddingTaxForAnItem()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" name="ValidationOfAnOrderAfterAddingTaxForAnItem" class="TestCases.OrderPage_TestCase"/>
       </group> <!-- Regression -->
       <group name="smoke">
-        <method signature="WishListPage_TestCases.ValidationOfShringItemToSharedWishListFromMyWishListPageWhicAddedToWishList()[pri:0, instance:TestCases.WishListPage_TestCases@35a3d49f]" name="ValidationOfShringItemToSharedWishListFromMyWishListPageWhicAddedToWishList" class="TestCases.WishListPage_TestCases"/>
+        <method signature="OrderPage_TestCase.ValidationOfAnOrderAfterAddingTaxForAnItem()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" name="ValidationOfAnOrderAfterAddingTaxForAnItem" class="TestCases.OrderPage_TestCase"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2024-10-11T14:21:30 IST" name="Test" finished-at="2024-10-11T14:24:53 IST" duration-ms="203600">
-      <class name="TestCases.WishListPage_TestCases">
-        <test-method is-config="true" signature="initAndroidDriverAndApp()[pri:0, instance:TestCases.WishListPage_TestCases@35a3d49f]" started-at="2024-10-11T14:21:30 IST" name="initAndroidDriverAndApp" finished-at="2024-10-11T14:21:45 IST" duration-ms="15406" status="PASS">
+    <test started-at="2024-10-15T16:47:09 IST" name="Test" finished-at="2024-10-15T16:52:43 IST" duration-ms="333305">
+      <class name="TestCases.OrderPage_TestCase">
+        <test-method is-config="true" signature="initAndroidDriverAndApp()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" started-at="2024-10-15T16:47:09 IST" name="initAndroidDriverAndApp" finished-at="2024-10-15T16:47:29 IST" duration-ms="19161" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initAndroidDriverAndApp -->
-        <test-method signature="ValidationOfShringItemToSharedWishListFromMyWishListPageWhicAddedToWishList()[pri:0, instance:TestCases.WishListPage_TestCases@35a3d49f]" started-at="2024-10-11T14:21:45 IST" name="ValidationOfShringItemToSharedWishListFromMyWishListPageWhicAddedToWishList" description="Validation Of Item shared to shared WishList from My WishList" finished-at="2024-10-11T14:24:52 IST" duration-ms="187164" status="PASS">
+        <test-method signature="ValidationOfAnOrderAfterAddingTaxForAnItem()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" started-at="2024-10-15T16:47:29 IST" name="ValidationOfAnOrderAfterAddingTaxForAnItem" description="Validation Of An Order After Adding Tax For An Item" finished-at="2024-10-15T16:52:42 IST" duration-ms="313588" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidationOfShringItemToSharedWishListFromMyWishListPageWhicAddedToWishList -->
-        <test-method is-config="true" signature="stopAppiumServer()[pri:0, instance:TestCases.WishListPage_TestCases@35a3d49f]" started-at="2024-10-11T14:24:52 IST" name="stopAppiumServer" finished-at="2024-10-11T14:24:53 IST" duration-ms="986" status="PASS">
+        </test-method> <!-- ValidationOfAnOrderAfterAddingTaxForAnItem -->
+        <test-method is-config="true" signature="stopAppiumServer()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" started-at="2024-10-15T16:52:42 IST" name="stopAppiumServer" finished-at="2024-10-15T16:52:43 IST" duration-ms="511" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopAppiumServer -->
-      </class> <!-- TestCases.WishListPage_TestCases -->
+      </class> <!-- TestCases.OrderPage_TestCase -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
