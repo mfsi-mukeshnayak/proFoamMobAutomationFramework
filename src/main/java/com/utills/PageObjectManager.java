@@ -6,6 +6,7 @@ import com.pageObjects.MyAddressesPage;
 import com.pageObjects.OrderPage;
 import com.pageObjects.ProductDetailsPage;
 import com.pageObjects.ProductPage;
+import com.pageObjects.ProfileSettingsPage;
 import com.pageObjects.SearchPage;
 import com.pageObjects.WishListPage;
 
@@ -20,6 +21,7 @@ public class PageObjectManager {
     private SearchPage searchPage;
     private OrderPage orderPage;
     private WishListPage wishList;
+    private ProfileSettingsPage profileSettingsPage;
 	
 	// Constructor to initialize the page objects
     public PageObjectManager() {
@@ -31,6 +33,7 @@ public class PageObjectManager {
         searchPage = new SearchPage();
         orderPage = new OrderPage();
         wishList = new WishListPage();
+        profileSettingsPage = new ProfileSettingsPage();
     }
 
     // Getter methods to access the page objects
@@ -63,6 +66,10 @@ public class PageObjectManager {
     
     public WishListPage getWishListPage() {
         return wishList;
+    }
+    
+    public ProfileSettingsPage getProfileSettingsPage() {
+        return profileSettingsPage;
     }
 
 }

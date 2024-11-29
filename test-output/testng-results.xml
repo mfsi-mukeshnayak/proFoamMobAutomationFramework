@@ -2,33 +2,36 @@
 <testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-15T16:47:09 IST" name="Suite" finished-at="2024-10-15T16:52:43 IST" duration-ms="333305">
+  <suite started-at="2024-10-28T19:00:06 IST" name="Suite" finished-at="2024-10-28T19:01:40 IST" duration-ms="93879">
     <groups>
-      <group name="ValidationOfAnOrderAfterAddingTaxForAnItem">
-        <method signature="OrderPage_TestCase.ValidationOfAnOrderAfterAddingTaxForAnItem()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" name="ValidationOfAnOrderAfterAddingTaxForAnItem" class="TestCases.OrderPage_TestCase"/>
-      </group> <!-- ValidationOfAnOrderAfterAddingTaxForAnItem -->
+      <group name="ValidateInvalidEmailIDErrorMsgInProfileSettingsPage">
+        <method signature="ProfileSettingsPage_TestCases.ValidateInvalidEmailIDErrorMsgInProfileSettingsPage()[pri:0, instance:TestCases.ProfileSettingsPage_TestCases@7905a0b8]" name="ValidateInvalidEmailIDErrorMsgInProfileSettingsPage" class="TestCases.ProfileSettingsPage_TestCases"/>
+      </group> <!-- ValidateInvalidEmailIDErrorMsgInProfileSettingsPage -->
+      <group name="NegativeTestCase">
+        <method signature="ProfileSettingsPage_TestCases.ValidateInvalidEmailIDErrorMsgInProfileSettingsPage()[pri:0, instance:TestCases.ProfileSettingsPage_TestCases@7905a0b8]" name="ValidateInvalidEmailIDErrorMsgInProfileSettingsPage" class="TestCases.ProfileSettingsPage_TestCases"/>
+      </group> <!-- NegativeTestCase -->
       <group name="Regression">
-        <method signature="OrderPage_TestCase.ValidationOfAnOrderAfterAddingTaxForAnItem()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" name="ValidationOfAnOrderAfterAddingTaxForAnItem" class="TestCases.OrderPage_TestCase"/>
+        <method signature="ProfileSettingsPage_TestCases.ValidateInvalidEmailIDErrorMsgInProfileSettingsPage()[pri:0, instance:TestCases.ProfileSettingsPage_TestCases@7905a0b8]" name="ValidateInvalidEmailIDErrorMsgInProfileSettingsPage" class="TestCases.ProfileSettingsPage_TestCases"/>
       </group> <!-- Regression -->
       <group name="smoke">
-        <method signature="OrderPage_TestCase.ValidationOfAnOrderAfterAddingTaxForAnItem()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" name="ValidationOfAnOrderAfterAddingTaxForAnItem" class="TestCases.OrderPage_TestCase"/>
+        <method signature="ProfileSettingsPage_TestCases.ValidateInvalidEmailIDErrorMsgInProfileSettingsPage()[pri:0, instance:TestCases.ProfileSettingsPage_TestCases@7905a0b8]" name="ValidateInvalidEmailIDErrorMsgInProfileSettingsPage" class="TestCases.ProfileSettingsPage_TestCases"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2024-10-15T16:47:09 IST" name="Test" finished-at="2024-10-15T16:52:43 IST" duration-ms="333305">
-      <class name="TestCases.OrderPage_TestCase">
-        <test-method is-config="true" signature="initAndroidDriverAndApp()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" started-at="2024-10-15T16:47:09 IST" name="initAndroidDriverAndApp" finished-at="2024-10-15T16:47:29 IST" duration-ms="19161" status="PASS">
+    <test started-at="2024-10-28T19:00:06 IST" name="Test" finished-at="2024-10-28T19:01:40 IST" duration-ms="93879">
+      <class name="TestCases.ProfileSettingsPage_TestCases">
+        <test-method is-config="true" signature="initAndroidDriverAndApp()[pri:0, instance:TestCases.ProfileSettingsPage_TestCases@7905a0b8]" started-at="2024-10-28T19:00:06 IST" name="initAndroidDriverAndApp" finished-at="2024-10-28T19:00:41 IST" duration-ms="34940" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initAndroidDriverAndApp -->
-        <test-method signature="ValidationOfAnOrderAfterAddingTaxForAnItem()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" started-at="2024-10-15T16:47:29 IST" name="ValidationOfAnOrderAfterAddingTaxForAnItem" description="Validation Of An Order After Adding Tax For An Item" finished-at="2024-10-15T16:52:42 IST" duration-ms="313588" status="PASS">
+        <test-method signature="ValidateInvalidEmailIDErrorMsgInProfileSettingsPage()[pri:0, instance:TestCases.ProfileSettingsPage_TestCases@7905a0b8]" started-at="2024-10-28T19:00:41 IST" name="ValidateInvalidEmailIDErrorMsgInProfileSettingsPage" description="Validate In valid Email ID ErrorMsg In Profile Settings Page" finished-at="2024-10-28T19:01:39 IST" duration-ms="57984" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidationOfAnOrderAfterAddingTaxForAnItem -->
-        <test-method is-config="true" signature="stopAppiumServer()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" started-at="2024-10-15T16:52:42 IST" name="stopAppiumServer" finished-at="2024-10-15T16:52:43 IST" duration-ms="511" status="PASS">
+        </test-method> <!-- ValidateInvalidEmailIDErrorMsgInProfileSettingsPage -->
+        <test-method is-config="true" signature="stopAppiumServer()[pri:0, instance:TestCases.ProfileSettingsPage_TestCases@7905a0b8]" started-at="2024-10-28T19:01:39 IST" name="stopAppiumServer" finished-at="2024-10-28T19:01:40 IST" duration-ms="888" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopAppiumServer -->
-      </class> <!-- TestCases.OrderPage_TestCase -->
+      </class> <!-- TestCases.ProfileSettingsPage_TestCases -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

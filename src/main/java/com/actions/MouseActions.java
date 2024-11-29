@@ -133,27 +133,6 @@ public class MouseActions extends BaseClass{
 		tapObject.put("startY", yPosition);
 		js.executeScript("mobile: tap", tapObject);
 	}
-	
-	/**
-	 * method to long press on specific element by passing locator
-	 *
-	 * @param locator element to be long pressed
-	 */
-//	public void longPress(By locator) {
-//		try {
-//			WebElement element = driver.findElement(locator);
-//
-//			TouchAction touch = new TouchAction((AndroidDriver) driver);
-//			LongPressOptions longPressOptions = new LongPressOptions();
-//			longPressOptions.withElement(ElementOption.element(element));
-//			touch.longPress(longPressOptions).release().perform();
-//			//            Log.info("Long press successful on element: " + element);
-//			
-//
-//		} catch (NoSuchElementException e) {
-//			//            Log.logError(this.getClass().getName(), "findElement", "Element not found" + locator);
-//			throw e;
-//		}
 
 	
 	/**
@@ -179,23 +158,6 @@ public class MouseActions extends BaseClass{
         }
 	}
 	
-//	public static void ScrollUsingUiAutomatorTwo(String text) {
-//		 
-//		
-//		 // Create a UiScrollable object for scrolling
-//       WebElement parentElement = driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true))"));
-//
-//       // Specify the element to scroll to based on its text content
-//       WebElement targetElement = driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(new UiSelector().text(\""+text+"\"));"));
-//
-//       // Scroll to the target element
-//       if (targetElement != null) {
-//         //  targetElement.click();
-//       } else {
-//           
-//       	logger.info("Element not found: " + text); 
-//       }
-//	}
 //	
 	/**
 	 * method to Scroll to the botoom in Android Mobile
@@ -365,5 +327,26 @@ public class MouseActions extends BaseClass{
 	            Thread.sleep(5000);
 	        }
 	    }
+	    
+		/**
+		 * method to long press on specific element by passing locator
+		 *
+		 * @param locator element to be long pressed
+		 */
+//		public void longPress(By locator) {
+//			try {
+//				WebElement element = driver.findElement(locator);
+	//
+//				TouchAction touch = new TouchAction((AndroidDriver) driver);
+//				LongPressOptions longPressOptions = new LongPressOptions();
+//				longPressOptions.withElement(ElementOption.element(element));
+//				touch.longPress(longPressOptions).release().perform();
+//				//            Log.info("Long press successful on element: " + element);
+//				
+	//
+//			} catch (NoSuchElementException e) {
+//				//            Log.logError(this.getClass().getName(), "findElement", "Element not found" + locator);
+//				throw e;
+//			}
 	
 }

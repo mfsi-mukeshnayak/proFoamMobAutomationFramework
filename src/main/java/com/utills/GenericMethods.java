@@ -315,6 +315,19 @@ public class GenericMethods extends BaseClass {
 
 		}
 	}
+	
+    public static String generateRandomLetters(int length) {
+        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        StringBuilder randomLetters = new StringBuilder(length);
+        Random random = new Random();
+
+        for (int i = 0; i < length; i++) {
+            int index = random.nextInt(alphabet.length());
+            randomLetters.append(alphabet.charAt(index));
+        }
+
+        return randomLetters.toString();
+    }
 
 
 

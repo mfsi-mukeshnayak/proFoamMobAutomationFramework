@@ -11596,3 +11596,357 @@ Applying this coupon code will remove discounts from the items in cart.
 15 Oct 2024 16:52:42  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Checkout
 15 Oct 2024 16:52:42  INFO logger - Clicked on CheckOutBtn with element : AppiumBy.accessibilityId: Checkout
 15 Oct 2024 16:52:43  INFO logger - Appium server stopped
+15 Oct 2024 21:16:16  INFO logger - Automation name got found in properties file!
+15 Oct 2024 21:16:21  INFO logger - Appium Server started
+15 Oct 2024 21:17:03  INFO logger - Getting the text value with element :By.xpath: (//android.widget.TextView)[2]
+15 Oct 2024 21:17:03  INFO logger - Welcome to Profoam Corporation’s Online Store. matched with expected text :Welcome to Profoam Corporation’s Online Store.
+15 Oct 2024 21:17:03  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: SKIP
+15 Oct 2024 21:17:03  INFO logger - Skip Button is clicked with element : AppiumBy.accessibilityId: SKIP
+15 Oct 2024 21:17:04  INFO logger - LoginBtn is Displayed with element :AppiumBy.accessibilityId: Login
+15 Oct 2024 21:17:05  INFO logger - Appium server stopped
+16 Oct 2024 13:58:22  INFO logger - Automation name got found in properties file!
+16 Oct 2024 13:58:23  INFO logger - Appium Server started
+16 Oct 2024 13:58:52  INFO logger - Getting the text value with element :By.xpath: (//android.widget.TextView)[2]
+16 Oct 2024 13:58:52  INFO logger - Welcome to Profoam Corporation’s Online Store. matched with expected text :Welcome to Profoam Corporation’s Online Store.
+16 Oct 2024 13:58:52  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: SKIP
+16 Oct 2024 13:58:52  INFO logger - Skip Button is clicked with element : AppiumBy.accessibilityId: SKIP
+16 Oct 2024 13:58:53  INFO logger - LoginBtn is Displayed with element :AppiumBy.accessibilityId: Login
+16 Oct 2024 13:58:53  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+16 Oct 2024 13:58:53  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+16 Oct 2024 13:58:55  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[1]
+16 Oct 2024 13:58:56  INFO logger - EmailId is entered with element : By.xpath: (//android.widget.EditText)[1]
+16 Oct 2024 13:58:56  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[2]
+16 Oct 2024 13:58:58  INFO logger - Password is entered with element : By.xpath: (//android.widget.EditText)[2]
+16 Oct 2024 13:58:58  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+16 Oct 2024 13:58:59  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+16 Oct 2024 13:59:04  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 13:59:09  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 13:59:09  INFO logger - SideMenu Button is clicked with element : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 13:59:11  INFO logger - Element found: Profile Settings
+16 Oct 2024 13:59:15  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Profile Settings
+16 Oct 2024 13:59:15  INFO logger - Profile Settings Button is clicked with element : AppiumBy.accessibilityId: Profile Settings
+16 Oct 2024 13:59:18  INFO logger - headerProfileSettings is Displayed with element :By.xpath: //android.widget.TextView[starts-with(@text,'Profile Settings')]
+16 Oct 2024 13:59:21  INFO logger - DeleteBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc='Delete']
+16 Oct 2024 13:59:22  INFO logger - Appium server stopped
+16 Oct 2024 16:01:26  INFO logger - Automation name got found in properties file!
+16 Oct 2024 16:01:27  INFO logger - Appium Server started
+16 Oct 2024 16:01:54  INFO logger - Getting the text value with element :By.xpath: (//android.widget.TextView)[2]
+16 Oct 2024 16:01:54  INFO logger - Welcome to Profoam Corporation’s Online Store. matched with expected text :Welcome to Profoam Corporation’s Online Store.
+16 Oct 2024 16:01:54  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: SKIP
+16 Oct 2024 16:01:54  INFO logger - Skip Button is clicked with element : AppiumBy.accessibilityId: SKIP
+16 Oct 2024 16:01:55  INFO logger - LoginBtn is Displayed with element :AppiumBy.accessibilityId: Login
+16 Oct 2024 16:01:55  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+16 Oct 2024 16:01:56  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+16 Oct 2024 16:01:56  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[1]
+16 Oct 2024 16:01:57  INFO logger - EmailId is entered with element : By.xpath: (//android.widget.EditText)[1]
+16 Oct 2024 16:01:58  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[2]
+16 Oct 2024 16:02:00  INFO logger - Password is entered with element : By.xpath: (//android.widget.EditText)[2]
+16 Oct 2024 16:02:00  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+16 Oct 2024 16:02:00  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+16 Oct 2024 16:02:08  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 16:02:13  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 16:02:13  INFO logger - SideMenu Button is clicked with element : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 16:02:15  INFO logger - Element found: Profile Settings
+16 Oct 2024 16:02:18  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Profile Settings
+16 Oct 2024 16:02:18  INFO logger - Profile Settings Button is clicked with element : AppiumBy.accessibilityId: Profile Settings
+16 Oct 2024 16:02:21  INFO logger - headerProfileSettings is Displayed with element :By.xpath: //android.widget.TextView[starts-with(@text,'Profile Settings')]
+16 Oct 2024 16:02:25  INFO logger - DeleteBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc='Delete']
+16 Oct 2024 16:02:28  INFO logger - FirstNameTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'First name')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 16:02:28  INFO logger - LastNameTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Last name')]//following-sibling::android.widget.EditText)[2]
+16 Oct 2024 16:02:28  INFO logger - MobileNumTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Mobile number')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 16:02:28  INFO logger - EmailIdTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 16:02:28  INFO logger - SaveBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc='Save']
+16 Oct 2024 16:02:29  INFO logger - Appium server stopped
+16 Oct 2024 16:18:11  INFO logger - Automation name got found in properties file!
+16 Oct 2024 16:18:14  INFO logger - Appium Server started
+16 Oct 2024 16:18:39  INFO logger - Getting the text value with element :By.xpath: (//android.widget.TextView)[2]
+16 Oct 2024 16:18:39  INFO logger - Welcome to Profoam Corporation’s Online Store. matched with expected text :Welcome to Profoam Corporation’s Online Store.
+16 Oct 2024 16:18:39  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: SKIP
+16 Oct 2024 16:18:39  INFO logger - Skip Button is clicked with element : AppiumBy.accessibilityId: SKIP
+16 Oct 2024 16:18:40  INFO logger - LoginBtn is Displayed with element :AppiumBy.accessibilityId: Login
+16 Oct 2024 16:18:40  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+16 Oct 2024 16:18:40  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+16 Oct 2024 16:18:41  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[1]
+16 Oct 2024 16:18:42  INFO logger - EmailId is entered with element : By.xpath: (//android.widget.EditText)[1]
+16 Oct 2024 16:18:43  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[2]
+16 Oct 2024 16:18:44  INFO logger - Password is entered with element : By.xpath: (//android.widget.EditText)[2]
+16 Oct 2024 16:18:45  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+16 Oct 2024 16:18:45  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+16 Oct 2024 16:18:49  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 16:18:54  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 16:18:54  INFO logger - SideMenu Button is clicked with element : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 16:18:57  INFO logger - Element found: Profile Settings
+16 Oct 2024 16:19:00  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Profile Settings
+16 Oct 2024 16:19:00  INFO logger - Profile Settings Button is clicked with element : AppiumBy.accessibilityId: Profile Settings
+16 Oct 2024 16:19:03  INFO logger - headerProfileSettings is Displayed with element :By.xpath: //android.widget.TextView[starts-with(@text,'Profile Settings')]
+16 Oct 2024 16:19:07  INFO logger - DeleteBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc='Delete']
+16 Oct 2024 16:19:10  INFO logger - FirstNameTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'First name')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 16:19:10  INFO logger - LastNameTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Last name')]//following-sibling::android.widget.EditText)[2]
+16 Oct 2024 16:19:10  INFO logger - MobileNumTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Mobile number')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 16:19:10  INFO logger - EmailIdTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 16:19:10  INFO logger - SaveBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc='Save']
+16 Oct 2024 16:19:14  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[starts-with(@text,'First name')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 16:47:33  INFO logger - Automation name got found in properties file!
+16 Oct 2024 16:47:36  INFO logger - Appium Server started
+16 Oct 2024 16:48:07  INFO logger - Getting the text value with element :By.xpath: (//android.widget.TextView)[2]
+16 Oct 2024 16:48:07  INFO logger - Welcome to Profoam Corporation’s Online Store. matched with expected text :Welcome to Profoam Corporation’s Online Store.
+16 Oct 2024 16:48:07  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: SKIP
+16 Oct 2024 16:48:07  INFO logger - Skip Button is clicked with element : AppiumBy.accessibilityId: SKIP
+16 Oct 2024 16:48:08  INFO logger - LoginBtn is Displayed with element :AppiumBy.accessibilityId: Login
+16 Oct 2024 16:48:08  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+16 Oct 2024 16:48:08  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+16 Oct 2024 16:48:09  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[1]
+16 Oct 2024 16:48:11  INFO logger - EmailId is entered with element : By.xpath: (//android.widget.EditText)[1]
+16 Oct 2024 16:48:11  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[2]
+16 Oct 2024 16:48:13  INFO logger - Password is entered with element : By.xpath: (//android.widget.EditText)[2]
+16 Oct 2024 16:48:13  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+16 Oct 2024 16:48:13  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+16 Oct 2024 16:48:19  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 16:48:23  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 16:48:23  INFO logger - SideMenu Button is clicked with element : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 16:48:25  INFO logger - Element found: Profile Settings
+16 Oct 2024 16:48:29  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Profile Settings
+16 Oct 2024 16:48:29  INFO logger - Profile Settings Button is clicked with element : AppiumBy.accessibilityId: Profile Settings
+16 Oct 2024 16:48:32  INFO logger - headerProfileSettings is Displayed with element :By.xpath: //android.widget.TextView[starts-with(@text,'Profile Settings')]
+16 Oct 2024 16:48:35  INFO logger - DeleteBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc='Delete']
+16 Oct 2024 16:48:38  INFO logger - FirstNameTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'First name')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 16:48:39  INFO logger - LastNameTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Last name')]//following-sibling::android.widget.EditText)[2]
+16 Oct 2024 16:48:39  INFO logger - MobileNumTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Mobile number')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 16:48:39  INFO logger - EmailIdTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 16:48:39  INFO logger - SaveBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc='Save']
+16 Oct 2024 16:48:42  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[starts-with(@text,'First name')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 16:49:52  INFO logger - Automation name got found in properties file!
+16 Oct 2024 16:49:54  INFO logger - Appium Server started
+16 Oct 2024 16:50:24  INFO logger - Getting the text value with element :By.xpath: (//android.widget.TextView)[2]
+16 Oct 2024 16:50:24  INFO logger - Welcome to Profoam Corporation’s Online Store. matched with expected text :Welcome to Profoam Corporation’s Online Store.
+16 Oct 2024 16:50:24  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: SKIP
+16 Oct 2024 16:50:24  INFO logger - Skip Button is clicked with element : AppiumBy.accessibilityId: SKIP
+16 Oct 2024 16:50:25  INFO logger - LoginBtn is Displayed with element :AppiumBy.accessibilityId: Login
+16 Oct 2024 16:50:25  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+16 Oct 2024 16:50:26  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+16 Oct 2024 16:50:27  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[1]
+16 Oct 2024 16:50:29  INFO logger - EmailId is entered with element : By.xpath: (//android.widget.EditText)[1]
+16 Oct 2024 16:50:30  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[2]
+16 Oct 2024 16:50:30  INFO logger - Password is entered with element : By.xpath: (//android.widget.EditText)[2]
+16 Oct 2024 16:50:31  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+16 Oct 2024 16:50:31  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+16 Oct 2024 16:50:39  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 16:50:43  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 16:50:43  INFO logger - SideMenu Button is clicked with element : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 16:50:46  INFO logger - Element found: Profile Settings
+16 Oct 2024 16:50:49  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Profile Settings
+16 Oct 2024 16:50:49  INFO logger - Profile Settings Button is clicked with element : AppiumBy.accessibilityId: Profile Settings
+16 Oct 2024 16:50:52  INFO logger - headerProfileSettings is Displayed with element :By.xpath: //android.widget.TextView[starts-with(@text,'Profile Settings')]
+16 Oct 2024 16:50:55  INFO logger - DeleteBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc='Delete']
+16 Oct 2024 16:50:59  INFO logger - FirstNameTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'First name')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 16:50:59  INFO logger - LastNameTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Last name')]//following-sibling::android.widget.EditText)[2]
+16 Oct 2024 16:50:59  INFO logger - MobileNumTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Mobile number')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 16:50:59  INFO logger - EmailIdTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 16:51:00  INFO logger - SaveBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc='Save']
+16 Oct 2024 16:51:03  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[starts-with(@text,'First name')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 16:51:03  INFO logger - Cleared text in element: By.xpath: (//android.widget.TextView[starts-with(@text,'First name')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 16:51:04  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[starts-with(@text,'Last name')]//following-sibling::android.widget.EditText)[2]
+16 Oct 2024 16:51:04  INFO logger - Cleared text in element: By.xpath: (//android.widget.TextView[starts-with(@text,'Last name')]//following-sibling::android.widget.EditText)[2]
+16 Oct 2024 16:51:07  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 16:51:07  INFO logger - Cleared text in element: By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 16:51:09  INFO logger - Wait for SaveBtn for Webelement : By.xpath: //android.view.ViewGroup[@content-desc='Save']
+16 Oct 2024 16:51:09  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: //android.view.ViewGroup[@content-desc='Save']
+16 Oct 2024 16:51:09  INFO logger - Clicked on SaveBtn with element : By.xpath: //android.view.ViewGroup[@content-desc='Save']
+16 Oct 2024 16:51:14  INFO logger - Getting the text value with element :By.xpath: ((//android.widget.TextView[starts-with(@text,'First name')]//following-sibling::android.widget.EditText)[1]//following-sibling::android.widget.TextView)[1]
+16 Oct 2024 16:51:14  INFO logger - Please enter first name matched with expected text :Please enter first name
+16 Oct 2024 16:51:17  INFO logger - Getting the text value with element :By.xpath: ((//android.widget.TextView[starts-with(@text,'Last name')]//following-sibling::android.widget.EditText)[2]//following-sibling::android.widget.TextView)[2]
+16 Oct 2024 16:51:17  INFO logger - Please enter last name matched with expected text :Please enter last name
+16 Oct 2024 16:51:19  INFO logger - Getting the text value with element :By.xpath: ((//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]//following-sibling::android.widget.TextView)[1]
+16 Oct 2024 16:51:19  INFO logger - Please enter email id matched with expected text :Please enter email id
+16 Oct 2024 16:51:20  INFO logger - Appium server stopped
+16 Oct 2024 17:36:39  INFO logger - Automation name got found in properties file!
+16 Oct 2024 17:36:43  INFO logger - Appium Server started
+16 Oct 2024 17:37:19  INFO logger - Getting the text value with element :By.xpath: (//android.widget.TextView)[2]
+16 Oct 2024 17:37:19  INFO logger - Welcome to Profoam Corporation’s Online Store. matched with expected text :Welcome to Profoam Corporation’s Online Store.
+16 Oct 2024 17:37:19  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: SKIP
+16 Oct 2024 17:37:19  INFO logger - Skip Button is clicked with element : AppiumBy.accessibilityId: SKIP
+16 Oct 2024 17:37:20  INFO logger - LoginBtn is Displayed with element :AppiumBy.accessibilityId: Login
+16 Oct 2024 17:37:21  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+16 Oct 2024 17:37:21  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+16 Oct 2024 17:37:22  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[1]
+16 Oct 2024 17:37:23  INFO logger - EmailId is entered with element : By.xpath: (//android.widget.EditText)[1]
+16 Oct 2024 17:37:24  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[2]
+16 Oct 2024 17:37:33  INFO logger - Appium server stopped
+16 Oct 2024 17:37:50  INFO logger - Automation name got found in properties file!
+16 Oct 2024 17:37:53  INFO logger - Appium Server started
+16 Oct 2024 17:38:24  INFO logger - Getting the text value with element :By.xpath: (//android.widget.TextView)[2]
+16 Oct 2024 17:38:24  INFO logger - Welcome to Profoam Corporation’s Online Store. matched with expected text :Welcome to Profoam Corporation’s Online Store.
+16 Oct 2024 17:38:24  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: SKIP
+16 Oct 2024 17:38:24  INFO logger - Skip Button is clicked with element : AppiumBy.accessibilityId: SKIP
+16 Oct 2024 17:38:25  INFO logger - LoginBtn is Displayed with element :AppiumBy.accessibilityId: Login
+16 Oct 2024 17:38:25  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+16 Oct 2024 17:38:26  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+16 Oct 2024 17:38:28  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[1]
+16 Oct 2024 17:38:29  INFO logger - EmailId is entered with element : By.xpath: (//android.widget.EditText)[1]
+16 Oct 2024 17:38:30  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[2]
+16 Oct 2024 17:38:31  INFO logger - Password is entered with element : By.xpath: (//android.widget.EditText)[2]
+16 Oct 2024 17:38:31  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+16 Oct 2024 17:38:31  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+16 Oct 2024 17:38:40  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 17:38:44  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 17:38:45  INFO logger - SideMenu Button is clicked with element : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 17:38:48  INFO logger - Element found: Profile Settings
+16 Oct 2024 17:38:51  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Profile Settings
+16 Oct 2024 17:38:52  INFO logger - Profile Settings Button is clicked with element : AppiumBy.accessibilityId: Profile Settings
+16 Oct 2024 17:38:55  INFO logger - headerProfileSettings is Displayed with element :By.xpath: //android.widget.TextView[starts-with(@text,'Profile Settings')]
+16 Oct 2024 17:38:58  INFO logger - DeleteBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc='Delete']
+16 Oct 2024 17:39:01  INFO logger - FirstNameTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'First name')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 17:39:02  INFO logger - LastNameTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Last name')]//following-sibling::android.widget.EditText)[2]
+16 Oct 2024 17:39:02  INFO logger - MobileNumTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Mobile number')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 17:39:02  INFO logger - EmailIdTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 17:39:03  INFO logger - SaveBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc='Save']
+16 Oct 2024 17:39:03  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 17:39:04  INFO logger - 2024-10-16-17-39-03 with element : By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 17:39:25  INFO logger - Getting the text value with element :By.xpath: ((//android.widget.TextView[starts-with(@text,'First name')]//following-sibling::android.widget.EditText)[1]//following-sibling::android.widget.TextView)[1]
+16 Oct 2024 17:39:28  INFO logger - Appium server stopped
+16 Oct 2024 17:41:35  INFO logger - Automation name got found in properties file!
+16 Oct 2024 17:41:37  INFO logger - Appium Server started
+16 Oct 2024 17:42:06  INFO logger - Getting the text value with element :By.xpath: (//android.widget.TextView)[2]
+16 Oct 2024 17:42:06  INFO logger - Welcome to Profoam Corporation’s Online Store. matched with expected text :Welcome to Profoam Corporation’s Online Store.
+16 Oct 2024 17:42:07  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: SKIP
+16 Oct 2024 17:42:07  INFO logger - Skip Button is clicked with element : AppiumBy.accessibilityId: SKIP
+16 Oct 2024 17:42:08  INFO logger - LoginBtn is Displayed with element :AppiumBy.accessibilityId: Login
+16 Oct 2024 17:42:08  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+16 Oct 2024 17:42:08  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+16 Oct 2024 17:42:09  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[1]
+16 Oct 2024 17:42:10  INFO logger - EmailId is entered with element : By.xpath: (//android.widget.EditText)[1]
+16 Oct 2024 17:42:11  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[2]
+16 Oct 2024 17:42:12  INFO logger - Password is entered with element : By.xpath: (//android.widget.EditText)[2]
+16 Oct 2024 17:42:13  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+16 Oct 2024 17:42:13  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+16 Oct 2024 17:42:22  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 17:42:27  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 17:42:27  INFO logger - SideMenu Button is clicked with element : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 17:42:30  INFO logger - Element not found. Performing swipe: 1
+16 Oct 2024 17:42:34  INFO logger - Element found: Profile Settings
+16 Oct 2024 17:42:37  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Profile Settings
+16 Oct 2024 17:42:37  INFO logger - Profile Settings Button is clicked with element : AppiumBy.accessibilityId: Profile Settings
+16 Oct 2024 17:42:41  INFO logger - headerProfileSettings is Displayed with element :By.xpath: //android.widget.TextView[starts-with(@text,'Profile Settings')]
+16 Oct 2024 17:42:44  INFO logger - DeleteBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc='Delete']
+16 Oct 2024 17:42:47  INFO logger - FirstNameTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'First name')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 17:42:47  INFO logger - LastNameTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Last name')]//following-sibling::android.widget.EditText)[2]
+16 Oct 2024 17:42:48  INFO logger - MobileNumTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Mobile number')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 17:42:48  INFO logger - EmailIdTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 17:42:48  INFO logger - SaveBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc='Save']
+16 Oct 2024 17:42:49  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 17:42:49  INFO logger - Entring the invalid mailId: JQYBQC@RPV with element : By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 17:42:51  INFO logger - Wait for SaveBtn for Webelement : By.xpath: //android.view.ViewGroup[@content-desc='Save']
+16 Oct 2024 17:42:51  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: //android.view.ViewGroup[@content-desc='Save']
+16 Oct 2024 17:42:51  INFO logger - Clicked on SaveBtn with element : By.xpath: //android.view.ViewGroup[@content-desc='Save']
+16 Oct 2024 17:43:01  INFO logger - Getting the text value with element :By.xpath: ((//android.widget.TextView[starts-with(@text,'First name')]//following-sibling::android.widget.EditText)[1]//following-sibling::android.widget.TextView)[1]
+16 Oct 2024 17:43:01  INFO logger - Assertion failed. Actual: 'Mobile number *', Expected: 'Please enter valid email address'
+16 Oct 2024 17:43:03  INFO logger - Appium server stopped
+16 Oct 2024 17:44:39  INFO logger - Automation name got found in properties file!
+16 Oct 2024 17:44:42  INFO logger - Appium Server started
+16 Oct 2024 17:45:12  INFO logger - Getting the text value with element :By.xpath: (//android.widget.TextView)[2]
+16 Oct 2024 17:45:12  INFO logger - Welcome to Profoam Corporation’s Online Store. matched with expected text :Welcome to Profoam Corporation’s Online Store.
+16 Oct 2024 17:45:12  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: SKIP
+16 Oct 2024 17:45:13  INFO logger - Skip Button is clicked with element : AppiumBy.accessibilityId: SKIP
+16 Oct 2024 17:45:13  INFO logger - LoginBtn is Displayed with element :AppiumBy.accessibilityId: Login
+16 Oct 2024 17:45:14  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+16 Oct 2024 17:45:14  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+16 Oct 2024 17:45:15  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[1]
+16 Oct 2024 17:45:16  INFO logger - EmailId is entered with element : By.xpath: (//android.widget.EditText)[1]
+16 Oct 2024 17:45:17  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[2]
+16 Oct 2024 17:45:18  INFO logger - Password is entered with element : By.xpath: (//android.widget.EditText)[2]
+16 Oct 2024 17:45:19  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+16 Oct 2024 17:45:19  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+16 Oct 2024 17:45:27  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 17:45:31  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 17:45:32  INFO logger - SideMenu Button is clicked with element : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 17:45:34  INFO logger - Element found: Profile Settings
+16 Oct 2024 17:45:38  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Profile Settings
+16 Oct 2024 17:45:38  INFO logger - Profile Settings Button is clicked with element : AppiumBy.accessibilityId: Profile Settings
+16 Oct 2024 17:45:41  INFO logger - headerProfileSettings is Displayed with element :By.xpath: //android.widget.TextView[starts-with(@text,'Profile Settings')]
+16 Oct 2024 17:45:45  INFO logger - DeleteBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc='Delete']
+16 Oct 2024 17:45:48  INFO logger - FirstNameTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'First name')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 17:45:48  INFO logger - LastNameTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Last name')]//following-sibling::android.widget.EditText)[2]
+16 Oct 2024 17:45:48  INFO logger - MobileNumTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Mobile number')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 17:45:49  INFO logger - EmailIdTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 17:45:49  INFO logger - SaveBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc='Save']
+16 Oct 2024 17:45:49  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 17:45:51  INFO logger - Entring the invalid mailId: ZVEWLC@OUK with element : By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 17:45:52  INFO logger - Wait for SaveBtn for Webelement : By.xpath: //android.view.ViewGroup[@content-desc='Save']
+16 Oct 2024 17:45:52  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: //android.view.ViewGroup[@content-desc='Save']
+16 Oct 2024 17:45:53  INFO logger - Clicked on SaveBtn with element : By.xpath: //android.view.ViewGroup[@content-desc='Save']
+16 Oct 2024 17:46:03  INFO logger - Getting the text value with element :By.xpath: ((//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]//following-sibling::android.widget.TextView)[1]
+16 Oct 2024 17:46:03  INFO logger - Assertion failed. Actual: 'please enter valid email address', Expected: 'Please enter valid email address'
+16 Oct 2024 17:46:05  INFO logger - Appium server stopped
+16 Oct 2024 17:46:39  INFO logger - Automation name got found in properties file!
+16 Oct 2024 17:46:42  INFO logger - Appium Server started
+16 Oct 2024 17:47:16  INFO logger - Getting the text value with element :By.xpath: (//android.widget.TextView)[2]
+16 Oct 2024 17:47:16  INFO logger - Welcome to Profoam Corporation’s Online Store. matched with expected text :Welcome to Profoam Corporation’s Online Store.
+16 Oct 2024 17:47:16  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: SKIP
+16 Oct 2024 17:47:16  INFO logger - Skip Button is clicked with element : AppiumBy.accessibilityId: SKIP
+16 Oct 2024 17:47:17  INFO logger - LoginBtn is Displayed with element :AppiumBy.accessibilityId: Login
+16 Oct 2024 17:47:17  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+16 Oct 2024 17:47:17  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+16 Oct 2024 17:47:18  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[1]
+16 Oct 2024 17:47:20  INFO logger - EmailId is entered with element : By.xpath: (//android.widget.EditText)[1]
+16 Oct 2024 17:47:21  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[2]
+16 Oct 2024 17:47:22  INFO logger - Password is entered with element : By.xpath: (//android.widget.EditText)[2]
+16 Oct 2024 17:47:23  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+16 Oct 2024 17:47:23  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+16 Oct 2024 17:47:29  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 17:47:33  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 17:47:34  INFO logger - SideMenu Button is clicked with element : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+16 Oct 2024 17:47:37  INFO logger - Element found: Profile Settings
+16 Oct 2024 17:47:40  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Profile Settings
+16 Oct 2024 17:47:41  INFO logger - Profile Settings Button is clicked with element : AppiumBy.accessibilityId: Profile Settings
+16 Oct 2024 17:47:44  INFO logger - headerProfileSettings is Displayed with element :By.xpath: //android.widget.TextView[starts-with(@text,'Profile Settings')]
+16 Oct 2024 17:47:48  INFO logger - DeleteBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc='Delete']
+16 Oct 2024 17:47:51  INFO logger - FirstNameTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'First name')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 17:47:51  INFO logger - LastNameTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Last name')]//following-sibling::android.widget.EditText)[2]
+16 Oct 2024 17:47:52  INFO logger - MobileNumTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Mobile number')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 17:47:53  INFO logger - EmailIdTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 17:47:53  INFO logger - SaveBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc='Save']
+16 Oct 2024 17:47:54  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 17:47:55  INFO logger - Entring the invalid mailId: CABGOL@VNH with element : By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+16 Oct 2024 17:47:56  INFO logger - Wait for SaveBtn for Webelement : By.xpath: //android.view.ViewGroup[@content-desc='Save']
+16 Oct 2024 17:47:56  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: //android.view.ViewGroup[@content-desc='Save']
+16 Oct 2024 17:47:57  INFO logger - Clicked on SaveBtn with element : By.xpath: //android.view.ViewGroup[@content-desc='Save']
+16 Oct 2024 17:48:07  INFO logger - Getting the text value with element :By.xpath: ((//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]//following-sibling::android.widget.TextView)[1]
+16 Oct 2024 17:48:07  INFO logger - please enter valid email address matched with expected text :please enter valid email address
+16 Oct 2024 17:48:09  INFO logger - Appium server stopped
+28 Oct 2024 18:58:50  INFO logger - Automation name got found in properties file!
+28 Oct 2024 19:00:06  INFO logger - Automation name got found in properties file!
+28 Oct 2024 19:00:20  INFO logger - Appium Server started
+28 Oct 2024 19:00:50  INFO logger - Getting the text value with element :By.xpath: (//android.widget.TextView)[2]
+28 Oct 2024 19:00:50  INFO logger - Welcome to Profoam Corporation’s Online Store. matched with expected text :Welcome to Profoam Corporation’s Online Store.
+28 Oct 2024 19:00:50  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: SKIP
+28 Oct 2024 19:00:50  INFO logger - Skip Button is clicked with element : AppiumBy.accessibilityId: SKIP
+28 Oct 2024 19:00:51  INFO logger - LoginBtn is Displayed with element :AppiumBy.accessibilityId: Login
+28 Oct 2024 19:00:51  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+28 Oct 2024 19:00:51  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+28 Oct 2024 19:00:52  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[1]
+28 Oct 2024 19:00:54  INFO logger - EmailId is entered with element : By.xpath: (//android.widget.EditText)[1]
+28 Oct 2024 19:00:55  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[2]
+28 Oct 2024 19:00:56  INFO logger - Password is entered with element : By.xpath: (//android.widget.EditText)[2]
+28 Oct 2024 19:00:56  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+28 Oct 2024 19:00:56  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+28 Oct 2024 19:01:03  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+28 Oct 2024 19:01:08  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+28 Oct 2024 19:01:08  INFO logger - SideMenu Button is clicked with element : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+28 Oct 2024 19:01:10  INFO logger - Element found: Profile Settings
+28 Oct 2024 19:01:14  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Profile Settings
+28 Oct 2024 19:01:14  INFO logger - Profile Settings Button is clicked with element : AppiumBy.accessibilityId: Profile Settings
+28 Oct 2024 19:01:17  INFO logger - headerProfileSettings is Displayed with element :By.xpath: //android.widget.TextView[starts-with(@text,'Profile Settings')]
+28 Oct 2024 19:01:20  INFO logger - DeleteBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc='Delete']
+28 Oct 2024 19:01:24  INFO logger - FirstNameTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'First name')]//following-sibling::android.widget.EditText)[1]
+28 Oct 2024 19:01:24  INFO logger - LastNameTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Last name')]//following-sibling::android.widget.EditText)[2]
+28 Oct 2024 19:01:24  INFO logger - MobileNumTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Mobile number')]//following-sibling::android.widget.EditText)[1]
+28 Oct 2024 19:01:25  INFO logger - EmailIdTextBox is Displayed with element :By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+28 Oct 2024 19:01:25  INFO logger - SaveBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc='Save']
+28 Oct 2024 19:01:25  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+28 Oct 2024 19:01:27  INFO logger - Entring the invalid mailId: JGYYFQ@CWB with element : By.xpath: (//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]
+28 Oct 2024 19:01:28  INFO logger - Wait for SaveBtn for Webelement : By.xpath: //android.view.ViewGroup[@content-desc='Save']
+28 Oct 2024 19:01:28  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: //android.view.ViewGroup[@content-desc='Save']
+28 Oct 2024 19:01:29  INFO logger - Clicked on SaveBtn with element : By.xpath: //android.view.ViewGroup[@content-desc='Save']
+28 Oct 2024 19:01:39  INFO logger - Getting the text value with element :By.xpath: ((//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]//following-sibling::android.widget.TextView)[1]
+28 Oct 2024 19:01:39  INFO logger - please enter valid email address matched with expected text :please enter valid email address
+28 Oct 2024 19:01:40  INFO logger - Appium server stopped

@@ -72,14 +72,14 @@ public class KeyBoardActions extends BaseClass{
 		((AndroidDriver) driver).pressKey(new KeyEvent().withKey(AndroidKey.BACK));
 	}
 	
-	public void clearText(By ele, String LogMsg) {
+	public static void clearText(By ele, String LogMsg) {
 	    try {
-	        waitForVisibility(ele);
+	    	Waits.waiForAnElement(ele, "Wait for the Element to be displayed");
 	        WebElement webElement = driver.findElement(ele);
 	        webElement.clear();
-	        while (!webElement.getText().isEmpty()) {
-	            webElement.clear();  // Retry clearing if not fully cleared
-	        }
+//	        while (!webElement.getText().isEmpty()) {
+//	            webElement.clear();  // Retry clearing if not fully cleared
+//	        }
 	        logger.info("Cleared text in element: " + ele);
 	        ExtentReport.getTest().log(Status.INFO, "Cleared text in element: " + ele);
 
