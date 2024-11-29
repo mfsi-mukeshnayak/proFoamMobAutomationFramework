@@ -9,8 +9,8 @@
       <class name="TestCases.ProfileSettingsPage_TestCases">
         <methods>
           <include name="initAndroidDriverAndApp"/>
+          <include name="NavigateToProfileSettingsPageandValidateHeaders"/>
           <include name="stopAppiumServer"/>
-          <include name="ValidateInvalidEmailIDErrorMsgInProfileSettingsPage"/>
         </methods>
       </class> <!-- TestCases.ProfileSettingsPage_TestCases -->
     </classes>

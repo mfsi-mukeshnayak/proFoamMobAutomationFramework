@@ -11950,3 +11950,37 @@ Applying this coupon code will remove discounts from the items in cart.
 28 Oct 2024 19:01:39  INFO logger - Getting the text value with element :By.xpath: ((//android.widget.TextView[starts-with(@text,'Email ID')]//following-sibling::android.widget.EditText)[1]//following-sibling::android.widget.TextView)[1]
 28 Oct 2024 19:01:39  INFO logger - please enter valid email address matched with expected text :please enter valid email address
 28 Oct 2024 19:01:40  INFO logger - Appium server stopped
+29 Nov 2024 13:42:05  INFO logger - Automation name got found in properties file!
+29 Nov 2024 13:44:22  INFO logger - Automation name got found in properties file!
+29 Nov 2024 13:45:34  INFO logger - Automation name got found in properties file!
+29 Nov 2024 13:45:45  INFO logger - Appium Server started
+29 Nov 2024 13:46:17  INFO logger - Getting the text value with element :By.xpath: (//android.widget.TextView)[2]
+29 Nov 2024 13:46:17  INFO logger - Welcome to Profoam Corporation’s Online Store. matched with expected text :Welcome to Profoam Corporation’s Online Store.
+29 Nov 2024 13:46:17  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: SKIP
+29 Nov 2024 13:46:17  INFO logger - Skip Button is clicked with element : AppiumBy.accessibilityId: SKIP
+29 Nov 2024 13:46:18  INFO logger - LoginBtn is Displayed with element :AppiumBy.accessibilityId: Login
+29 Nov 2024 13:46:19  INFO logger - Appium server stopped
+29 Nov 2024 13:47:13  INFO logger - Automation name got found in properties file!
+29 Nov 2024 13:47:24  INFO logger - Appium Server started
+29 Nov 2024 13:47:48  INFO logger - Getting the text value with element :By.xpath: (//android.widget.TextView)[2]
+29 Nov 2024 13:47:48  INFO logger - Welcome to Profoam Corporation’s Online Store. matched with expected text :Welcome to Profoam Corporation’s Online Store.
+29 Nov 2024 13:47:48  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: SKIP
+29 Nov 2024 13:47:48  INFO logger - Skip Button is clicked with element : AppiumBy.accessibilityId: SKIP
+29 Nov 2024 13:47:49  INFO logger - LoginBtn is Displayed with element :AppiumBy.accessibilityId: Login
+29 Nov 2024 13:47:49  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+29 Nov 2024 13:47:50  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+29 Nov 2024 13:47:51  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[1]
+29 Nov 2024 13:47:53  INFO logger - EmailId is entered with element : By.xpath: (//android.widget.EditText)[1]
+29 Nov 2024 13:47:54  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.EditText)[2]
+29 Nov 2024 13:47:55  INFO logger - Password is entered with element : By.xpath: (//android.widget.EditText)[2]
+29 Nov 2024 13:47:55  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Login
+29 Nov 2024 13:47:56  INFO logger - Login Button is clicked with element : AppiumBy.accessibilityId: Login
+29 Nov 2024 13:48:13  INFO logger - Appium server stopped
+29 Nov 2024 13:59:21  INFO logger - Automation name got found in properties file!
+29 Nov 2024 13:59:34  INFO logger - Appium Server started
+29 Nov 2024 14:00:01  INFO logger - Getting the text value with element :By.xpath: (//android.widget.TextView)[2]
+29 Nov 2024 14:00:02  INFO logger - Welcome to Profoam Corporation’s Online Store. matched with expected text :Welcome to Profoam Corporation’s Online Store.
+29 Nov 2024 14:00:02  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: SKIP
+29 Nov 2024 14:00:02  INFO logger - Skip Button is clicked with element : AppiumBy.accessibilityId: SKIP
+29 Nov 2024 14:00:03  INFO logger - LoginBtn is Displayed with element :AppiumBy.accessibilityId: Login
+29 Nov 2024 14:00:04  INFO logger - Appium server stopped

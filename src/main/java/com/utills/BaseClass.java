@@ -102,7 +102,7 @@ public class BaseClass {
 			builder = new AppiumServiceBuilder();
 			// Set the Appium server's capabilities
 
-			builder.withIPAddress("192.168.29.24");
+			builder.withIPAddress("192.168.29.23");
 			builder.usingPort(4723);
 			builder.withArgument(GeneralServerFlag.SESSION_OVERRIDE);
 			builder.withArgument(GeneralServerFlag.LOG_LEVEL, "info");

@@ -12,9 +12,9 @@
 		<class name="TestCases.SS_NotificationsPageTestCases"/>
 		<class name="TestCases.SS_SearchPeoplePageTestCases"/>
 		<class name="TestCases.SS_PlayListPageTestCases"/>  -->
-	    	 <class name="TestCases.ProfileSettingsPage_TestCases">
+	    	 <class name="TestCases.LoginPage_TestCase">
 		  <methods>
-  		  <include name="ValidateInvalidEmailIDErrorMsgInProfileSettingsPage()"/> 
+  		  <include name="LandingOnLoginPageValidation()"/> 
   		 <!--  <include name="LandingOnLoginPageValidation()"/>   -->
 		  </methods>
 	  </class>

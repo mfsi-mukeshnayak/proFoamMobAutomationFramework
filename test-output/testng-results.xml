@@ -1,37 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-28T19:00:06 IST" name="Suite" finished-at="2024-10-28T19:01:40 IST" duration-ms="93879">
+  <suite started-at="2024-11-29T13:59:21 IST" name="Suite" finished-at="2024-11-29T14:00:04 IST" duration-ms="42314">
     <groups>
-      <group name="ValidateInvalidEmailIDErrorMsgInProfileSettingsPage">
-        <method signature="ProfileSettingsPage_TestCases.ValidateInvalidEmailIDErrorMsgInProfileSettingsPage()[pri:0, instance:TestCases.ProfileSettingsPage_TestCases@7905a0b8]" name="ValidateInvalidEmailIDErrorMsgInProfileSettingsPage" class="TestCases.ProfileSettingsPage_TestCases"/>
-      </group> <!-- ValidateInvalidEmailIDErrorMsgInProfileSettingsPage -->
-      <group name="NegativeTestCase">
-        <method signature="ProfileSettingsPage_TestCases.ValidateInvalidEmailIDErrorMsgInProfileSettingsPage()[pri:0, instance:TestCases.ProfileSettingsPage_TestCases@7905a0b8]" name="ValidateInvalidEmailIDErrorMsgInProfileSettingsPage" class="TestCases.ProfileSettingsPage_TestCases"/>
-      </group> <!-- NegativeTestCase -->
-      <group name="Regression">
-        <method signature="ProfileSettingsPage_TestCases.ValidateInvalidEmailIDErrorMsgInProfileSettingsPage()[pri:0, instance:TestCases.ProfileSettingsPage_TestCases@7905a0b8]" name="ValidateInvalidEmailIDErrorMsgInProfileSettingsPage" class="TestCases.ProfileSettingsPage_TestCases"/>
-      </group> <!-- Regression -->
+      <group name="ValidateLaunching_App">
+        <method signature="LoginPage_TestCase.LandingOnLoginPageValidation()[pri:0, instance:TestCases.LoginPage_TestCase@163370c2]" name="LandingOnLoginPageValidation" class="TestCases.LoginPage_TestCase"/>
+      </group> <!-- ValidateLaunching_App -->
       <group name="smoke">
-        <method signature="ProfileSettingsPage_TestCases.ValidateInvalidEmailIDErrorMsgInProfileSettingsPage()[pri:0, instance:TestCases.ProfileSettingsPage_TestCases@7905a0b8]" name="ValidateInvalidEmailIDErrorMsgInProfileSettingsPage" class="TestCases.ProfileSettingsPage_TestCases"/>
+        <method signature="LoginPage_TestCase.LandingOnLoginPageValidation()[pri:0, instance:TestCases.LoginPage_TestCase@163370c2]" name="LandingOnLoginPageValidation" class="TestCases.LoginPage_TestCase"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2024-10-28T19:00:06 IST" name="Test" finished-at="2024-10-28T19:01:40 IST" duration-ms="93879">
-      <class name="TestCases.ProfileSettingsPage_TestCases">
-        <test-method is-config="true" signature="initAndroidDriverAndApp()[pri:0, instance:TestCases.ProfileSettingsPage_TestCases@7905a0b8]" started-at="2024-10-28T19:00:06 IST" name="initAndroidDriverAndApp" finished-at="2024-10-28T19:00:41 IST" duration-ms="34940" status="PASS">
+    <test started-at="2024-11-29T13:59:21 IST" name="Test" finished-at="2024-11-29T14:00:04 IST" duration-ms="42314">
+      <class name="TestCases.LoginPage_TestCase">
+        <test-method is-config="true" signature="initAndroidDriverAndApp()[pri:0, instance:TestCases.LoginPage_TestCase@163370c2]" started-at="2024-11-29T13:59:21 IST" name="initAndroidDriverAndApp" finished-at="2024-11-29T13:59:52 IST" duration-ms="30950" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initAndroidDriverAndApp -->
-        <test-method signature="ValidateInvalidEmailIDErrorMsgInProfileSettingsPage()[pri:0, instance:TestCases.ProfileSettingsPage_TestCases@7905a0b8]" started-at="2024-10-28T19:00:41 IST" name="ValidateInvalidEmailIDErrorMsgInProfileSettingsPage" description="Validate In valid Email ID ErrorMsg In Profile Settings Page" finished-at="2024-10-28T19:01:39 IST" duration-ms="57984" status="PASS">
+        <test-method signature="LandingOnLoginPageValidation()[pri:0, instance:TestCases.LoginPage_TestCase@163370c2]" started-at="2024-11-29T13:59:52 IST" name="LandingOnLoginPageValidation" description="Validating to launch the app and display LoginBtn" finished-at="2024-11-29T14:00:03 IST" duration-ms="10407" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateInvalidEmailIDErrorMsgInProfileSettingsPage -->
-        <test-method is-config="true" signature="stopAppiumServer()[pri:0, instance:TestCases.ProfileSettingsPage_TestCases@7905a0b8]" started-at="2024-10-28T19:01:39 IST" name="stopAppiumServer" finished-at="2024-10-28T19:01:40 IST" duration-ms="888" status="PASS">
+        </test-method> <!-- LandingOnLoginPageValidation -->
+        <test-method is-config="true" signature="stopAppiumServer()[pri:0, instance:TestCases.LoginPage_TestCase@163370c2]" started-at="2024-11-29T14:00:03 IST" name="stopAppiumServer" finished-at="2024-11-29T14:00:04 IST" duration-ms="911" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopAppiumServer -->
-      </class> <!-- TestCases.ProfileSettingsPage_TestCases -->
+      </class> <!-- TestCases.LoginPage_TestCase -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
