@@ -1,31 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-29T13:59:21 IST" name="Suite" finished-at="2024-11-29T14:00:04 IST" duration-ms="42314">
+  <suite started-at="2024-12-02T14:10:49 IST" name="Suite" finished-at="2024-12-02T14:12:10 IST" duration-ms="81133">
     <groups>
-      <group name="ValidateLaunching_App">
-        <method signature="LoginPage_TestCase.LandingOnLoginPageValidation()[pri:0, instance:TestCases.LoginPage_TestCase@163370c2]" name="LandingOnLoginPageValidation" class="TestCases.LoginPage_TestCase"/>
-      </group> <!-- ValidateLaunching_App -->
+      <group name="Regression">
+        <method signature="OrderPage_TestCase.ValidationOfOrderingAnewItemIncheckoutPage()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" name="ValidationOfOrderingAnewItemIncheckoutPage" class="TestCases.OrderPage_TestCase"/>
+      </group> <!-- Regression -->
       <group name="smoke">
-        <method signature="LoginPage_TestCase.LandingOnLoginPageValidation()[pri:0, instance:TestCases.LoginPage_TestCase@163370c2]" name="LandingOnLoginPageValidation" class="TestCases.LoginPage_TestCase"/>
+        <method signature="OrderPage_TestCase.ValidationOfOrderingAnewItemIncheckoutPage()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" name="ValidationOfOrderingAnewItemIncheckoutPage" class="TestCases.OrderPage_TestCase"/>
       </group> <!-- smoke -->
+      <group name="ValidationOfOrderingAnewItemIncheckoutPage">
+        <method signature="OrderPage_TestCase.ValidationOfOrderingAnewItemIncheckoutPage()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" name="ValidationOfOrderingAnewItemIncheckoutPage" class="TestCases.OrderPage_TestCase"/>
+      </group> <!-- ValidationOfOrderingAnewItemIncheckoutPage -->
     </groups>
-    <test started-at="2024-11-29T13:59:21 IST" name="Test" finished-at="2024-11-29T14:00:04 IST" duration-ms="42314">
-      <class name="TestCases.LoginPage_TestCase">
-        <test-method is-config="true" signature="initAndroidDriverAndApp()[pri:0, instance:TestCases.LoginPage_TestCase@163370c2]" started-at="2024-11-29T13:59:21 IST" name="initAndroidDriverAndApp" finished-at="2024-11-29T13:59:52 IST" duration-ms="30950" status="PASS">
+    <test started-at="2024-12-02T14:10:49 IST" name="Test" finished-at="2024-12-02T14:12:10 IST" duration-ms="81133">
+      <class name="TestCases.OrderPage_TestCase">
+        <test-method is-config="true" signature="initAndroidDriverAndApp()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" started-at="2024-12-02T14:10:49 IST" name="initAndroidDriverAndApp" finished-at="2024-12-02T14:11:07 IST" duration-ms="18434" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initAndroidDriverAndApp -->
-        <test-method signature="LandingOnLoginPageValidation()[pri:0, instance:TestCases.LoginPage_TestCase@163370c2]" started-at="2024-11-29T13:59:52 IST" name="LandingOnLoginPageValidation" description="Validating to launch the app and display LoginBtn" finished-at="2024-11-29T14:00:03 IST" duration-ms="10407" status="PASS">
+        <test-method signature="ValidationOfOrderingAnewItemIncheckoutPage()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" started-at="2024-12-02T14:11:07 IST" name="ValidationOfOrderingAnewItemIncheckoutPage" description="Adding a new order in checkoutpage" finished-at="2024-12-02T14:12:09 IST" duration-ms="61479" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LandingOnLoginPageValidation -->
-        <test-method is-config="true" signature="stopAppiumServer()[pri:0, instance:TestCases.LoginPage_TestCase@163370c2]" started-at="2024-11-29T14:00:03 IST" name="stopAppiumServer" finished-at="2024-11-29T14:00:04 IST" duration-ms="911" status="PASS">
+        </test-method> <!-- ValidationOfOrderingAnewItemIncheckoutPage -->
+        <test-method is-config="true" signature="stopAppiumServer()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" started-at="2024-12-02T14:12:09 IST" name="stopAppiumServer" finished-at="2024-12-02T14:12:10 IST" duration-ms="1169" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopAppiumServer -->
-      </class> <!-- TestCases.LoginPage_TestCase -->
+      </class> <!-- TestCases.OrderPage_TestCase -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

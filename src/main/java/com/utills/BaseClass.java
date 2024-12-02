@@ -90,46 +90,44 @@ public class BaseClass {
 	}
 	
 
-	/** 
-	 *  this method starts the appium  server depending on your OS.
+	/**
+	 * This method starts the Appium server depending on your OS.
 	 * @param os your machine OS (windows/mac)
 	 **/
+	public void startAppiumServer(String os) {
+	    try {
+	        if (os.contains("windows")) {
+	            builder = new AppiumServiceBuilder();
+	            // Set the Appium server's capabilities
+	            builder.withIPAddress("192.168.29.23");
+	            builder.usingPort(4723);
+	            builder.withArgument(GeneralServerFlag.SESSION_OVERRIDE);
+	            builder.withArgument(GeneralServerFlag.LOG_LEVEL, "info");
+	            builder.withArgument(GeneralServerFlag.LOCAL_TIMEZONE);
 
-	public void startAppiumServer(String os) throws MalformedURLException {
-
-
-		if (os.contains("windows")){
-			builder = new AppiumServiceBuilder();
-			// Set the Appium server's capabilities
-
-			builder.withIPAddress("192.168.29.23");
-			builder.usingPort(4723);
-			builder.withArgument(GeneralServerFlag.SESSION_OVERRIDE);
-			builder.withArgument(GeneralServerFlag.LOG_LEVEL, "info");
-			builder.withArgument(GeneralServerFlag.LOCAL_TIMEZONE);
-
-
-			// Start the Appium server
-			appiumService = AppiumDriverLocalService.buildService(builder);
-			appiumService.start();
-			//logger.info("Server started Successfully");
-
-
-		}else if (os.contains("mac")){
-			builder = new AppiumServiceBuilder()
-					.usingAnyFreePort()
-					.withArgument(GeneralServerFlag.SESSION_OVERRIDE)
-					.withArgument(GeneralServerFlag.LOG_LEVEL, "error");
-			//logger.info("Need to write standard code for "+os );
-
-		}
-		else{
-					logger.info(os + "is not supported yet");
-		}
-
-		logger.info("Appium Server started");
-	}
-	
+	            // Start the Appium server
+	            appiumService = AppiumDriverLocalService.buildService(builder);
+	            appiumService.start();
+	            logger.info("Appium Server started successfully on Windows.");
+	        } else if (os.contains("mac")) {
+	            builder = new AppiumServiceBuilder()
+	                    .usingAnyFreePort()
+	                    .withArgument(GeneralServerFlag.SESSION_OVERRIDE)
+	                    .withArgument(GeneralServerFlag.LOG_LEVEL, "error");
+	            logger.info("Appium Server configuration is under development for macOS.");
+	        } else {
+	            logger.info(os + " is not supported yet.");
+	        }
+	    } catch (Exception e) {
+	        logger.info("An unexpected error occurred while starting the Appium server: " + e.getMessage());
+	    } finally {
+	        if (appiumService != null && appiumService.isRunning()) {
+	            logger.info("Appium Server is running.");
+	        } else {
+	            logger.info("Appium Server did not start as expected.");
+	        }
+	    }
+	}	
 
 
 
@@ -168,6 +166,8 @@ public class BaseClass {
 	 */
 	@BeforeMethod
 	public void initAndroidDriverAndApp() throws IOException {
+	
+		try {
 		//props = new Properties();
 		String propFileName = "config.properties";
 
@@ -180,7 +180,6 @@ public class BaseClass {
 		} else {
 			logger.info("Automation name got found in properties file!");
 		}
-		
 		startAppiumServer("windows");
 		File app = new File(ProFoamRelease);
 		DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -198,6 +197,18 @@ public class BaseClass {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //		logger.info("Driver initiated");
 //		ExtentReport.getTest().log(Status.INFO,"Driver initiated" );}
+		} catch (IOException e) {
+	        logger.info("IOException occurred while loading properties or initializing the driver: " + e.getMessage());
+		}finally {
+	        try {
+	            if (inputStream != null) {
+	                inputStream.close();
+	            }
+	        } catch (IOException e) {
+	            logger.info("Failed to close the property file input stream: " + e.getMessage());
+	        }
+	      }
+
 	}
 
 	

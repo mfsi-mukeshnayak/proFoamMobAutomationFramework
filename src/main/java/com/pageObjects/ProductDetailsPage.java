@@ -17,8 +17,10 @@ public class ProductDetailsPage extends BaseClass {
 	//Locator
 	
 	private static final By productDetailPageHeader= AppiumBy.xpath("//android.widget.TextView[@text='Product Details']");
-	private static final By productNameInproductPage = AppiumBy.xpath("(//com.horcrux.svg.SvgView/following-sibling::android.widget.TextView)[2]");
-	private static final By priceOfItem(String typeOfPrice) {return AppiumBy.xpath("(//android.widget.TextView[starts-with(@text,'"+typeOfPrice+"')]/following-sibling::android.widget.TextView)[1]");}
+	//private static final By productNameInproductPage = AppiumBy.xpath("(//com.horcrux.svg.SvgView/following-sibling::android.widget.TextView)[2]");
+	private static final By productNameInproductPage = AppiumBy.xpath("//android.widget.TextView[starts-with(@text,'SKU:')]/preceding-sibling::*[last()]");
+	//private static final By priceOfItem(String typeOfPrice) {return AppiumBy.xpath("(//android.widget.TextView[starts-with(@text,'"+typeOfPrice+"')]/following-sibling::android.widget.TextView)[1]");}
+	private static final By priceOfItem = AppiumBy.xpath("(//android.widget.TextView[starts-with(@text,'$')])[1]");
 	private static final By BuyNowBtn = AppiumBy.accessibilityId("Buy now");
 	private static final By productAllDetailsDD (String DDName) {return AppiumBy.xpath("//android.widget.TextView[contains(@text,'"+DDName+"')]");}
 	private static final By ContShoppingBtInProdDetailsPgae =AppiumBy.id("android:id/button1");
@@ -26,6 +28,9 @@ public class ProductDetailsPage extends BaseClass {
 	private static final By BuyNowSuccesfulModal =AppiumBy.id("android:id/message");
 	private static final By BuyNowTitlefulModal =AppiumBy.id("android:id/alertTitle");
 	private static final By wishListItemBtn = AppiumBy.xpath("(//android.widget.TextView[@text='Product Details']/following-sibling::android.widget.ScrollView//com.horcrux.svg.SvgView)[1]");
+	//
+	private static final By ProdCost = AppiumBy.xpath("(//android.widget.TextView[@text='Product Details']//..//following-sibling::android.widget.HorizontalScrollView//following-sibling::android.widget.TextView[starts-with(@text,'$')])[1]");
+	private static final By ReducedProdCost = AppiumBy.xpath("(//android.widget.TextView[@text='Product Details']//..//following-sibling::android.widget.HorizontalScrollView//following-sibling::android.widget.TextView[starts-with(@text,'$')])[2]");
 	
 	
 	//Methods
@@ -36,17 +41,17 @@ public class ProductDetailsPage extends BaseClass {
 		MobWebAssertion.elementDisplayed(productDetailPageHeader, "productDetailPageHeader is Displayed");
 	}
 	
-	public void validateThePriceOfItemInProductDetailsPage(String typeOfPrice) {
+	public void validateThePriceOfItemInProductDetailsPage() {
 		
-	Waits.waitUntilElementIsVisible(priceOfItem(typeOfPrice));
-	MobWebAssertion.elementDisplayed(priceOfItem(typeOfPrice), typeOfPrice+" is Displayed");
+	Waits.waitUntilElementIsVisible(priceOfItem);
+	MobWebAssertion.elementDisplayed(priceOfItem, "priceOfItem is Displayed");
 	}
 	
-	public String getThePriceOfItemInProductDetailsPage(String typeOfPrice) {
+	public String getThePriceOfItemInProductDetailsPage() {
 	
-	Waits.waitUntilElementIsVisible(priceOfItem(typeOfPrice));
-	MobWebAssertion.elementDisplayed(priceOfItem(typeOfPrice), typeOfPrice+" is Displayed");
-	String price = GenericActions.getElements(priceOfItem(typeOfPrice), "Getting the text value").get(0).getText();
+	Waits.waitUntilElementIsVisible(priceOfItem);
+	MobWebAssertion.elementDisplayed(priceOfItem, " is Displayed");
+	String price = GenericActions.getElements(priceOfItem, "Getting the text value of ").get(0).getText();
 	return price;
 	}
 	
@@ -65,23 +70,35 @@ public class ProductDetailsPage extends BaseClass {
 	MobWebAssertion.assertEquals(itemName, expected);
 	}
 	
-	public void validateDisplayedItemOurPriceIsEqualAsInDisplayedInSearchPage() throws InterruptedException {
-		Waits.waitForGivenTime(3);	
-	Waits.waitUntilElementIsVisible(priceOfItem("Our price"));
-	MobWebAssertion.elementDisplayed(priceOfItem("Our price"), "priceOfItem(\"Our price\") is Displayed");
-	String itemPrice = GenericActions.getElements(priceOfItem("Our price"), "Getting the text value").get(0).getText();
-	String expected = searchPage.getItemOurPrice();
-	MobWebAssertion.assertEquals(itemPrice, expected);
-	}
+//	public void validateDisplayedItemOurPriceIsEqualAsInDisplayedInSearchPage() throws InterruptedException {
+//		Waits.waitForGivenTime(3);	
+//	Waits.waitUntilElementIsVisible(priceOfItem("Our price"));
+//	MobWebAssertion.elementDisplayed(priceOfItem("Our price"), "priceOfItem(\"Our price\") is Displayed");
+//	String itemPrice = GenericActions.getElements(priceOfItem("Our price"), "Getting the text value").get(0).getText();
+//	String expected = searchPage.getItemOurPrice();
+//	MobWebAssertion.assertEquals(itemPrice, expected);
+//	}
+//	
+//	public void validateDisplayedItemListPriceIsEqualAsInDisplayedInSearchPage() throws InterruptedException {
+//		Waits.waitForGivenTime(3);	
+//	Waits.waitUntilElementIsVisible(priceOfItem("List price"));
+//	MobWebAssertion.elementDisplayed(priceOfItem("List price"), "priceOfItem(\"List price\") is Displayed");
+//	String itemPrice = GenericActions.getElements(priceOfItem("List price"), "Getting the text value").get(0).getText();
+//	String expected = searchPage.getItemListPrice();
+//	MobWebAssertion.assertEquals(itemPrice, expected);
+//	}
 	
-	public void validateDisplayedItemListPriceIsEqualAsInDisplayedInSearchPage() throws InterruptedException {
+	//validation after changing in UI and Database
+	public void validateDisplayedItemPriceIsEqualAsInDisplayedInSearchPage() throws InterruptedException {
 		Waits.waitForGivenTime(3);	
-	Waits.waitUntilElementIsVisible(priceOfItem("List price"));
-	MobWebAssertion.elementDisplayed(priceOfItem("List price"), "priceOfItem(\"List price\") is Displayed");
-	String itemPrice = GenericActions.getElements(priceOfItem("List price"), "Getting the text value").get(0).getText();
+	Waits.waitUntilElementIsVisible(ProdCost);
+	MobWebAssertion.elementDisplayed(ProdCost, "ProdCost is Displayed");
+	String itemPrice = GenericActions.getElements(ProdCost, "Getting the text value").get(0).getText();
 	String expected = searchPage.getItemListPrice();
 	MobWebAssertion.assertEquals(itemPrice, expected);
 	}
+	
+	
 	public void ClickedOnBuyNowButtonInProductDetailsPage() throws InterruptedException {
 		
 		Waits.waitForGivenTime(3);

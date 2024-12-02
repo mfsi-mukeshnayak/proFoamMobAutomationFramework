@@ -34,7 +34,7 @@ public class SearchPage extends BaseClass {
 	private static final By SearchTab = AppiumBy.accessibilityId("Search for Products | Events");
 	private static final By productNameInSearchdPage(int index) { return AppiumBy.xpath("(((//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup)[1]/android.view.ViewGroup)[" + index + "]//android.widget.TextView)[1]");}
 	private static final By priductOurPriceInSearchdPage(int index) { return AppiumBy.xpath("(((//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup)[1]/android.view.ViewGroup)[" + index + "]//android.widget.TextView)[2]");}
-	private static final By priductListPriceInSearchdPage(int index) { return AppiumBy.xpath("(((//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup)[1]/android.view.ViewGroup)[" + index + "]//android.widget.TextView)[3]");}
+	private static final By priductPriceInSearchdPage = AppiumBy.xpath("(((//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup)[1]/android.view.ViewGroup)[1]//android.widget.TextView)[2]");
 	private static final By searchBox = AppiumBy.xpath("//android.widget.TextView[starts-with(@text,'Search for Products')]");
 	private static final By searchTextBox = AppiumBy.xpath("//android.widget.EditText[starts-with(@text,'Search for Products')]");
 	
@@ -95,9 +95,9 @@ public class SearchPage extends BaseClass {
 	
 	public  void grabListPriceofSearchedItemName() throws InterruptedException {
 		Waits.waitForGivenTime(3);
-	Waits.waitUntilElementIsVisible(priductListPriceInSearchdPage(1));
-	MobWebAssertion.elementDisplayed(priductListPriceInSearchdPage(1), "priductListPriceInSearchdPage(1) is Displayed");
-	itemListPrice = GenericActions.getElements(priductListPriceInSearchdPage(1), "Getting the text value").get(0).getText();
+	Waits.waitUntilElementIsVisible(priductPriceInSearchdPage);
+	MobWebAssertion.elementDisplayed(priductPriceInSearchdPage, "priductListPriceInSearchdPage(1) is Displayed");
+	itemListPrice = GenericActions.getElements(priductPriceInSearchdPage, "Getting the text value").get(0).getText();
 
 	}
 	

@@ -39,8 +39,8 @@ public class OrderPage_TestCase extends BaseClass {
 		pageManager.getSearchPage().ClickedOnProductInfromthesearchedList();
 		pageManager.getProdDetailsPage().ValidateLandingInProductPage();
 		pageManager.getProdDetailsPage().validateDisplayedItemIsEqualAsInDisplayedInSearchPage();
-		pageManager.getProdDetailsPage().validateDisplayedItemListPriceIsEqualAsInDisplayedInSearchPage();
-		pageManager.getProdDetailsPage().validateDisplayedItemOurPriceIsEqualAsInDisplayedInSearchPage();
+		pageManager.getProdDetailsPage().validateDisplayedItemPriceIsEqualAsInDisplayedInSearchPage();
+		//pageManager.getProdDetailsPage().validateDisplayedItemOurPriceIsEqualAsInDisplayedInSearchPage();
 		
 	}
 	
@@ -71,8 +71,8 @@ public class OrderPage_TestCase extends BaseClass {
 		pageManager.getSearchPage().ClickedOnProductInfromthesearchedList();
 		pageManager.getProdDetailsPage().ValidateLandingInProductPage();
 		pageManager.getProdDetailsPage().validateDisplayedItemIsEqualAsInDisplayedInSearchPage();
-		pageManager.getProdDetailsPage().validateDisplayedItemListPriceIsEqualAsInDisplayedInSearchPage();
-		pageManager.getProdDetailsPage().validateDisplayedItemOurPriceIsEqualAsInDisplayedInSearchPage();
+		pageManager.getProdDetailsPage().validateDisplayedItemPriceIsEqualAsInDisplayedInSearchPage();
+		//pageManager.getProdDetailsPage().validateDisplayedItemOurPriceIsEqualAsInDisplayedInSearchPage();
 		pageManager.getProdDetailsPage().ClickedOnBuyNowButtonInProductDetailsPage();
 		pageManager.getProdDetailsPage().ClickedOnViewCartButtonInProductDetailsPage();
 		pageManager.getOrderPage().BalancedQtyOfItemInMyBagPage();
@@ -116,8 +116,8 @@ public class OrderPage_TestCase extends BaseClass {
 		pageManager.getSearchPage().ClickedOnProductInfromthesearchedList();
 		pageManager.getProdDetailsPage().ValidateLandingInProductPage();
 		pageManager.getProdDetailsPage().validateDisplayedItemIsEqualAsInDisplayedInSearchPage();
-		pageManager.getProdDetailsPage().validateDisplayedItemListPriceIsEqualAsInDisplayedInSearchPage();
-		pageManager.getProdDetailsPage().validateDisplayedItemOurPriceIsEqualAsInDisplayedInSearchPage();
+		pageManager.getProdDetailsPage().validateDisplayedItemPriceIsEqualAsInDisplayedInSearchPage();
+		//pageManager.getProdDetailsPage().validateDisplayedItemOurPriceIsEqualAsInDisplayedInSearchPage();
 		pageManager.getProdDetailsPage().ClickedOnBuyNowButtonInProductDetailsPage();
 		pageManager.getProdDetailsPage().ClickedOnViewCartButtonInProductDetailsPage();
 		pageManager.getOrderPage().BalancedQtyOfItemInMyBagPage();
@@ -164,8 +164,8 @@ public class OrderPage_TestCase extends BaseClass {
 		pageManager.getSearchPage().ClickedOnProductInfromthesearchedList();
 		pageManager.getProdDetailsPage().ValidateLandingInProductPage();
 		pageManager.getProdDetailsPage().validateDisplayedItemIsEqualAsInDisplayedInSearchPage();
-		pageManager.getProdDetailsPage().validateDisplayedItemListPriceIsEqualAsInDisplayedInSearchPage();
-		pageManager.getProdDetailsPage().validateDisplayedItemOurPriceIsEqualAsInDisplayedInSearchPage();
+		pageManager.getProdDetailsPage().validateDisplayedItemPriceIsEqualAsInDisplayedInSearchPage();
+		//pageManager.getProdDetailsPage().validateDisplayedItemOurPriceIsEqualAsInDisplayedInSearchPage();
 		pageManager.getProdDetailsPage().ClickedOnBuyNowButtonInProductDetailsPage();
 		pageManager.getProdDetailsPage().ClickedOnViewCartButtonInProductDetailsPage();
 		pageManager.getOrderPage().BalancedQtyOfItemInMyBagPage();
