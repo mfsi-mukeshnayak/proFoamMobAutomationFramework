@@ -13,11 +13,11 @@ public class MyAddresses_TestCases extends BaseClass {
 	public void NavigateToMyaddressPageandvalidateButtons() throws InterruptedException {
 		System.out.println("Application is launching");
 		
-		pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
-		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
-		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
-		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
-		pageManager.getLoginPage().LoginToProFoamApplication();
+//		pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
+//		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
+//		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
+//		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
+//		pageManager.getLoginPage().LoginToProFoamApplication();
 		pageManager.getProductPage().LandedOnProductPageAndAbleToSeeSideMenu();
 		pageManager.getProductPage().ClickOnSideMenubar();
 		pageManager.getMyAddressesPage().ClickOnMyAddresCategoryInSidemenu();
@@ -30,11 +30,11 @@ public class MyAddresses_TestCases extends BaseClass {
 	public void AddAnewAddressInMyAddressPage() throws InterruptedException {
 		System.out.println("Application is launching");
 		
-		pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
-		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
-		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
-		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
-		pageManager.getLoginPage().LoginToProFoamApplication();
+//		pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
+//		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
+//		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
+//		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
+//		pageManager.getLoginPage().LoginToProFoamApplication();
 		pageManager.getProductPage().LandedOnProductPageAndAbleToSeeSideMenu();
 		pageManager.getProductPage().ClickOnSideMenubar();
 		pageManager.getMyAddressesPage().ClickOnMyAddresCategoryInSidemenu();

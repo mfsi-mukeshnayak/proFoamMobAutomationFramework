@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCases.OrderPage_TestCase" class="method navigator-link" hash-for-method="ValidationOfOrderingAnewItemIncheckoutPage">ValidationOfOrderingAnewItemIncheckoutPage</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="TestCases.MyAddresses_TestCases" class="method navigator-link" hash-for-method="AddAnewAddressInMyAddressPage">AddAnewAddressInMyAddressPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -121,16 +121,16 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">TestCases.OrderPage_TestCase</span>
+              <span class="class-name">TestCases.MyAddresses_TestCases</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="ValidationOfOrderingAnewItemIncheckoutPage">
-                  </a> <!-- ValidationOfOrderingAnewItemIncheckoutPage -->
-                  <span class="method-name">ValidationOfOrderingAnewItemIncheckoutPage</span>
+                  <a name="AddAnewAddressInMyAddressPage">
+                  </a> <!-- AddAnewAddressInMyAddressPage -->
+                  <span class="method-name">AddAnewAddressInMyAddressPage</span>
                   <em>
-(Adding a new order in checkoutpage)                  </em>
+(Adding a newaddress in MyAddress in sideMenu)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -150,11 +150,11 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;TestCases.OrderPage_TestCase&quot;&gt;
+      &lt;class name=&quot;TestCases.MyAddresses_TestCases&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;ValidationOfOrderingAnewItemIncheckoutPage()&quot;/&gt;
+          &lt;include name=&quot;AddAnewAddressInMyAddressPage()&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- TestCases.OrderPage_TestCase --&gt;
+      &lt;/class&gt; &lt;!-- TestCases.MyAddresses_TestCases --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -179,18 +179,18 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">Regression</span>
+              <span class="test-group-name">AddAnewAddressInMyAddressPage</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">ValidationOfOrderingAnewItemIncheckoutPage</span>
+                <span class="method-in-group-name">AddAnewAddressInMyAddressPage</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
             <div class="test-group">
-              <span class="test-group-name">ValidationOfOrderingAnewItemIncheckoutPage</span>
+              <span class="test-group-name">Regression</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">ValidationOfOrderingAnewItemIncheckoutPage</span>
+                <span class="method-in-group-name">AddAnewAddressInMyAddressPage</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -198,7 +198,7 @@
               <span class="test-group-name">smoke</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">ValidationOfOrderingAnewItemIncheckoutPage</span>
+                <span class="method-in-group-name">AddAnewAddressInMyAddressPage</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -220,9 +220,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ValidationOfOrderingAnewItemIncheckoutPage')
-data.setCell(0, 2, 'TestCases.OrderPage_TestCase')
-data.setCell(0, 3, 61479);
+data.setCell(0, 1, 'AddAnewAddressInMyAddressPage')
+data.setCell(0, 2, 'TestCases.MyAddresses_TestCases')
+data.setCell(0, 3, 75052);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -242,17 +242,13 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">TestCases.OrderPage_TestCase</span>
+              <span class="ignored-class-name">TestCases.MyAddresses_TestCases</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">ValidationOfAnOrderAfterAddingTaxForAnItem</span>
-                <br/>
-                <span class="ignored-method-name">ValidationOfACompleteOrderofAnItem</span>
-                <br/>
-                <span class="ignored-method-name">ValidationOfAnOrderofApplyingCouponDiscountForAnItem</span>
+                <span class="ignored-method-name">NavigateToMyaddressPageandvalidateButtons</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -264,18 +260,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.OrderPage_TestCase</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">TestCases.MyAddresses_TestCases</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">initAndroidDriverAndApp</span>
+                <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">ValidationOfOrderingAnewItemIncheckoutPage</span>
-                <span class="method-start">18436 ms</span>
+                <span class="method-name">AddAnewAddressInMyAddressPage</span>
+                <span class="method-start">45819 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopAppiumServer</span>
-                <span class="method-start">79920 ms</span>
+                <span class="method-start">120875 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TestCases.OrderPage_TestCase">
+      <class name="TestCases.MyAddresses_TestCases">
         <methods>
-          <include name="initAndroidDriverAndApp"/>
           <include name="stopAppiumServer"/>
-          <include name="ValidationOfOrderingAnewItemIncheckoutPage"/>
+          <include name="NavigateToMyaddressPageandvalidateButtons"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- TestCases.OrderPage_TestCase -->
+      </class> <!-- TestCases.MyAddresses_TestCases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

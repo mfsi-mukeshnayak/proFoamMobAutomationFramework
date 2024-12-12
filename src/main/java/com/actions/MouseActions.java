@@ -52,16 +52,28 @@ public class MouseActions extends BaseClass{
 	
 	
 	/**
-	 * method to Click an Element
-	 * @param locator
-	 * @param LogMsg
+	 * Method to Click an Element
+	 * @param locator - The By locator of the element
+	 * @param LogMsg - Message to log on successful click
 	 */
-	public static void clickElement(By locator , String LogMsg) throws InterruptedException {
-		Waits.waiForAnElement(locator, "Wait for the Element to be displayed");
-		driver.findElement(locator).click();
-		logger.info(LogMsg +" with element : "+ locator);
-		ExtentReport.getTest().log(Status.INFO, LogMsg +" with element : "+ locator);
+	public static void clickElement(By locator, String LogMsg) throws InterruptedException {
+	    try {
+	        Waits.waiForAnElement(locator, "Wait for the Element to be displayed");
+	        driver.findElement(locator).click();
+	        
+	        // Log success message
+	        logger.info(LogMsg + " with element: " + locator);
+	        ExtentReport.getTest().log(Status.INFO, LogMsg + " with element: " + locator);
+	    } catch (Exception e) {
+	        // Log error details
+	        logger.info("Failed to click element: " + locator + ". Exception: " + e.getMessage());
+	        ExtentReport.getTest().log(Status.FAIL, "Failed to click element: " + locator + ". Exception: " + e.getMessage());
+	        
+	        // Optionally, you can rethrow the exception if needed
+	        throw e;
+	    }
 	}
+	
 	/**
 	 * method to Select a value from dropDown using visbleText for Webversion
 	 * @param locator

@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-02T14:10:49 IST" name="Suite" finished-at="2024-12-02T14:12:10 IST" duration-ms="81133">
+  <suite started-at="2024-12-10T21:21:35 IST" name="Suite" finished-at="2024-12-10T21:23:37 IST" duration-ms="122124">
     <groups>
       <group name="Regression">
-        <method signature="OrderPage_TestCase.ValidationOfOrderingAnewItemIncheckoutPage()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" name="ValidationOfOrderingAnewItemIncheckoutPage" class="TestCases.OrderPage_TestCase"/>
+        <method signature="MyAddresses_TestCases.AddAnewAddressInMyAddressPage()[pri:0, instance:TestCases.MyAddresses_TestCases@7905a0b8]" name="AddAnewAddressInMyAddressPage" class="TestCases.MyAddresses_TestCases"/>
       </group> <!-- Regression -->
       <group name="smoke">
-        <method signature="OrderPage_TestCase.ValidationOfOrderingAnewItemIncheckoutPage()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" name="ValidationOfOrderingAnewItemIncheckoutPage" class="TestCases.OrderPage_TestCase"/>
+        <method signature="MyAddresses_TestCases.AddAnewAddressInMyAddressPage()[pri:0, instance:TestCases.MyAddresses_TestCases@7905a0b8]" name="AddAnewAddressInMyAddressPage" class="TestCases.MyAddresses_TestCases"/>
       </group> <!-- smoke -->
-      <group name="ValidationOfOrderingAnewItemIncheckoutPage">
-        <method signature="OrderPage_TestCase.ValidationOfOrderingAnewItemIncheckoutPage()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" name="ValidationOfOrderingAnewItemIncheckoutPage" class="TestCases.OrderPage_TestCase"/>
-      </group> <!-- ValidationOfOrderingAnewItemIncheckoutPage -->
+      <group name="AddAnewAddressInMyAddressPage">
+        <method signature="MyAddresses_TestCases.AddAnewAddressInMyAddressPage()[pri:0, instance:TestCases.MyAddresses_TestCases@7905a0b8]" name="AddAnewAddressInMyAddressPage" class="TestCases.MyAddresses_TestCases"/>
+      </group> <!-- AddAnewAddressInMyAddressPage -->
     </groups>
-    <test started-at="2024-12-02T14:10:49 IST" name="Test" finished-at="2024-12-02T14:12:10 IST" duration-ms="81133">
-      <class name="TestCases.OrderPage_TestCase">
-        <test-method is-config="true" signature="initAndroidDriverAndApp()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" started-at="2024-12-02T14:10:49 IST" name="initAndroidDriverAndApp" finished-at="2024-12-02T14:11:07 IST" duration-ms="18434" status="PASS">
+    <test started-at="2024-12-10T21:21:35 IST" name="Test" finished-at="2024-12-10T21:23:37 IST" duration-ms="122124">
+      <class name="TestCases.MyAddresses_TestCases">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.MyAddresses_TestCases@7905a0b8]" started-at="2024-12-10T21:21:35 IST" name="setup" finished-at="2024-12-10T21:22:21 IST" duration-ms="45815" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initAndroidDriverAndApp -->
-        <test-method signature="ValidationOfOrderingAnewItemIncheckoutPage()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" started-at="2024-12-02T14:11:07 IST" name="ValidationOfOrderingAnewItemIncheckoutPage" description="Adding a new order in checkoutpage" finished-at="2024-12-02T14:12:09 IST" duration-ms="61479" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="AddAnewAddressInMyAddressPage()[pri:0, instance:TestCases.MyAddresses_TestCases@7905a0b8]" started-at="2024-12-10T21:22:21 IST" name="AddAnewAddressInMyAddressPage" description="Adding a newaddress in MyAddress in sideMenu" finished-at="2024-12-10T21:23:36 IST" duration-ms="75052" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidationOfOrderingAnewItemIncheckoutPage -->
-        <test-method is-config="true" signature="stopAppiumServer()[pri:0, instance:TestCases.OrderPage_TestCase@7905a0b8]" started-at="2024-12-02T14:12:09 IST" name="stopAppiumServer" finished-at="2024-12-02T14:12:10 IST" duration-ms="1169" status="PASS">
+        </test-method> <!-- AddAnewAddressInMyAddressPage -->
+        <test-method is-config="true" signature="stopAppiumServer()[pri:0, instance:TestCases.MyAddresses_TestCases@7905a0b8]" started-at="2024-12-10T21:23:36 IST" name="stopAppiumServer" finished-at="2024-12-10T21:23:37 IST" duration-ms="1182" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopAppiumServer -->
-      </class> <!-- TestCases.OrderPage_TestCase -->
+      </class> <!-- TestCases.MyAddresses_TestCases -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

@@ -37,6 +37,7 @@ import org.testng.annotations.BeforeTest;
 //import com.actions.ChromeDriver;
 import com.aventstack.extentreports.Status;
 import com.logger.Log;
+import com.pageObjects.LoginPage;
 import com.reports.ExtentReport;
 
 import io.appium.java_client.AppiumDriver;
@@ -63,6 +64,7 @@ public class BaseClass {
 	public AppiumDriverLocalService appiumService;
 	public static AppiumServiceBuilder builder;
 	public static WebDriver wdriver;
+	public static LoginPage loginPage = new LoginPage();
 	
 	
 //	protected static AppiumDriver driver;
@@ -71,6 +73,7 @@ public class BaseClass {
 	InputStream inputStream = null;
 	InputStream stringsis = null;
 	Properties props = new Properties();
+	private ExtentReport test;
 	// common timeout for all tests can be set here
 	public static WebDriverWait wait;
 	public final int timeOut = 40;
@@ -163,8 +166,9 @@ public class BaseClass {
 	 *  this method creates the android driver
 	 *  @param buildPath - path to pick the location of the app 
 	 *  @throws IOException 
+	 * @throws InterruptedException 
 	 */
-	@BeforeMethod
+	
 	public void initAndroidDriverAndApp() throws IOException {
 	
 		try {
@@ -208,8 +212,22 @@ public class BaseClass {
 	            logger.info("Failed to close the property file input stream: " + e.getMessage());
 	        }
 	      }
+		//LoginToProFoamApplication();
 
 	}
+	
+	
+	@BeforeMethod
+	public void setup() throws IOException, InterruptedException {
+		
+	    initAndroidDriverAndApp();  
+	    LoginToApplication(); 
+	}
+	
+//	//public void setUp() throws InterruptedException, IOException {
+//	        initAndroidDriverAndApp();
+//	       // LoginToProFoamApplication();
+//	    }
 
 	
 	/** 
@@ -247,7 +265,7 @@ public class BaseClass {
 		wdriver.close();
 	}
 
-	public void launchApp() throws IOException {
+	public void launchApp() throws IOException, InterruptedException {
 
 		startAppiumServer("windows");
 		initAndroidDriverAndApp();
@@ -395,6 +413,15 @@ public class BaseClass {
 		ExtentReport.getTest().log(Status.INFO, str );
 
 	}
+//	//@BeforeMethod(dependsOnMethods = {"initAndroidDriverAndApp"})
+	public void LoginToApplication() throws InterruptedException {
+		loginPage.ClickOnSkipButtonInWelcomePage();
+		loginPage.ClickOnLoginButtonInLoginButton();
+		loginPage.LoginToProFoamApplication();
+		
+	}
+
+	
 	
 
   

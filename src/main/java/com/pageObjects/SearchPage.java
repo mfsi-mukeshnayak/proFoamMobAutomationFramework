@@ -7,7 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Wait;
 
 import com.actions.GenericActions;
-import com.actions.JavascriptActions;
 import com.actions.KeyBoardActions;
 import com.actions.MouseActions;
 import com.assertions.MobWebAssertion;
