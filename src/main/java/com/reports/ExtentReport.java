@@ -9,30 +9,37 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ExtentReport {
-	static ExtentReports extent;
-	final static String filePath = "Extent.html";
-	static Map<Integer, ExtentTest> extentTestMap = new HashMap();
+    private static ExtentReports extent;
+    private static final String REPORT_FILE_PATH = "Reports//Extent.html";
+    private static Map<Integer, ExtentTest> extentTestMap = new HashMap<>();
 
-	public synchronized static ExtentReports getReporter() {
-		if (extent == null) {
-			ExtentSparkReporter html = new ExtentSparkReporter("Reports//Extent.html");
-			html.config().setDocumentTitle("Appium Framework");
-			html.config().setReportName("Profoam");
-			html.config().setTheme(Theme.DARK);
-			extent = new ExtentReports();
-			extent.attachReporter(html);
-		}
+    public synchronized static ExtentReports getReporter() {
+        if (extent == null) {
+            ExtentSparkReporter sparkReporter = new ExtentSparkReporter(REPORT_FILE_PATH);
+            sparkReporter.config().setDocumentTitle("Profoam Automation Report");
+            sparkReporter.config().setReportName("Profoam Mobile Application");
+            sparkReporter.config().setTheme(Theme.DARK);
 
-		return extent;
-	}
+            extent = new ExtentReports();
+            extent.attachReporter(sparkReporter);
+            extent.setSystemInfo("Environment", "QA");
+            extent.setSystemInfo("Platform", System.getProperty("os.name"));
+            extent.setSystemInfo("User", System.getProperty("user.name"));
+        }
+        return extent;
+    }
 
-	public static synchronized ExtentTest getTest() {
-		return (ExtentTest) extentTestMap.get((int) (long) (Thread.currentThread().getId()));
-	}
+    public static synchronized ExtentTest getTest() {
+        return extentTestMap.get((int) (long) (Thread.currentThread().getId()));
+    }
 
-	public static synchronized ExtentTest startTest(String testName, String desc) {
-		ExtentTest test = getReporter().createTest(testName, desc);
-		extentTestMap.put((int) (long) (Thread.currentThread().getId()), test);
-		return test;
-	}
+    public static synchronized ExtentTest startTest(String testName, String description, String category) {
+        ExtentTest test = getReporter().createTest(testName, description).assignCategory(category);
+        extentTestMap.put((int) (long) (Thread.currentThread().getId()), test);
+        return test;
+    }
+
+    public static synchronized void endTest() {
+        getReporter().flush();
+    }
 }

@@ -7,7 +7,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 
 import com.actions.KeyBoardActions;
-import com.actions.MouseActions;
+import com.actions.TouchActions;
 import com.aventstack.extentreports.Status;
 import com.pageObjects.ProductPage;
 import com.reports.ExtentReport;

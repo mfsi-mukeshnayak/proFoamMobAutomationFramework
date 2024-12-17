@@ -11,7 +11,7 @@ import org.openqa.selenium.By;
 
 import com.actions.GenericActions;
 import com.actions.KeyBoardActions;
-import com.actions.MouseActions;
+import com.actions.TouchActions;
 import com.assertions.MobWebAssertion;
 import com.utills.BaseClass;
 import com.utills.CustomMethods;
@@ -107,7 +107,16 @@ public class MyAddressesPage extends BaseClass {
 	private static final By NoBtnForalertMessage = AppiumBy.id("android:id/button1");
 	private static final By Ok_BtnForalertMessage = AppiumBy.id("android:id/button1");
 	
+	private static final By selectQty(String selQty) {return AppiumBy.xpath("//android.view.ViewGroup[@content-desc="+selQty+"]");}
 	
+	
+	
+	
+	public void ClickOnMyAddresCategoryInSidemenudemo() throws InterruptedException {
+		
+		String randomQty = generic.generateRandomNumber(1);
+		TouchActions.clickElement(selectQty(randomQty), "Clicking Qty");
+	}
 	public void ClickOnMyAddresCategoryInSidemenu() throws InterruptedException {
 		
 		commonAct.selectCategoryInSideMenu("My Addresses");
@@ -127,21 +136,21 @@ public class MyAddressesPage extends BaseClass {
 	
 	public void clickOnaddNewaddressButton() throws InterruptedException {
 		Waits.waitUntilElementIsVisible(AddNewAddressBtn);
-		MouseActions.clickElement(AddNewAddressBtn, "AddNewAddress Button is clicked");
+		TouchActions.clickElement(AddNewAddressBtn, "AddNewAddress Button is clicked");
 		
 	}
 	
 	public void confirmDeletingAddress() throws InterruptedException {
 		
 		Waits.waitUntilElementIsVisible(YesBtnForalertMessage);
-		MouseActions.clickElement(YesBtnForalertMessage, "YesBtnForalertMessage Button is clicked");
+		TouchActions.clickElement(YesBtnForalertMessage, "YesBtnForalertMessage Button is clicked");
 		
 	} 
 	
 	public void AddressDeletedConfirmationToastmsg() throws InterruptedException {
 		
 		Waits.waitUntilElementIsVisible(YesBtnForalertMessage);
-		MouseActions.clickElement(Ok_BtnForalertMessage, "Ok_BtnForalertMessage Button is clicked");
+		TouchActions.clickElement(Ok_BtnForalertMessage, "Ok_BtnForalertMessage Button is clicked");
 	}
 	
 	public void ClearAllAddressIfItExists() {
@@ -187,17 +196,17 @@ public class MyAddressesPage extends BaseClass {
 	
 	public void SelectCountryInAddressFieldDropDown(String countryName ) throws InterruptedException {
 		Waits.waitForGivenTime(2);
-		MouseActions.clickElement(CountryDropDown, "CountryDropDown Button is clicked");
+		TouchActions.clickElement(CountryDropDown, "CountryDropDown Button is clicked");
 		Waits.waitForGivenTime(2);
-		MouseActions.clickElement(SelectCountry(countryName), countryName+" is selected as Country");
+		TouchActions.clickElement(SelectCountry(countryName), countryName+" is selected as Country");
 	}
 	
 	public void SelectStateInAddressFieldDropDown(String stateName ) throws InterruptedException {
 		Waits.waitForGivenTime(2);
-		MouseActions.clickElement(stateDropDown, "stateDropDown Button is clicked");
+		TouchActions.clickElement(stateDropDown, "stateDropDown Button is clicked");
 		Waits.waitForGivenTime(2);
-		MouseActions.swipeUntilElementIsVisible(SelectState(stateName));
-		MouseActions.clickElement(SelectState(stateName), stateName+" is selected as state");
+		TouchActions.swipeUntilElementIsVisible(SelectState(stateName));
+		TouchActions.clickElement(SelectState(stateName), stateName+" is selected as state");
 	}
 	
 	public void FilledCityName(String cityName ) throws InterruptedException {
@@ -226,7 +235,7 @@ public class MyAddressesPage extends BaseClass {
 		SelectStateInAddressFieldDropDown(State);
 		FilledCityName(City);
 		FilledZipCode(ZipCode);
-		MouseActions.clickElement(saveBtnInAddresspage, "Save Button is Clicked");
+		TouchActions.clickElement(saveBtnInAddresspage, "Save Button is Clicked");
 		Waits.waitForGivenTime(4);
 		
 	}

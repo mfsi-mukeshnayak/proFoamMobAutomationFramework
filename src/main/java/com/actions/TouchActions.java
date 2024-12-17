@@ -48,7 +48,7 @@ import org.openqa.selenium.interactions.Sequence;
 import java.time.Duration;
 import java.util.Arrays;
 
-public class MouseActions extends BaseClass{
+public class TouchActions extends BaseClass{
 	
 	
 	/**

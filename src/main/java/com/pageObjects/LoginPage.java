@@ -4,7 +4,7 @@ package com.pageObjects;
 import org.openqa.selenium.By;
 
 import com.actions.GenericActions;
-import com.actions.MouseActions;
+import com.actions.TouchActions;
 import com.assertions.MobWebAssertion;
 import com.utills.BaseClass;
 import com.utills.CustomMethods;
@@ -12,10 +12,12 @@ import com.utills.GenericMethods;
 import com.waits.Waits;
 
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.AndroidDriver;
 
 
 
 public class LoginPage extends BaseClass {
+	
 	
 	GenericMethods generic = new GenericMethods();
 	CustomMethods custom = new CustomMethods();

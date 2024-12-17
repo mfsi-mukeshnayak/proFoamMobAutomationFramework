@@ -14,11 +14,6 @@ public class WishListPage_TestCases extends BaseClass{
 		public void ValidationOfLandingOnWishListPageAndAttributesOfWishListPage() throws InterruptedException {
 			System.out.println("Application is launching");
 			
-			pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
-			pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
-			pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
-			pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
-			pageManager.getLoginPage().LoginToProFoamApplication();
 			pageManager.getProductPage().LandedOnProductPageAndAbleToSeeSideMenu();
 			pageManager.getProductPage().ClickOnSideMenubar();
 			pageManager.getWishListPage().ClickOnWishlistCategoryInSidemenu();
@@ -31,11 +26,6 @@ public class WishListPage_TestCases extends BaseClass{
 		public void ValidationOfMyWishListPageAndAttributes() throws InterruptedException {
 			System.out.println("Application is launching");
 			
-			pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
-			pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
-			pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
-			pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
-			pageManager.getLoginPage().LoginToProFoamApplication();
 			pageManager.getProductPage().LandedOnProductPageAndAbleToSeeSideMenu();
 			pageManager.getProductPage().ClickOnSideMenubar();
 			pageManager.getWishListPage().ClickOnWishlistCategoryInSidemenu();
@@ -50,11 +40,6 @@ public class WishListPage_TestCases extends BaseClass{
 		public void ValidationOfSharedWishListPageAndAttributes() throws InterruptedException {
 			System.out.println("Application is launching");
 			
-			pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
-			pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
-			pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
-			pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
-			pageManager.getLoginPage().LoginToProFoamApplication();
 			pageManager.getProductPage().LandedOnProductPageAndAbleToSeeSideMenu();
 			pageManager.getProductPage().ClickOnSideMenubar();
 			pageManager.getWishListPage().ClickOnWishlistCategoryInSidemenu();
@@ -69,11 +54,6 @@ public class WishListPage_TestCases extends BaseClass{
 		public void ValidationOfItemDisplayedInMyWishListPageWhicAddedToWishList() throws InterruptedException {
 			System.out.println("Application is launching");
 			
-			pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
-			pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
-			pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
-			pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
-			pageManager.getLoginPage().LoginToProFoamApplication();
 			pageManager.getProductPage().LandedOnProductPageAndAbleToSeeSideMenu();
 			pageManager.getProductPage().ClickOnSideMenubar();
 			pageManager.getWishListPage().ClickOnWishlistCategoryInSidemenu();
@@ -109,11 +89,6 @@ public class WishListPage_TestCases extends BaseClass{
 		public void ValidationOfSelectedItemToCartBtnDisplayedInMyWishListPageWhicAddedToWishList() throws InterruptedException {
 			System.out.println("Application is launching");
 			
-			pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
-			pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
-			pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
-			pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
-			pageManager.getLoginPage().LoginToProFoamApplication();
 			pageManager.getProductPage().LandedOnProductPageAndAbleToSeeSideMenu();
 			pageManager.getProductPage().ClickOnSideMenubar();
 			pageManager.getWishListPage().ClickOnWishlistCategoryInSidemenu();
@@ -151,11 +126,6 @@ public class WishListPage_TestCases extends BaseClass{
 		public void ValidationOfShringItemToSharedWishListFromMyWishListPageWhicAddedToWishList() throws InterruptedException {
 			System.out.println("Application is launching");
 			
-			pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
-			pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
-			pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
-			pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
-			pageManager.getLoginPage().LoginToProFoamApplication();
 			pageManager.getProductPage().LandedOnProductPageAndAbleToSeeSideMenu();
 			pageManager.getProductPage().ClickOnSideMenubar();
 			pageManager.getWishListPage().ClickOnWishlistCategoryInSidemenu();

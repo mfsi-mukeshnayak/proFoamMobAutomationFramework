@@ -107,33 +107,47 @@ public class MobWebAssertion extends BaseClass{
 	    }
 	
 	/**
-	 * method to check expected and actual value true or not
+	 * Method to check if expected and actual value are true
 	 * @param value
-	 
 	 */
 	public static void assertTrue(boolean value) {
-		Assert.assertTrue(value);
-		logger.info("Value is present :" +value );
-		ExtentReport.getTest().log(Status.INFO, "Value is present :" +value);
+	    try {
+	        Assert.assertTrue(value);
+	        logger.info("Value is present: " + value);
+	        ExtentReport.getTest().log(Status.INFO, "Value is present: " + value);
+	    } catch (AssertionError e) {
+	        logger.info("Assertion failed. Expected value to be true but was false: " + value);
+	        ExtentReport.getTest().log(Status.FAIL, "Assertion failed. Expected value to be true but was false: " + value);
+	        throw e; // Optionally rethrow the assertion error
+	    }
 	}
 		
 	/**
-	 * method to check fetched element clickale or not
+	 * Method to check if the fetched element is clickable or not
 	 * @param locator
-	 * @param timout
-	 *  */
-	public static void IsElementClickable(By locator , int timout) {
-		boolean clickable = Waits.WaitTillElementisClickable(locator, timout);
-		
-		if (clickable) {
-			logger.info("Element is clickable :" +locator );
-			ExtentReport.getTest().log(Status.INFO, "Element is clickable :" +locator);
-        } else {
-			logger.info("Element is not clickable :" +locator );
-			ExtentReport.getTest().log(Status.INFO, "Element is not clickable :" +locator);
-        }
+	 * @param timeout
+	 */
+	public static void IsElementClickable(By locator, int timeout) {
+	    try {
+	        boolean clickable = Waits.WaitTillElementisClickable(locator, timeout);
+
+	        if (clickable) {
+	            // Log success
+	            logger.info("Element is clickable: " + locator);
+	            ExtentReport.getTest().log(Status.INFO, "Element is clickable: " + locator);
+	        } else {
+	            // Log failure
+	            logger.info("Element is not clickable: " + locator);
+	            ExtentReport.getTest().log(Status.WARNING, "Element is not clickable: " + locator);
+	        }
+	    } catch (Exception e) {
+	        // Log error and rethrow exception
+	        logger.info("Error occurred while checking element clickability: " + e.getMessage());
+	        ExtentReport.getTest().log(Status.FAIL, "Failed to check element clickability for: " + locator + " - " + e.getMessage());
+	        throw e; // Optionally rethrow the exception
+	    }
 	}
-	
+
 
 	       
 	

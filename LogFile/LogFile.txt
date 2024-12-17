@@ -12484,3 +12484,692 @@ Applying this coupon code will remove discounts from the items in cart.
 10 Dec 2024 21:23:32  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Save
 10 Dec 2024 21:23:32  INFO logger - Save Button is Clicked with element: AppiumBy.accessibilityId: Save
 10 Dec 2024 21:23:37  INFO logger - Appium server stopped
+12 Dec 2024 17:26:43  INFO logger - Automation name got found in properties file!
+12 Dec 2024 17:27:00  INFO logger - Appium Server started successfully on Windows.
+12 Dec 2024 17:27:00  INFO logger - Appium Server is running.
+12 Dec 2024 17:27:38  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+12 Dec 2024 17:27:43  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+12 Dec 2024 17:27:43  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+12 Dec 2024 17:27:47  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+12 Dec 2024 17:27:47  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+12 Dec 2024 17:27:51  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+12 Dec 2024 17:27:51  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+12 Dec 2024 17:27:54  INFO logger - Fetching  DeleteButtons with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+12 Dec 2024 17:27:56  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.id: android:id/button2
+12 Dec 2024 17:27:56  INFO logger - YesBtnForalertMessage Button is clicked with element: AppiumBy.id: android:id/button2
+12 Dec 2024 17:27:58  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.id: android:id/button1
+12 Dec 2024 17:27:58  INFO logger - Ok_BtnForalertMessage Button is clicked with element: AppiumBy.id: android:id/button1
+12 Dec 2024 17:28:11  INFO logger -  Fetching more DeleteButton with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+12 Dec 2024 17:28:11  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+12 Dec 2024 17:28:11  INFO logger - AddNewAddress Button is clicked with element: By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+12 Dec 2024 17:28:13  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[1]
+12 Dec 2024 17:28:15  INFO logger - Home is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[1]
+12 Dec 2024 17:28:17  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[2]
+12 Dec 2024 17:28:18  INFO logger - 9975066000 is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[2]
+12 Dec 2024 17:28:20  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[3]
+12 Dec 2024 17:28:21  INFO logger - 5175 Maple St is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[3]
+12 Dec 2024 17:28:24  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[1]
+12 Dec 2024 17:28:24  INFO logger - CountryDropDown Button is clicked with element: By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[1]
+12 Dec 2024 17:28:26  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: United States
+12 Dec 2024 17:28:26  INFO logger - United States is selected as Country with element: AppiumBy.accessibilityId: United States
+12 Dec 2024 17:28:28  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[2]
+12 Dec 2024 17:28:29  INFO logger - stateDropDown Button is clicked with element: By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[2]
+12 Dec 2024 17:28:36  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Alaska
+12 Dec 2024 17:28:36  INFO logger - Alaska is selected as state with element: AppiumBy.accessibilityId: Alaska
+12 Dec 2024 17:28:38  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[5]
+12 Dec 2024 17:28:39  INFO logger - Sitka is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[5]
+12 Dec 2024 17:28:41  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[6]
+12 Dec 2024 17:28:43  INFO logger - 99932 is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[6]
+12 Dec 2024 17:28:43  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Save
+12 Dec 2024 17:28:43  INFO logger - Save Button is Clicked with element: AppiumBy.accessibilityId: Save
+12 Dec 2024 17:28:48  INFO logger - Appium server stopped
+12 Dec 2024 17:57:18  INFO logger - Automation name got found in properties file!
+12 Dec 2024 17:57:33  INFO logger - Appium Server started successfully on Windows.
+12 Dec 2024 17:57:33  INFO logger - Appium Server is running.
+12 Dec 2024 17:58:08  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+12 Dec 2024 17:58:12  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+12 Dec 2024 17:58:13  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+12 Dec 2024 17:58:16  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+12 Dec 2024 17:58:16  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+12 Dec 2024 17:58:21  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+12 Dec 2024 17:58:21  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+12 Dec 2024 17:58:23  INFO logger - Fetching  DeleteButtons with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+12 Dec 2024 17:58:25  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.id: android:id/button2
+12 Dec 2024 17:58:25  INFO logger - YesBtnForalertMessage Button is clicked with element: AppiumBy.id: android:id/button2
+12 Dec 2024 17:58:27  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.id: android:id/button1
+12 Dec 2024 17:58:27  INFO logger - Ok_BtnForalertMessage Button is clicked with element: AppiumBy.id: android:id/button1
+12 Dec 2024 17:58:39  INFO logger -  Fetching more DeleteButton with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+12 Dec 2024 17:58:39  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+12 Dec 2024 17:58:40  INFO logger - AddNewAddress Button is clicked with element: By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+12 Dec 2024 17:58:42  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[1]
+12 Dec 2024 17:58:43  INFO logger - Home is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[1]
+12 Dec 2024 17:58:45  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[2]
+12 Dec 2024 17:58:46  INFO logger - 9575708451 is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[2]
+12 Dec 2024 17:58:48  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[3]
+12 Dec 2024 17:58:49  INFO logger - 6008 Maple St is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[3]
+12 Dec 2024 17:58:51  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[1]
+12 Dec 2024 17:58:51  INFO logger - CountryDropDown Button is clicked with element: By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[1]
+12 Dec 2024 17:58:53  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: United States
+12 Dec 2024 17:58:53  INFO logger - United States is selected as Country with element: AppiumBy.accessibilityId: United States
+12 Dec 2024 17:58:56  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[2]
+12 Dec 2024 17:58:56  INFO logger - stateDropDown Button is clicked with element: By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[2]
+12 Dec 2024 17:59:03  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Alaska
+12 Dec 2024 17:59:03  INFO logger - Alaska is selected as state with element: AppiumBy.accessibilityId: Alaska
+12 Dec 2024 17:59:05  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[5]
+12 Dec 2024 17:59:06  INFO logger - Sitka is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[5]
+12 Dec 2024 17:59:08  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[6]
+12 Dec 2024 17:59:09  INFO logger - 99623 is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[6]
+12 Dec 2024 17:59:10  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Save
+12 Dec 2024 17:59:10  INFO logger - Save Button is Clicked with element: AppiumBy.accessibilityId: Save
+12 Dec 2024 17:59:14  INFO logger - Appium server stopped
+13 Dec 2024 11:39:24  INFO logger - Automation name got found in properties file!
+13 Dec 2024 11:39:41  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 11:39:41  INFO logger - Appium Server is running.
+13 Dec 2024 11:40:14  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 11:40:18  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 11:40:19  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 11:40:22  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 11:40:22  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 11:40:26  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+13 Dec 2024 11:40:27  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 11:40:29  INFO logger - Fetching  DeleteButtons with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+13 Dec 2024 11:40:31  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.id: android:id/button2
+13 Dec 2024 11:40:31  INFO logger - YesBtnForalertMessage Button is clicked with element: AppiumBy.id: android:id/button2
+13 Dec 2024 11:40:33  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.id: android:id/button1
+13 Dec 2024 11:40:33  INFO logger - Ok_BtnForalertMessage Button is clicked with element: AppiumBy.id: android:id/button1
+13 Dec 2024 11:40:45  INFO logger -  Fetching more DeleteButton with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+13 Dec 2024 11:40:45  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 11:40:46  INFO logger - AddNewAddress Button is clicked with element: By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 11:40:48  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[1]
+13 Dec 2024 11:40:49  INFO logger - Home is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[1]
+13 Dec 2024 11:40:51  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[2]
+13 Dec 2024 11:40:52  INFO logger - 9762672409 is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[2]
+13 Dec 2024 11:40:54  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[3]
+13 Dec 2024 11:40:55  INFO logger - 2456 Oak St is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[3]
+13 Dec 2024 11:40:57  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 11:40:57  INFO logger - CountryDropDown Button is clicked with element: By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 11:41:00  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: United States
+13 Dec 2024 11:41:00  INFO logger - United States is selected as Country with element: AppiumBy.accessibilityId: United States
+13 Dec 2024 11:41:02  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[2]
+13 Dec 2024 11:41:03  INFO logger - stateDropDown Button is clicked with element: By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[2]
+13 Dec 2024 11:41:10  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Alaska
+13 Dec 2024 11:41:10  INFO logger - Alaska is selected as state with element: AppiumBy.accessibilityId: Alaska
+13 Dec 2024 11:41:12  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[5]
+13 Dec 2024 11:41:13  INFO logger - Kodiak is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[5]
+13 Dec 2024 11:41:15  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[6]
+13 Dec 2024 11:41:16  INFO logger - 99924 is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[6]
+13 Dec 2024 11:41:16  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Save
+13 Dec 2024 11:41:17  INFO logger - Save Button is Clicked with element: AppiumBy.accessibilityId: Save
+13 Dec 2024 11:41:21  INFO logger - Appium server stopped
+13 Dec 2024 11:44:31  INFO logger - Automation name got found in properties file!
+13 Dec 2024 11:44:43  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 11:44:43  INFO logger - Appium Server is running.
+13 Dec 2024 11:45:15  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 11:45:20  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 11:45:20  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 11:45:23  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 11:45:24  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 11:45:28  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+13 Dec 2024 11:45:28  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 11:45:30  INFO logger - Fetching  DeleteButtons with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+13 Dec 2024 11:45:32  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.id: android:id/button2
+13 Dec 2024 11:45:32  INFO logger - YesBtnForalertMessage Button is clicked with element: AppiumBy.id: android:id/button2
+13 Dec 2024 11:45:34  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.id: android:id/button1
+13 Dec 2024 11:45:34  INFO logger - Ok_BtnForalertMessage Button is clicked with element: AppiumBy.id: android:id/button1
+13 Dec 2024 11:45:46  INFO logger -  Fetching more DeleteButton with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+13 Dec 2024 11:45:47  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 11:45:47  INFO logger - AddNewAddress Button is clicked with element: By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 11:45:49  INFO logger - Appium server stopped
+13 Dec 2024 12:40:21  INFO logger - Automation name got found in properties file!
+13 Dec 2024 12:40:39  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 12:40:39  INFO logger - Appium Server is running.
+13 Dec 2024 12:41:14  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 12:41:20  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 12:41:21  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 12:41:24  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 12:41:24  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 12:41:28  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+13 Dec 2024 12:41:29  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 12:41:41  INFO logger - Fetching  DeleteButtons with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+13 Dec 2024 12:41:41  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 12:41:41  INFO logger - AddNewAddress Button is clicked with element: By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 12:41:43  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[1]
+13 Dec 2024 12:41:45  INFO logger - Home is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[1]
+13 Dec 2024 12:41:47  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[2]
+13 Dec 2024 12:41:48  INFO logger - 9631698806 is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[2]
+13 Dec 2024 12:41:50  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[3]
+13 Dec 2024 12:41:51  INFO logger - 494 Pine St is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[3]
+13 Dec 2024 12:41:53  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 12:41:53  INFO logger - CountryDropDown Button is clicked with element: By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 12:41:55  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: United States
+13 Dec 2024 12:41:56  INFO logger - United States is selected as Country with element: AppiumBy.accessibilityId: United States
+13 Dec 2024 12:41:58  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[2]
+13 Dec 2024 12:41:58  INFO logger - stateDropDown Button is clicked with element: By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[2]
+13 Dec 2024 12:42:05  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Alaska
+13 Dec 2024 12:42:05  INFO logger - Alaska is selected as state with element: AppiumBy.accessibilityId: Alaska
+13 Dec 2024 12:42:07  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[5]
+13 Dec 2024 12:42:08  INFO logger - Anchorage is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[5]
+13 Dec 2024 12:42:10  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[6]
+13 Dec 2024 12:42:11  INFO logger - 99571 is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[6]
+13 Dec 2024 12:42:12  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Save
+13 Dec 2024 12:42:12  INFO logger - Save Button is Clicked with element: AppiumBy.accessibilityId: Save
+13 Dec 2024 12:42:17  INFO logger - Appium server stopped
+13 Dec 2024 12:45:36  INFO logger - Automation name got found in properties file!
+13 Dec 2024 12:45:51  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 12:45:51  INFO logger - Appium Server is running.
+13 Dec 2024 12:46:31  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 12:46:36  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 12:46:36  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 12:46:40  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 12:46:40  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 12:46:44  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+13 Dec 2024 12:46:44  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 12:46:46  INFO logger - Fetching  DeleteButtons with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+13 Dec 2024 12:46:49  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.id: android:id/button2
+13 Dec 2024 12:46:49  INFO logger - YesBtnForalertMessage Button is clicked with element: AppiumBy.id: android:id/button2
+13 Dec 2024 12:46:51  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.id: android:id/button1
+13 Dec 2024 12:46:51  INFO logger - Ok_BtnForalertMessage Button is clicked with element: AppiumBy.id: android:id/button1
+13 Dec 2024 12:47:03  INFO logger -  Fetching more DeleteButton with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+13 Dec 2024 12:47:03  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 12:47:03  INFO logger - AddNewAddress Button is clicked with element: By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 12:47:06  INFO logger - Appium server stopped
+13 Dec 2024 12:51:15  INFO logger - Automation name got found in properties file!
+13 Dec 2024 12:51:30  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 12:51:30  INFO logger - Appium Server is running.
+13 Dec 2024 12:52:10  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 12:52:15  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 12:52:15  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 12:52:18  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 12:52:19  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 12:52:23  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+13 Dec 2024 12:52:23  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 12:52:36  INFO logger - Fetching  DeleteButtons with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+13 Dec 2024 12:52:36  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 12:52:36  INFO logger - AddNewAddress Button is clicked with element: By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 12:52:39  INFO logger - Appium server stopped
+13 Dec 2024 12:52:39  INFO logger - Automation name got found in properties file!
+13 Dec 2024 12:52:57  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 12:52:57  INFO logger - Appium Server is running.
+13 Dec 2024 12:53:33  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 12:53:38  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 12:53:38  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 12:53:41  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 12:53:42  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 12:53:46  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+13 Dec 2024 12:53:46  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 12:53:47  INFO logger - Appium server stopped
+13 Dec 2024 13:01:55  INFO logger - Automation name got found in properties file!
+13 Dec 2024 13:02:11  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 13:02:11  INFO logger - Appium Server is running.
+13 Dec 2024 13:02:48  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 13:02:53  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 13:02:53  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 13:02:57  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 13:02:57  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 13:03:01  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+13 Dec 2024 13:03:01  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 13:03:13  INFO logger - Fetching  DeleteButtons with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+13 Dec 2024 13:03:14  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 13:03:14  INFO logger - AddNewAddress Button is clicked with element: By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 13:03:16  INFO logger - Appium server stopped
+13 Dec 2024 13:03:16  INFO logger - Automation name got found in properties file!
+13 Dec 2024 13:03:31  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 13:03:31  INFO logger - Appium Server is running.
+13 Dec 2024 13:04:06  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 13:04:10  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 13:04:11  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 13:04:14  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 13:04:14  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 13:04:18  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+13 Dec 2024 13:04:19  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 13:04:20  INFO logger - Appium server stopped
+13 Dec 2024 14:33:08  INFO logger - Automation name got found in properties file!
+13 Dec 2024 14:33:28  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 14:33:28  INFO logger - Appium Server is running.
+13 Dec 2024 14:34:19  INFO logger - Appium server stopped
+13 Dec 2024 14:34:19  INFO logger - Automation name got found in properties file!
+13 Dec 2024 14:34:40  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 14:34:40  INFO logger - Appium Server is running.
+13 Dec 2024 14:35:26  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 14:35:30  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 14:35:30  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 14:35:34  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 14:35:34  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 14:35:38  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+13 Dec 2024 14:35:39  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 14:35:39  INFO logger - Appium server stopped
+13 Dec 2024 14:55:47  INFO logger - Automation name got found in properties file!
+13 Dec 2024 14:56:07  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 14:56:07  INFO logger - Appium Server is running.
+13 Dec 2024 14:56:51  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 14:56:55  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 14:56:56  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 14:57:00  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 14:57:00  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 14:57:04  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+13 Dec 2024 14:57:04  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 14:57:06  INFO logger - Appium server stopped
+13 Dec 2024 15:03:38  INFO logger - Automation name got found in properties file!
+13 Dec 2024 15:04:01  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 15:04:01  INFO logger - Appium Server is running.
+13 Dec 2024 15:04:44  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:04:49  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:04:49  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:04:53  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 15:04:53  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 15:04:57  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+13 Dec 2024 15:04:58  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 15:05:10  INFO logger - Fetching  DeleteButtons with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+13 Dec 2024 15:05:10  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 15:05:10  INFO logger - AddNewAddress Button is clicked with element: By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 15:05:15  INFO logger - Appium server stopped
+13 Dec 2024 15:05:15  INFO logger - Automation name got found in properties file!
+13 Dec 2024 15:05:43  INFO logger - An unexpected error occurred while starting the Appium server: [The local appium server has not been started, Reason: Timed out waiting for [http://192.168.29.23:4723/status] to be available after 20015 ms, Consider increasing the server startup timeout value (currently 20000ms), Node.js executable path: C:\Program Files\nodejs\node.exe, Arguments: [C:\Users\mukeshn\AppData\Roaming\npm\node_modules\appium\build\lib\main.js, --port, 4723, --address, 192.168.29.23, --log-level, info, --local-timezone, --session-override], Output: [35m[Appium][39m Welcome to Appium v2.0.1
+[35m[Appium][39m Non-default server args:
+[35m[Appium][39m { address: [32m'192.168.29.23'[39m,
+[35m[Appium][39m   localTimezone: [33mtrue[39m,
+[35m[Appium][39m   loglevel: [32m'info'[39m,
+[35m[Appium][39m   sessionOverride: [33mtrue[39m }
+[35m[Appium][39m Attempting to load driver uiautomator2...
+]
+13 Dec 2024 15:05:43  INFO logger - Appium Server did not start as expected.
+13 Dec 2024 15:05:45  INFO logger - Automation name got found in properties file!
+13 Dec 2024 15:06:03  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 15:06:03  INFO logger - Appium Server is running.
+13 Dec 2024 15:06:43  INFO logger - Getting the text value with element: By.xpath: (//android.widget.TextView)[2]
+13 Dec 2024 15:06:43  INFO logger - Assertion failed. Actual: 'Search for Products | Events', Expected: 'Welcome to Profoam Corporation’s Online Store.'
+13 Dec 2024 15:06:45  INFO logger - Appium server stopped
+13 Dec 2024 15:06:45  INFO logger - Automation name got found in properties file!
+13 Dec 2024 15:07:02  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 15:07:02  INFO logger - Appium Server is running.
+13 Dec 2024 15:07:45  INFO logger - Getting the text value with element: By.xpath: (//android.widget.TextView)[2]
+13 Dec 2024 15:07:45  INFO logger - Assertion failed. Actual: 'Search for Products | Events', Expected: 'Welcome to Profoam Corporation’s Online Store.'
+13 Dec 2024 15:07:48  INFO logger - Appium server stopped
+13 Dec 2024 15:07:48  INFO logger - Automation name got found in properties file!
+13 Dec 2024 15:08:02  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 15:08:02  INFO logger - Appium Server is running.
+13 Dec 2024 15:08:40  INFO logger - Getting the text value with element: By.xpath: (//android.widget.TextView)[2]
+13 Dec 2024 15:08:40  INFO logger - Assertion failed. Actual: 'Search for Products | Events', Expected: 'Welcome to Profoam Corporation’s Online Store.'
+13 Dec 2024 15:08:46  INFO logger - Appium server stopped
+13 Dec 2024 15:08:46  INFO logger - Automation name got found in properties file!
+13 Dec 2024 15:09:00  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 15:09:00  INFO logger - Appium Server is running.
+13 Dec 2024 15:09:34  INFO logger - Getting the text value with element: By.xpath: (//android.widget.TextView)[2]
+13 Dec 2024 15:09:34  INFO logger - Assertion failed. Actual: 'Search for Products | Events', Expected: 'Welcome to Profoam Corporation’s Online Store.'
+13 Dec 2024 15:09:36  INFO logger - Appium server stopped
+13 Dec 2024 15:09:36  INFO logger - Automation name got found in properties file!
+13 Dec 2024 15:09:49  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 15:09:49  INFO logger - Appium Server is running.
+13 Dec 2024 15:10:23  INFO logger - Getting the text value with element: By.xpath: (//android.widget.TextView)[2]
+13 Dec 2024 15:10:23  INFO logger - Assertion failed. Actual: 'Search for Products | Events', Expected: 'Welcome to Profoam Corporation’s Online Store.'
+13 Dec 2024 15:10:25  INFO logger - Appium server stopped
+13 Dec 2024 15:10:25  INFO logger - Automation name got found in properties file!
+13 Dec 2024 15:10:39  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 15:10:39  INFO logger - Appium Server is running.
+13 Dec 2024 15:11:13  INFO logger - Getting the text value with element: By.xpath: (//android.widget.TextView)[2]
+13 Dec 2024 15:11:13  INFO logger - Assertion failed. Actual: 'Search for Products | Events', Expected: 'Welcome to Profoam Corporation’s Online Store.'
+13 Dec 2024 15:11:16  INFO logger - Appium server stopped
+13 Dec 2024 15:34:09  INFO logger - Automation name got found in properties file!
+13 Dec 2024 15:34:21  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 15:34:21  INFO logger - Appium Server is running.
+13 Dec 2024 15:34:57  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:35:01  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:35:01  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:35:04  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 15:35:05  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 15:35:09  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+13 Dec 2024 15:35:09  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 15:35:21  INFO logger - Fetching  DeleteButtons with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+13 Dec 2024 15:35:21  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 15:35:21  INFO logger - AddNewAddress Button is clicked with element: By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 15:35:24  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[1]
+13 Dec 2024 15:35:25  INFO logger - Home is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[1]
+13 Dec 2024 15:35:27  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[2]
+13 Dec 2024 15:35:28  INFO logger - 9375925568 is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[2]
+13 Dec 2024 15:35:30  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[3]
+13 Dec 2024 15:35:31  INFO logger - 5212 Main St is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[3]
+13 Dec 2024 15:35:34  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:35:34  INFO logger - CountryDropDown Button is clicked with element: By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:35:36  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: United States
+13 Dec 2024 15:35:36  INFO logger - United States is selected as Country with element: AppiumBy.accessibilityId: United States
+13 Dec 2024 15:35:38  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[2]
+13 Dec 2024 15:35:38  INFO logger - stateDropDown Button is clicked with element: By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[2]
+13 Dec 2024 15:35:45  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Alaska
+13 Dec 2024 15:35:45  INFO logger - Alaska is selected as state with element: AppiumBy.accessibilityId: Alaska
+13 Dec 2024 15:35:48  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[5]
+13 Dec 2024 15:35:49  INFO logger - Kenai is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[5]
+13 Dec 2024 15:35:51  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[6]
+13 Dec 2024 15:35:52  INFO logger - 99536 is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[6]
+13 Dec 2024 15:35:53  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Save
+13 Dec 2024 15:35:53  INFO logger - Save Button is Clicked with element: AppiumBy.accessibilityId: Save
+13 Dec 2024 15:35:57  INFO logger - Appium server stopped
+13 Dec 2024 15:35:57  INFO logger - Automation name got found in properties file!
+13 Dec 2024 15:36:10  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 15:36:10  INFO logger - Appium Server is running.
+13 Dec 2024 15:36:39  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:36:43  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:36:44  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:36:47  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 15:36:47  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 15:36:52  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+13 Dec 2024 15:36:52  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 15:36:53  INFO logger - Appium server stopped
+13 Dec 2024 15:36:53  INFO logger - Automation name got found in properties file!
+13 Dec 2024 15:37:07  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 15:37:07  INFO logger - Appium Server is running.
+13 Dec 2024 15:37:37  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:37:42  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:37:42  INFO logger - cartBtn is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[2]
+13 Dec 2024 15:37:42  INFO logger - ProductsTab is Displayed with element :AppiumBy.accessibilityId: Products
+13 Dec 2024 15:37:42  INFO logger - Getting the text value of Products Tab with element: By.xpath: //android.view.View[@content-desc='Products']/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView
+13 Dec 2024 15:37:42  INFO logger - Products matched with expected text :Products
+13 Dec 2024 15:37:42  INFO logger - Eventstab is Displayed with element :AppiumBy.accessibilityId: Events
+13 Dec 2024 15:37:43  INFO logger - Getting the text value of Events Tab with element: By.xpath: //android.view.View[@content-desc='Events']/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView
+13 Dec 2024 15:37:43  INFO logger - Events matched with expected text :Events
+13 Dec 2024 15:37:43  INFO logger - SearchTab is Displayed with element :AppiumBy.accessibilityId: Search for Products | Events
+13 Dec 2024 15:37:44  INFO logger - Appium server stopped
+13 Dec 2024 15:49:27  INFO logger - Automation name got found in properties file!
+13 Dec 2024 15:49:39  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 15:49:39  INFO logger - Appium Server is running.
+13 Dec 2024 15:50:11  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:50:15  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:50:16  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:50:19  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 15:50:19  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 15:50:23  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+13 Dec 2024 15:50:23  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 15:50:26  INFO logger - Fetching  DeleteButtons with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+13 Dec 2024 15:50:28  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.id: android:id/button2
+13 Dec 2024 15:50:28  INFO logger - YesBtnForalertMessage Button is clicked with element: AppiumBy.id: android:id/button2
+13 Dec 2024 15:50:30  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.id: android:id/button1
+13 Dec 2024 15:50:30  INFO logger - Ok_BtnForalertMessage Button is clicked with element: AppiumBy.id: android:id/button1
+13 Dec 2024 15:50:42  INFO logger -  Fetching more DeleteButton with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+13 Dec 2024 15:50:43  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 15:50:43  INFO logger - AddNewAddress Button is clicked with element: By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 15:50:45  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[1]
+13 Dec 2024 15:50:46  INFO logger - Home is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[1]
+13 Dec 2024 15:50:48  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[2]
+13 Dec 2024 15:50:49  INFO logger - 9743393307 is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[2]
+13 Dec 2024 15:50:51  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[3]
+13 Dec 2024 15:50:52  INFO logger - 4857 Oak St is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[3]
+13 Dec 2024 15:50:54  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:50:54  INFO logger - CountryDropDown Button is clicked with element: By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:50:56  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: United States
+13 Dec 2024 15:50:56  INFO logger - United States is selected as Country with element: AppiumBy.accessibilityId: United States
+13 Dec 2024 15:50:59  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[2]
+13 Dec 2024 15:50:59  INFO logger - stateDropDown Button is clicked with element: By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[2]
+13 Dec 2024 15:51:06  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Alaska
+13 Dec 2024 15:51:07  INFO logger - Alaska is selected as state with element: AppiumBy.accessibilityId: Alaska
+13 Dec 2024 15:51:09  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[5]
+13 Dec 2024 15:51:10  INFO logger - Juneau is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[5]
+13 Dec 2024 15:51:12  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[6]
+13 Dec 2024 15:51:13  INFO logger - 99927 is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[6]
+13 Dec 2024 15:51:14  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Save
+13 Dec 2024 15:51:14  INFO logger - Save Button is Clicked with element: AppiumBy.accessibilityId: Save
+13 Dec 2024 15:51:18  INFO logger - Appium server stopped
+13 Dec 2024 15:51:18  INFO logger - Automation name got found in properties file!
+13 Dec 2024 15:51:31  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 15:51:31  INFO logger - Appium Server is running.
+13 Dec 2024 15:52:04  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:52:08  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:52:09  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 15:52:12  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 15:52:13  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 15:52:17  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+13 Dec 2024 15:52:18  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 15:52:19  INFO logger - Appium server stopped
+13 Dec 2024 15:52:19  INFO logger - Automation name got found in properties file!
+13 Dec 2024 15:52:45  INFO logger - An unexpected error occurred while starting the Appium server: [The local appium server has not been started, Reason: Timed out waiting for [http://192.168.29.23:4723/status] to be available after 20005 ms, Consider increasing the server startup timeout value (currently 20000ms), Node.js executable path: C:\Program Files\nodejs\node.exe, Arguments: [C:\Users\mukeshn\AppData\Roaming\npm\node_modules\appium\build\lib\main.js, --port, 4723, --address, 192.168.29.23, --log-level, info, --local-timezone, --session-override]]
+13 Dec 2024 15:52:45  INFO logger - Appium Server did not start as expected.
+13 Dec 2024 16:07:25  INFO logger - Automation name got found in properties file!
+13 Dec 2024 16:07:40  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 16:07:41  INFO logger - Appium Server is running.
+13 Dec 2024 16:08:15  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 16:08:19  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 16:08:20  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 16:08:23  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 16:08:23  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 16:08:27  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+13 Dec 2024 16:08:28  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 16:08:30  INFO logger - Fetching  DeleteButtons with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+13 Dec 2024 16:08:32  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.id: android:id/button2
+13 Dec 2024 16:08:32  INFO logger - YesBtnForalertMessage Button is clicked with element: AppiumBy.id: android:id/button2
+13 Dec 2024 16:08:34  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.id: android:id/button1
+13 Dec 2024 16:08:34  INFO logger - Ok_BtnForalertMessage Button is clicked with element: AppiumBy.id: android:id/button1
+13 Dec 2024 16:08:46  INFO logger -  Fetching more DeleteButton with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+13 Dec 2024 16:08:47  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 16:08:47  INFO logger - AddNewAddress Button is clicked with element: By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 16:08:49  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[1]
+13 Dec 2024 16:08:50  INFO logger - Home is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[1]
+13 Dec 2024 16:08:53  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[2]
+13 Dec 2024 16:08:54  INFO logger - 9796759661 is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[2]
+13 Dec 2024 16:08:56  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[3]
+13 Dec 2024 16:08:57  INFO logger - 4004 Pine St is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[3]
+13 Dec 2024 16:08:59  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 16:08:59  INFO logger - CountryDropDown Button is clicked with element: By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 16:09:01  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: United States
+13 Dec 2024 16:09:01  INFO logger - United States is selected as Country with element: AppiumBy.accessibilityId: United States
+13 Dec 2024 16:09:03  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[2]
+13 Dec 2024 16:09:04  INFO logger - stateDropDown Button is clicked with element: By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[2]
+13 Dec 2024 16:09:11  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Alaska
+13 Dec 2024 16:09:12  INFO logger - Alaska is selected as state with element: AppiumBy.accessibilityId: Alaska
+13 Dec 2024 16:09:14  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[5]
+13 Dec 2024 16:09:15  INFO logger - Kodiak is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[5]
+13 Dec 2024 16:09:17  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[6]
+13 Dec 2024 16:09:18  INFO logger - 99537 is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[6]
+13 Dec 2024 16:09:19  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Save
+13 Dec 2024 16:09:19  INFO logger - Save Button is Clicked with element: AppiumBy.accessibilityId: Save
+13 Dec 2024 16:09:24  INFO logger - Appium server stopped
+13 Dec 2024 16:09:24  INFO logger - Automation name got found in properties file!
+13 Dec 2024 16:09:40  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 16:09:40  INFO logger - Appium Server is running.
+13 Dec 2024 16:10:13  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 16:10:18  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 16:10:18  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 16:10:22  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 16:10:22  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 16:10:26  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+13 Dec 2024 16:10:26  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 16:10:27  INFO logger - Appium server stopped
+13 Dec 2024 16:10:27  INFO logger - Automation name got found in properties file!
+13 Dec 2024 16:10:43  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 16:10:43  INFO logger - Appium Server is running.
+13 Dec 2024 16:11:15  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 16:11:19  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 16:11:19  INFO logger - cartBtn is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[2]
+13 Dec 2024 16:11:19  INFO logger - ProductsTab is Displayed with element :AppiumBy.accessibilityId: Products
+13 Dec 2024 16:11:20  INFO logger - Getting the text value of Products Tab with element: By.xpath: //android.view.View[@content-desc='Products']/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView
+13 Dec 2024 16:11:20  INFO logger - Products matched with expected text :Products
+13 Dec 2024 16:11:20  INFO logger - Eventstab is Displayed with element :AppiumBy.accessibilityId: Events
+13 Dec 2024 16:11:20  INFO logger - Getting the text value of Events Tab with element: By.xpath: //android.view.View[@content-desc='Events']/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView
+13 Dec 2024 16:11:21  INFO logger - Events matched with expected text :Events
+13 Dec 2024 16:11:21  INFO logger - SearchTab is Displayed with element :AppiumBy.accessibilityId: Search for Products | Events
+13 Dec 2024 16:11:22  INFO logger - Appium server stopped
+13 Dec 2024 16:20:57  INFO logger - Automation name got found in properties file!
+13 Dec 2024 16:21:14  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 16:21:14  INFO logger - Appium Server is running.
+13 Dec 2024 16:21:49  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 16:21:53  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 16:21:54  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 16:21:57  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 16:21:58  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 16:22:02  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+13 Dec 2024 16:22:02  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 16:22:05  INFO logger - Fetching  DeleteButtons with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+13 Dec 2024 16:22:07  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.id: android:id/button2
+13 Dec 2024 16:22:07  INFO logger - YesBtnForalertMessage Button is clicked with element: AppiumBy.id: android:id/button2
+13 Dec 2024 16:22:09  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.id: android:id/button1
+13 Dec 2024 16:22:09  INFO logger - Ok_BtnForalertMessage Button is clicked with element: AppiumBy.id: android:id/button1
+13 Dec 2024 16:22:22  INFO logger -  Fetching more DeleteButton with element: By.xpath: //android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView
+13 Dec 2024 16:22:22  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 16:22:22  INFO logger - AddNewAddress Button is clicked with element: By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 16:22:24  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[1]
+13 Dec 2024 16:22:26  INFO logger - Home is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[1]
+13 Dec 2024 16:22:28  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[2]
+13 Dec 2024 16:22:29  INFO logger - 9609193657 is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[2]
+13 Dec 2024 16:22:31  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[3]
+13 Dec 2024 16:22:32  INFO logger - 7431 Oak St is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[3]
+13 Dec 2024 16:22:35  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 16:22:35  INFO logger - CountryDropDown Button is clicked with element: By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 16:22:37  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: United States
+13 Dec 2024 16:22:37  INFO logger - United States is selected as Country with element: AppiumBy.accessibilityId: United States
+13 Dec 2024 16:22:39  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[2]
+13 Dec 2024 16:22:40  INFO logger - stateDropDown Button is clicked with element: By.xpath: (//android.widget.TextView[contains(@text,'State')]//following-sibling::android.view.ViewGroup)[2]
+13 Dec 2024 16:22:47  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Alaska
+13 Dec 2024 16:22:47  INFO logger - Alaska is selected as state with element: AppiumBy.accessibilityId: Alaska
+13 Dec 2024 16:22:49  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[5]
+13 Dec 2024 16:22:50  INFO logger - Kodiak is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[5]
+13 Dec 2024 16:22:52  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[6]
+13 Dec 2024 16:22:53  INFO logger - 99760 is entered with element: By.xpath: (//android.widget.TextView/following-sibling::android.widget.EditText)[6]
+13 Dec 2024 16:22:54  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: Save
+13 Dec 2024 16:22:54  INFO logger - Save Button is Clicked with element: AppiumBy.accessibilityId: Save
+13 Dec 2024 16:22:59  INFO logger - Appium server stopped
+13 Dec 2024 16:22:59  INFO logger - Automation name got found in properties file!
+13 Dec 2024 16:23:16  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 16:23:16  INFO logger - Appium Server is running.
+13 Dec 2024 16:23:55  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 16:24:00  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 16:24:00  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 16:24:03  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 16:24:04  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+13 Dec 2024 16:24:08  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+13 Dec 2024 16:24:08  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+13 Dec 2024 16:24:09  INFO logger - Appium server stopped
+13 Dec 2024 16:24:09  INFO logger - Automation name got found in properties file!
+13 Dec 2024 16:24:28  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 16:24:29  INFO logger - Appium Server is running.
+13 Dec 2024 16:25:14  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 16:25:18  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+13 Dec 2024 16:25:19  INFO logger - cartBtn is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[2]
+13 Dec 2024 16:25:19  INFO logger - ProductsTab is Displayed with element :AppiumBy.accessibilityId: Products
+13 Dec 2024 16:25:20  INFO logger - Getting the text value of Products Tab with element: By.xpath: //android.view.View[@content-desc='Products']/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView
+13 Dec 2024 16:25:20  INFO logger - Products matched with expected text :Products
+13 Dec 2024 16:25:20  INFO logger - Eventstab is Displayed with element :AppiumBy.accessibilityId: Events
+13 Dec 2024 16:25:21  INFO logger - Getting the text value of Events Tab with element: By.xpath: //android.view.View[@content-desc='Events']/android.view.ViewGroup/android.view.ViewGroup/android.widget.TextView
+13 Dec 2024 16:25:21  INFO logger - Events matched with expected text :Events
+13 Dec 2024 16:25:21  INFO logger - SearchTab is Displayed with element :AppiumBy.accessibilityId: Search for Products | Events
+13 Dec 2024 16:25:23  INFO logger - Appium server stopped
+13 Dec 2024 16:31:01  INFO logger - Automation name got found in properties file!
+13 Dec 2024 16:31:48  INFO logger - An unexpected error occurred while starting the Appium server: [The local appium server has not been started, Reason: Timed out waiting for [http://192.168.29.23:4723/status] to be available after 20018 ms, Consider increasing the server startup timeout value (currently 20000ms), Node.js executable path: C:\Program Files\nodejs\node.exe, Arguments: [C:\Users\mukeshn\AppData\Roaming\npm\node_modules\appium\build\lib\main.js, --port, 4723, --address, 192.168.29.23, --log-level, info, --local-timezone, --session-override]]
+13 Dec 2024 16:31:48  INFO logger - Appium Server did not start as expected.
+13 Dec 2024 16:33:55  INFO logger - Automation name got found in properties file!
+13 Dec 2024 16:34:27  INFO logger - An unexpected error occurred while starting the Appium server: [The local appium server has not been started, Reason: Timed out waiting for [http://192.168.29.23:4723/status] to be available after 20004 ms, Consider increasing the server startup timeout value (currently 20000ms), Node.js executable path: C:\Program Files\nodejs\node.exe, Arguments: [C:\Users\mukeshn\AppData\Roaming\npm\node_modules\appium\build\lib\main.js, --port, 4723, --address, 192.168.29.23, --log-level, info, --local-timezone, --session-override]]
+13 Dec 2024 16:34:27  INFO logger - Appium Server did not start as expected.
+13 Dec 2024 16:36:10  INFO logger - Automation name got found in properties file!
+13 Dec 2024 16:36:33  INFO logger - Appium Server started successfully on Windows.
+13 Dec 2024 16:36:33  INFO logger - Appium Server is running.
+13 Dec 2024 16:37:39  INFO logger - Appium server stopped
+17 Dec 2024 14:27:58  INFO logger - Automation name got found in properties file!
+17 Dec 2024 14:28:21  INFO logger - Appium Server started successfully on Windows.
+17 Dec 2024 14:28:21  INFO logger - Appium Server is running.
+17 Dec 2024 14:29:04  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 14:29:09  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 14:29:09  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 14:29:13  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+17 Dec 2024 14:29:13  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+17 Dec 2024 14:29:17  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+17 Dec 2024 14:29:31  INFO logger - Appium server stopped
+17 Dec 2024 14:31:19  INFO logger - Automation name got found in properties file!
+17 Dec 2024 14:31:35  INFO logger - Appium Server started successfully on Windows.
+17 Dec 2024 14:31:35  INFO logger - Appium Server is running.
+17 Dec 2024 14:32:11  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 14:32:15  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 14:32:16  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 14:32:19  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+17 Dec 2024 14:32:19  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+17 Dec 2024 14:32:23  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+17 Dec 2024 14:32:37  INFO logger - Appium server stopped
+17 Dec 2024 14:45:27  INFO logger - Automation name got found in properties file!
+17 Dec 2024 14:45:42  INFO logger - Appium Server started successfully on Windows.
+17 Dec 2024 14:45:42  INFO logger - Appium Server is running.
+17 Dec 2024 14:46:18  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 14:46:23  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 14:46:23  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 14:46:27  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+17 Dec 2024 14:46:27  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+17 Dec 2024 14:46:31  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+17 Dec 2024 14:46:43  INFO logger - Screen recording saved: D:\Eclipse\ProF\proFoamMobAutomationFramework/ScreenRecords/NavigateToMyaddressPageandvalidateButtons.mp4
+17 Dec 2024 14:46:43  INFO logger - Screen recording saved: D:\Eclipse\ProF\proFoamMobAutomationFramework/ScreenRecords/NavigateToMyaddressPageandvalidateButtons.mp4
+17 Dec 2024 14:46:45  INFO logger - Appium server stopped
+17 Dec 2024 14:50:27  INFO logger - Automation name got found in properties file!
+17 Dec 2024 14:50:43  INFO logger - Appium Server started successfully on Windows.
+17 Dec 2024 14:50:43  INFO logger - Appium Server is running.
+17 Dec 2024 14:51:23  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 14:51:28  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 14:51:29  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 14:51:33  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+17 Dec 2024 14:51:33  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+17 Dec 2024 14:51:37  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+17 Dec 2024 14:51:49  INFO logger - Screen recording saved: D:\Eclipse\ProF\proFoamMobAutomationFramework/ScreenRecords/NavigateToMyaddressPageandvalidateButtons.mp4
+17 Dec 2024 14:51:51  INFO logger - Appium server stopped
+17 Dec 2024 14:53:17  INFO logger - Automation name got found in properties file!
+17 Dec 2024 14:53:32  INFO logger - Appium Server started successfully on Windows.
+17 Dec 2024 14:53:32  INFO logger - Appium Server is running.
+17 Dec 2024 14:54:13  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 14:54:17  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 14:54:18  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 14:54:21  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+17 Dec 2024 14:54:22  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+17 Dec 2024 14:54:26  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+17 Dec 2024 14:54:37  INFO logger - Screen recording saved: D:\Eclipse\ProF\proFoamMobAutomationFramework/ScreenRecords/NavigateToMyaddressPageandvalidateButtons.mp4
+17 Dec 2024 14:54:39  INFO logger - Appium server stopped
+17 Dec 2024 15:01:53  INFO logger - Automation name got found in properties file!
+17 Dec 2024 15:02:12  INFO logger - Appium Server started successfully on Windows.
+17 Dec 2024 15:02:12  INFO logger - Appium Server is running.
+17 Dec 2024 15:02:57  INFO logger - Screen recording saved: D:\Eclipse\ProF\proFoamMobAutomationFramework/ScreenRecords/NavigateToMyaddressPageandvalidateButtons.mp4
+17 Dec 2024 15:02:58  INFO logger - Screen recording saved: D:\Eclipse\ProF\proFoamMobAutomationFramework/ScreenRecords/NavigateToMyaddressPageandvalidateButtons.mp4
+17 Dec 2024 15:03:01  INFO logger - Appium server stopped
+17 Dec 2024 15:13:10  INFO logger - Automation name got found in properties file!
+17 Dec 2024 15:13:28  INFO logger - Appium Server started successfully on Windows.
+17 Dec 2024 15:13:28  INFO logger - Appium Server is running.
+17 Dec 2024 15:14:11  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 15:14:16  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 15:14:16  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 15:14:20  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+17 Dec 2024 15:14:20  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+17 Dec 2024 15:14:25  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+17 Dec 2024 15:14:38  INFO logger - Screen recording saved: D:\Eclipse\ProF\proFoamMobAutomationFramework/ScreenRecords/NavigateToMyaddressPageandvalidateButtons.mp4
+17 Dec 2024 15:14:38  INFO logger - Screen recording saved: D:\Eclipse\ProF\proFoamMobAutomationFramework/ScreenRecords/NavigateToMyaddressPageandvalidateButtons.mp4
+17 Dec 2024 15:14:40  INFO logger - Appium server stopped
+17 Dec 2024 15:21:33  INFO logger - Automation name got found in properties file!
+17 Dec 2024 15:21:56  INFO logger - Appium Server started successfully on Windows.
+17 Dec 2024 15:21:56  INFO logger - Appium Server is running.
+17 Dec 2024 15:22:43  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 15:22:48  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 15:22:48  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 15:22:52  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+17 Dec 2024 15:22:53  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+17 Dec 2024 15:22:57  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+17 Dec 2024 15:23:09  INFO logger - Screen recording saved: D:\Eclipse\ProF\proFoamMobAutomationFramework/ScreenRecords/NavigateToMyaddressPageandvalidateButtons.mp4
+17 Dec 2024 15:23:14  INFO logger - Appium server stopped
+17 Dec 2024 15:25:56  INFO logger - Automation name got found in properties file!
+17 Dec 2024 15:26:20  INFO logger - An unexpected error occurred while starting the Appium server: [The local appium server has not been started, Reason: Timed out waiting for [http://192.168.29.23:4723/status] to be available after 20010 ms, Consider increasing the server startup timeout value (currently 20000ms), Node.js executable path: C:\Program Files\nodejs\node.exe, Arguments: [C:\Users\mukeshn\AppData\Roaming\npm\node_modules\appium\build\lib\main.js, --port, 4723, --address, 192.168.29.23, --log-level, info, --local-timezone, --session-override], Output: [35m[Appium][39m Welcome to Appium v2.0.1
+[35m[Appium][39m Non-default server args:
+[35m[Appium][39m { address: [32m'192.168.29.23'[39m,
+[35m[Appium][39m   localTimezone: [33mtrue[39m,
+[35m[Appium][39m   loglevel: [32m'info'[39m,
+[35m[Appium][39m   sessionOverride: [33mtrue[39m }
+[35m[Appium][39m Attempting to load driver uiautomator2...
+]
+17 Dec 2024 15:26:20  INFO logger - Appium Server did not start as expected.
+17 Dec 2024 15:26:48  INFO logger - Automation name got found in properties file!
+17 Dec 2024 15:27:13  INFO logger - An unexpected error occurred while starting the Appium server: [The local appium server has not been started, Reason: Timed out waiting for [http://192.168.29.23:4723/status] to be available after 20008 ms, Consider increasing the server startup timeout value (currently 20000ms), Node.js executable path: C:\Program Files\nodejs\node.exe, Arguments: [C:\Users\mukeshn\AppData\Roaming\npm\node_modules\appium\build\lib\main.js, --port, 4723, --address, 192.168.29.23, --log-level, info, --local-timezone, --session-override]]
+17 Dec 2024 15:27:13  INFO logger - Appium Server did not start as expected.
+17 Dec 2024 15:30:50  INFO logger - Automation name got found in properties file!
+17 Dec 2024 15:31:21  INFO logger - An unexpected error occurred while starting the Appium server: [The local appium server has not been started, Reason: Timed out waiting for [http://192.168.29.23:4723/status] to be available after 20014 ms, Consider increasing the server startup timeout value (currently 20000ms), Node.js executable path: C:\Program Files\nodejs\node.exe, Arguments: [C:\Users\mukeshn\AppData\Roaming\npm\node_modules\appium\build\lib\main.js, --port, 4723, --address, 192.168.29.23, --log-level, info, --local-timezone, --session-override]]
+17 Dec 2024 15:31:21  INFO logger - Appium Server did not start as expected.
+17 Dec 2024 15:34:05  INFO logger - Automation name got found in properties file!
+17 Dec 2024 15:34:30  INFO logger - An unexpected error occurred while starting the Appium server: [The local appium server has not been started, Reason: Timed out waiting for [http://192.168.29.23:4723/status] to be available after 20020 ms, Consider increasing the server startup timeout value (currently 20000ms), Node.js executable path: C:\Program Files\nodejs\node.exe, Arguments: [C:\Users\mukeshn\AppData\Roaming\npm\node_modules\appium\build\lib\main.js, --port, 4723, --address, 192.168.29.23, --log-level, info, --local-timezone, --session-override]]
+17 Dec 2024 15:34:30  INFO logger - Appium Server did not start as expected.
+17 Dec 2024 15:47:24  INFO logger - Automation name got found in properties file!
+17 Dec 2024 15:47:40  INFO logger - Appium Server started successfully on Windows.
+17 Dec 2024 15:47:40  INFO logger - Appium Server is running.
+17 Dec 2024 15:48:18  INFO logger - SideMenu is Displayed with element :By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 15:48:23  INFO logger - Wait for the Element to be displayed for Webelement : By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 15:48:23  INFO logger - SideMenu Button is clicked with element: By.xpath: (//android.view.ViewGroup[@content-desc='Search for Products | Events']/preceding-sibling::android.view.ViewGroup)[1]
+17 Dec 2024 15:48:27  INFO logger - Wait for the Element to be displayed for Webelement : AppiumBy.accessibilityId: My Addresses
+17 Dec 2024 15:48:27  INFO logger - My Addresses Button is clicked with element: AppiumBy.accessibilityId: My Addresses
+17 Dec 2024 15:48:31  INFO logger - AddNewAddressHeader is Displayed with element :By.xpath: (//android.widget.TextView)[1]
+17 Dec 2024 15:48:31  INFO logger - AddNewAddressBtn is Displayed with element :By.xpath: //android.view.ViewGroup[@content-desc="Add new address"]/android.widget.TextView
+17 Dec 2024 15:48:33  INFO logger - Screen recording saved: D:\Eclipse\ProF\proFoamMobAutomationFramework/ScreenRecords/NavigateToMyaddressPageandvalidateButtons.mp4
+17 Dec 2024 15:48:34  INFO logger - Appium server stopped

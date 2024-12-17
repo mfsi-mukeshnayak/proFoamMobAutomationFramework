@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import com.actions.GenericActions;
-import com.actions.MouseActions;
+import com.actions.TouchActions;
 import com.assertions.MobWebAssertion;
 import com.utills.BaseClass;
 import com.waits.Waits;
@@ -103,14 +103,14 @@ public class ProductDetailsPage extends BaseClass {
 		
 		Waits.waitForGivenTime(3);
 		Waits.waiForAnElement(BuyNowBtn, "Wait for search btn");
-		MouseActions.clickElement(BuyNowBtn, "Clicked on BuyNow button");
+		TouchActions.clickElement(BuyNowBtn, "Clicked on BuyNow button");
 		
 	}
 	public void ClickedOnViewCartButtonInProductDetailsPage() throws InterruptedException {
 		
 		Waits.waitForGivenTime(3);
 		Waits.waiForAnElement(viewCartBtInProdDetailsPgae, "Wait for search btn");
-		MouseActions.clickElement(viewCartBtInProdDetailsPgae, "Clicked on viewCartbtInProdDetailsPgae button");
+		TouchActions.clickElement(viewCartBtInProdDetailsPgae, "Clicked on viewCartbtInProdDetailsPgae button");
 		
 	}
 	
@@ -118,7 +118,7 @@ public class ProductDetailsPage extends BaseClass {
 		
 		Waits.waitForGivenTime(3);
 		Waits.waiForAnElement(wishListItemBtn, "Wait for search btn");
-		MouseActions.clickElement(wishListItemBtn, "Clicked on wishListItemBtn button");
+		TouchActions.clickElement(wishListItemBtn, "Clicked on wishListItemBtn button");
 		
 	}
 	

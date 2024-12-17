@@ -8,7 +8,7 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 
 import com.actions.GenericActions;
-import com.actions.MouseActions;
+import com.actions.TouchActions;
 import com.assertions.MobWebAssertion;
 import com.utills.BaseClass;
 import com.waits.Waits;
@@ -53,7 +53,7 @@ public class WishListPage extends BaseClass {
 	//Methods
 	
 	public void ClickOnWishlistCategoryInSidemenu() throws InterruptedException {
-		MouseActions.scrollSideMenuToElement("Wishlist");
+		TouchActions.scrollSideMenuToElement("Wishlist");
 		commonAct.selectCategoryInSideMenu("Wishlist");
 	}
 	
@@ -82,14 +82,14 @@ public class WishListPage extends BaseClass {
 	public void confirmDeletingAddress() throws InterruptedException {
 		
 		Waits.waitUntilElementIsVisible(YesBtnForalertMessage);
-		MouseActions.clickElement(YesBtnForalertMessage, "YesBtnForalertMessage Button is clicked");
+		TouchActions.clickElement(YesBtnForalertMessage, "YesBtnForalertMessage Button is clicked");
 		
 	} 
 	
 	public void AddressDeletedConfirmationToastmsg() throws InterruptedException {
 		
 		Waits.waitUntilElementIsVisible(Ok_BtnForalertMessage);
-		MouseActions.clickElement(Ok_BtnForalertMessage, "Ok_BtnForalertMessage Button is clicked");
+		TouchActions.clickElement(Ok_BtnForalertMessage, "Ok_BtnForalertMessage Button is clicked");
 	}
 	
 	public void ValidateDeletedAlertMessage() throws InterruptedException {
@@ -108,13 +108,13 @@ public class WishListPage extends BaseClass {
 	public void NavigatingMyWishList() throws InterruptedException {
 		
 		Waits.waitUntilElementIsVisible(myWishlist);
-		MouseActions.clickElement(myWishlist, "myWishlist Button is clicked");
+		TouchActions.clickElement(myWishlist, "myWishlist Button is clicked");
 		
 	} 
 	public void NavigatingSharedWishList() throws InterruptedException {
 		
 		Waits.waitUntilElementIsVisible(sharedWishlist);
-		MouseActions.clickElement(sharedWishlist, "sharedWishlist Button is clicked");
+		TouchActions.clickElement(sharedWishlist, "sharedWishlist Button is clicked");
 		
 	} 
 	
@@ -143,9 +143,9 @@ public class WishListPage extends BaseClass {
 	public void ClickedOnSelectButtonAndCheckedTheTextBoxofItem() throws InterruptedException {
 		String prod = searchPage.getItemName();
 		Waits.waitUntilElementIsVisible(selectBtnInWishlist);
-		MouseActions.clickElement(selectBtnInWishlist, "selectBtnInWishlist Button is clicked");
+		TouchActions.clickElement(selectBtnInWishlist, "selectBtnInWishlist Button is clicked");
 		Waits.waitForGivenTime(3);
-		MouseActions.clickElement(WishListedItemWishListBtnChekedBox(prod), "WishListedItemWishListBtnChekedBox(prod) Button is clicked");
+		TouchActions.clickElement(WishListedItemWishListBtnChekedBox(prod), "WishListedItemWishListBtnChekedBox(prod) Button is clicked");
 	}
 	
 	public void validatingSelectedIteToCartBtnAndCancelBtnIsDisplayed() throws InterruptedException {
@@ -158,7 +158,7 @@ public class WishListPage extends BaseClass {
 	public void ClickedOnSharedButtonInMyWishListPage() throws InterruptedException {
 		Waits.waitForGivenTime(3);
 		Waits.waitUntilElementIsVisible(SharedBtn);
-		MouseActions.clickElement(SharedBtn, "SharedBtn Button is clicked");
+		TouchActions.clickElement(SharedBtn, "SharedBtn Button is clicked");
 	}
 	
 	public void ClearAllWishlistedItemIfItExistsInMyWishListPage() {
@@ -188,7 +188,7 @@ public class WishListPage extends BaseClass {
 	public void ClickedOnViewItemsButtonInSharedWishListPage() throws InterruptedException {
 		Waits.waitForGivenTime(3);
 		Waits.waitUntilElementIsVisible(sharedWishlistedViewItemsBtn(1));
-		MouseActions.clickElement(sharedWishlistedViewItemsBtn(1), "ViewItemsBtn Button is clicked");
+		TouchActions.clickElement(sharedWishlistedViewItemsBtn(1), "ViewItemsBtn Button is clicked");
 	}
 	
 	public void ClearAllSharedWishlistedDetailsIfItExists() {

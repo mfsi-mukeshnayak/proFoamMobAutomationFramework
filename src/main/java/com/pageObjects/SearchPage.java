@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Wait;
 
 import com.actions.GenericActions;
 import com.actions.KeyBoardActions;
-import com.actions.MouseActions;
+import com.actions.TouchActions;
 import com.assertions.MobWebAssertion;
 import com.utills.BaseClass;
 import com.waits.Waits;
@@ -43,7 +43,7 @@ public class SearchPage extends BaseClass {
 	public void inputProductNameAndSearchTheItem(String productNmae) throws InterruptedException {
 		Waits.waitForGivenTime(5);
 		Waits.waiForAnElement(SearchTab, "Wait for search btn");
-		MouseActions.clickElement(SearchTab, "Clicked on search Button");
+		TouchActions.clickElement(SearchTab, "Clicked on search Button");
 		Waits.waitForGivenTime(3);
 		Waits.waiForAnElement(searchTextBox, "waiting for search button");
 		KeyBoardActions.enterText(searchTextBox, productNmae, productNmae+" is entered");
@@ -55,7 +55,7 @@ public class SearchPage extends BaseClass {
 		
 		Waits.waitForGivenTime(3);
 		Waits.waiForAnElement(productNameFromTheDDlist(productNmae), "Wait for search btn");
-		MouseActions.clickElement(productNameFromTheDDlist(productNmae), "Clicked on " + productNmae);
+		TouchActions.clickElement(productNameFromTheDDlist(productNmae), "Clicked on " + productNmae);
 		
 	}
 	
@@ -63,7 +63,7 @@ public class SearchPage extends BaseClass {
 		
 		Waits.waitForGivenTime(3);
 		Waits.waiForAnElement(Searchbtn, "Wait for search btn");
-		MouseActions.clickElement(Searchbtn, "Clicked on Searchbtn");
+		TouchActions.clickElement(Searchbtn, "Clicked on Searchbtn");
 		
 	}
 	
@@ -72,7 +72,7 @@ public class SearchPage extends BaseClass {
 		int productIndex =1;
 		Waits.waitForGivenTime(2);
 		//Waits.waiForAnElement(selectProductByIndex(productIndex), "Wait for search btn");
-		MouseActions.clickElement(selectProductByIndex(productIndex), "Clicked on Product");
+		TouchActions.clickElement(selectProductByIndex(productIndex), "Clicked on Product");
 		
 	}
 	

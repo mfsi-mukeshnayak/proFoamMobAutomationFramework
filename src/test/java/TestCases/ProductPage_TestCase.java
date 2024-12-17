@@ -13,11 +13,11 @@ public class ProductPage_TestCase extends BaseClass {
 	
 	@Test (groups = {"smoke","Regression","ProductPage_TestCase", "ValidateButtonsInProductpage"}, description = "Validating buttons present in ProductPage")
 	public void VeryFyingProductPageDisplayedFuncns() throws InterruptedException {
-		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
-		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
-		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
-		pageManager.getLoginPage().ValidateLoginTextBoxAndButtonInLoginPage();
-		pageManager.getLoginPage().LoginToProFoamApplication();
+//		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
+//		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
+//		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
+//		pageManager.getLoginPage().ValidateLoginTextBoxAndButtonInLoginPage();
+//		pageManager.getLoginPage().LoginToProFoamApplication();
 		pageManager.getProductPage().LandedOnProductPageAndAbleToSeeSideMenu();
 		pageManager.getProductPage().SideMenubarIsDisplayed();
 		pageManager.getProductPage().cartMenuIsDisplayed();

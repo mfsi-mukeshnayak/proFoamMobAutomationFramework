@@ -27,6 +27,7 @@ public class GenericActions extends BaseClass{
 	        // Attempt to find the element and fetch its text
 	        text = driver.findElement(locator).getText();
 	        logger.info(message + " with element: " + locator);
+	       
 	        ExtentReport.getTest().log(Status.INFO, message + " with element: " + locator);
 	    } catch (Exception e) {
 	       

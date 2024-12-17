@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 import com.actions.GenericActions;
 import com.actions.KeyBoardActions;
-import com.actions.MouseActions;
+import com.actions.TouchActions;
 import com.assertions.MobWebAssertion;
 import com.utills.BaseClass;
 import com.utills.GenericMethods;
@@ -44,7 +44,7 @@ public class ProfileSettingsPage extends BaseClass {
 	//Methods
 	
 	public void ClickOnProfileSettingsCategoryInSidemenu() throws InterruptedException {
-		MouseActions.scrollSideMenuToElement("Profile Settings");
+		TouchActions.scrollSideMenuToElement("Profile Settings");
 		commonAct.selectCategoryInSideMenu("Profile Settings");
 	}
 	
@@ -133,7 +133,7 @@ public class ProfileSettingsPage extends BaseClass {
 		
 		Waits.waitForGivenTime(1);
 		Waits.waiForAnElement(SaveBtn, "Wait for SaveBtn");
-		MouseActions.clickElement(SaveBtn, "Clicked on SaveBtn");
+		TouchActions.clickElement(SaveBtn, "Clicked on SaveBtn");
 		
 	}
 	

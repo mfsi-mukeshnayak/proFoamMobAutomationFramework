@@ -5,17 +5,14 @@
 		<listener class-name="com.listeners.TestListener"/>
 	</listeners>
   <test thread-count="5" name="Test">
+	  
     <classes>
-	 <!-- 	<class name="TestCases.LoginPage_TestCase"/>
-		<class name="TestCases.SS_MediaPageTestCases"/>
-		<class name="TestCases.SS_ProfilePageTestCases"/>
-		<class name="TestCases.SS_NotificationsPageTestCases"/>
-		<class name="TestCases.SS_SearchPeoplePageTestCases"/>
-		<class name="TestCases.SS_PlayListPageTestCases"/>  -->
-	    	 <class name="TestCases.MyAddresses_TestCases">
-		  <methods>
-  		  <include name="AddAnewAddressInMyAddressPage()"/> 
-  		 <!--  <include name="LandingOnLoginPageValidation()"/>   -->
+	 <!-- 	<class name="TestCases.MyAddresses_TestCases"/> -->
+	 	<!-- <class name="TestCases.ProductPage_TestCase"/>-->
+ 
+	   	 <class name="TestCases.MyAddresses_TestCases">
+				<methods>
+  		  <include name="NavigateToMyaddressPageandvalidateButtons()"/>    
 		  </methods>
 	  </class>
 	  	    	<!-- <class name="TestCases.OrderPage_TestCase">

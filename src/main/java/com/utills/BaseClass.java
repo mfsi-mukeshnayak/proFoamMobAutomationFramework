@@ -48,6 +48,8 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import java.io.FileOutputStream;
+import java.util.Base64;
 
 
 
@@ -68,7 +70,8 @@ public class BaseClass {
 	
 	
 //	protected static AppiumDriver driver;
-	protected static AndroidDriver driver;
+	public static AndroidDriver driver;
+	
 
 	InputStream inputStream = null;
 	InputStream stringsis = null;
@@ -420,9 +423,32 @@ public class BaseClass {
 		loginPage.LoginToProFoamApplication();
 		
 	}
+	
+	  // Start screen recording
+    public void startScreenRecording() {
+        driver.startRecordingScreen();
+    }
+    
+    public String stopScreenRecording(String testName) {
+        String videoPath = null;
+        try {
+            String media = driver.stopRecordingScreen();
+            byte[] decode = Base64.getDecoder().decode(media);
 
-	
-	
+            videoPath = System.getProperty("user.dir") + "/ScreenRecords/" + testName + ".mp4";
+            File videoFile = new File(videoPath);
+            videoFile.getParentFile().mkdirs();
+            
+            FileOutputStream stream = new FileOutputStream(videoFile);
+            stream.write(decode);
+            stream.close();
+
+            logger.info("Screen recording saved: " + videoPath);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return videoPath;
+    }
 
   
 

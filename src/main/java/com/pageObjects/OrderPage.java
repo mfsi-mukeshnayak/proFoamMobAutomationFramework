@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import com.actions.GenericActions;
 import com.actions.KeyBoardActions;
-import com.actions.MouseActions;
+import com.actions.TouchActions;
 import com.assertions.MobWebAssertion;
 import com.utills.BaseClass;
 import com.utills.GenericMethods;
@@ -67,14 +67,14 @@ public class OrderPage extends BaseClass {
 
 	        // If quantity is greater than 1, click minus button until it's 1
 	        while (currentQty > 1) {
-	        	MouseActions.clickElement(MinusBtnQtyInMyBag(itemName), "Clicked on MinusBtnQtyInMyBag(itemName) button");
+	        	TouchActions.clickElement(MinusBtnQtyInMyBag(itemName), "Clicked on MinusBtnQtyInMyBag(itemName) button");
 	            Waits.waitForGivenTime(3); // Short wait for UI update
 	            currentQty = Integer.parseInt(GenericActions.getElement(QtyInMyBag(itemName),"").getText());
 	        }
 
 	        // If quantity is less than 1, click plus button until it's 1
 	        while (currentQty < 1) {
-	            MouseActions.clickElement(PlusBtnQtyInMyBag(itemName), "Clicked on MinusBtnQtyInMyBag(itemName) button");
+	            TouchActions.clickElement(PlusBtnQtyInMyBag(itemName), "Clicked on MinusBtnQtyInMyBag(itemName) button");
 	            Waits.waitForGivenTime(3); // Short wait for UI update
 	            currentQty = Integer.parseInt(GenericActions.getElement(QtyInMyBag(itemName),"").getText());
 	        }
@@ -94,7 +94,7 @@ public class OrderPage extends BaseClass {
 		
 		Waits.waitForGivenTime(1);
 		Waits.waiForAnElement(proceedToBuyBtn, "Wait for proceedToBuyBtn");
-		MouseActions.clickElement(proceedToBuyBtn, "Clicked on proceedToBuyBtn");
+		TouchActions.clickElement(proceedToBuyBtn, "Clicked on proceedToBuyBtn");
 		
 	}
 	
@@ -102,7 +102,7 @@ public class OrderPage extends BaseClass {
 		
 		Waits.waitForGivenTime(1);
 		Waits.waiForAnElement(continueShoppingBtn, "Wait for continueShoppingBtn");
-		MouseActions.clickElement(continueShoppingBtn, "Clicked on continueShoppingBtn");
+		TouchActions.clickElement(continueShoppingBtn, "Clicked on continueShoppingBtn");
 		
 	}
 	
@@ -114,7 +114,7 @@ public class OrderPage extends BaseClass {
 	public void ClickedOnSelectAddressForTheOrder() throws InterruptedException {
 		Waits.waitForGivenTime(1);
 		Waits.waiForAnElement(SelectAddressForOrder, "Wait for SelectAddressForOrder");
-		MouseActions.clickElement(SelectAddressForOrder, "Clicked on SelectAddressForOrder");
+		TouchActions.clickElement(SelectAddressForOrder, "Clicked on SelectAddressForOrder");
 	}
 	
 	public void selectBillingAddressCheckBoxIfNotSelected(By checkBoxLocator) {
@@ -149,7 +149,7 @@ public class OrderPage extends BaseClass {
 	        // Wait until the AddButton is fully available
 	        Waits.waiForAnElement(AddButton, "Wait for AddButton to be clickable");
 	        // Perform the click action if AddButton is visible
-	        MouseActions.clickElement(AddButton, "Clicked on AddButton");
+	        TouchActions.clickElement(AddButton, "Clicked on AddButton");
 	        
 	        SelectAddressforOrderProcess();
 	    } else {
@@ -162,7 +162,7 @@ public class OrderPage extends BaseClass {
 		
 		Waits.waitForGivenTime(3);
 		Waits.waiForAnElement(SelectAddressForOrder, "Wait for SelectAddressForOrder");
-		MouseActions.clickElement(SelectAddressForOrder, "Clicked on SelectAddressForOrder");
+		TouchActions.clickElement(SelectAddressForOrder, "Clicked on SelectAddressForOrder");
 		
 	}
 	
@@ -170,14 +170,14 @@ public class OrderPage extends BaseClass {
 		
 		Waits.waitForGivenTime(3);
 		//Waits.waiForAnElement(PickUpLocationRadioButtn(address), "Wait for SelectAddressForOrder");
-		MouseActions.clickElement(PickUpLocationRadioButtn, "Clicked on PickUpLocationRadioButtn");
+		TouchActions.clickElement(PickUpLocationRadioButtn, "Clicked on PickUpLocationRadioButtn");
 		
 	}
 	public void clickedOnChekoutButton() throws InterruptedException {
 		
 		Waits.waitForGivenTime(10);
 		Waits.waiForAnElement(CheckOutBtn, "Wait for CheckOutBtn");
-		MouseActions.clickElement(CheckOutBtn, "Clicked on CheckOutBtn");
+		TouchActions.clickElement(CheckOutBtn, "Clicked on CheckOutBtn");
 		
 	}
 
@@ -223,7 +223,7 @@ public class OrderPage extends BaseClass {
 		
 		Waits.waitForGivenTime(1);
 		Waits.waiForAnElement(PayBtn, "Wait for PayBtn");
-		MouseActions.clickElement(PayBtn, "Clicked on PayBtn");
+		TouchActions.clickElement(PayBtn, "Clicked on PayBtn");
 		
 	}
 	
@@ -231,7 +231,7 @@ public class OrderPage extends BaseClass {
 		
 		Waits.waitForGivenTime(12);
 		Waits.waiForAnElement(OrderConfirmedOKBtn, "Wait for OrderConfirmedOKBtn");
-		MouseActions.clickElement(OrderConfirmedOKBtn, "Clicked on OrderConfirmedOKBtn");
+		TouchActions.clickElement(OrderConfirmedOKBtn, "Clicked on OrderConfirmedOKBtn");
 		
 	}
 	
@@ -272,7 +272,7 @@ public class OrderPage extends BaseClass {
 		String discountedPriceString=null ;
 		String expectedSubTotal = searchPage.getItemListPrice();
 		String expectedTotalPaid = searchPage.getItemOurPrice();
-		MouseActions.ScrollUsingUiAutomator("Total paid: ");
+		TouchActions.ScrollUsingUiAutomator("Total paid: ");
 		String actualSubTotal = GenericActions.getElements(OrderPrices("Subtotal"), "Getting the text value").get(0).getText();
 		String actualtotalpaid = GenericActions.getElements(OrderPrices("Total paid"), "Getting the text value").get(0).getText();
 		String actualDiscount = GenericActions.getElements(OrderPrices("Total discount"), "Getting the text value").get(0).getText();
@@ -305,19 +305,19 @@ public void ClickedOnAvailableButton() throws InterruptedException {
 		
 		Waits.waitForGivenTime(3);
 		Waits.waitUntilElementIsVisible(AvailbleCoupnBtn);
-		MouseActions.clickElement(AvailbleCoupnBtn, "Clicked on AvailbleCoupnBtn");
+		TouchActions.clickElement(AvailbleCoupnBtn, "Clicked on AvailbleCoupnBtn");
 		
 	}
 	public void ClickedOnApplyCouponButton(String couponName) throws InterruptedException {
 		
 		Waits.waitForGivenTime(3);
 		Waits.waitUntilElementIsVisible(ApplyCouponBtn(couponName));
-		MouseActions.clickElement(ApplyCouponBtn(couponName), "Clicked on ApplyCouponBtn(couponName)");
+		TouchActions.clickElement(ApplyCouponBtn(couponName), "Clicked on ApplyCouponBtn(couponName)");
 		
 	}
 	
 	public void AppliedDiscountFoerTheOder(String couponName) throws InterruptedException {
-		MouseActions.scrollToElementUsingUIwithSwipe(AvailbleCoupnBtn);
+		TouchActions.scrollToElementUsingUIwithSwipe(AvailbleCoupnBtn);
 		ClickedOnAvailableButton();
 		ClickedOnApplyCouponButton(couponName);
 		Waits.waitForGivenTime(4);
@@ -328,7 +328,7 @@ public void ClickedOnAvailableButton() throws InterruptedException {
 		String expectedTotalPriceString=null;
 	//	String expectedSubTotal = searchPage.getItemListPrice();
 	//	String expectedTotalPaid = searchPage.getItemOurPrice();
-		MouseActions.ScrollUsingUiAutomator("Total paid: ");
+		TouchActions.ScrollUsingUiAutomator("Total paid: ");
 		String actualSubTotal = GenericActions.getElements(OrderPrices("Subtotal"), "Getting the text value").get(0).getText();
 		String actualtotalpaid = GenericActions.getElements(OrderPrices("Total paid"), "Getting the text value").get(0).getText();
 		String actualDiscount = GenericActions.getElements(OrderPrices("Total discount"), "Getting the text value").get(0).getText();
@@ -375,7 +375,7 @@ public void ClickedOnAvailableButton() throws InterruptedException {
 	    String expectedShippingString = null;
 
 	    // Scroll to the element with the total price
-	    MouseActions.scrollToElementUsingUIwithSwipe(OrderPrices("Total payable"));
+	    TouchActions.scrollToElementUsingUIwithSwipe(OrderPrices("Total payable"));
 
 	    // Fetch the actual prices displayed on the screen
 	    String actualSubTotal = GenericActions.getElements(OrderPrices("Subtotal"), "Getting the text value").get(0).getText();
@@ -488,7 +488,7 @@ public void ClickedOnAvailableButton() throws InterruptedException {
 	public void ClickedOnApplyWhileApplyingDiscountCouponinOrderNowPage() throws InterruptedException {
 
 		if (Waits.isElementVisible(ApplyCouponInOrderNowPage, "waiting for CouponConfirmedAlertdMsg")) {
-	    MouseActions.clickElement(ApplyCouponInOrderNowPage, "Clicked on ApplyCouponInOrderNowPage");
+	    TouchActions.clickElement(ApplyCouponInOrderNowPage, "Clicked on ApplyCouponInOrderNowPage");
 		}
 	    String expectedMsg1 = "This coupon doesn't have permission to apply with other discount.\r\n"
 	            + "Applying this coupon code will remove discounts from the items in cart.";
@@ -500,7 +500,7 @@ public void ClickedOnAvailableButton() throws InterruptedException {
 	            String actualMessage = GenericActions.getElements(CouponConfirmedAlertdMsg, "Getting the text value").get(0).getText();
 	            if (actualMessage.contains(expectedMsg1) ||actualMessage.contains(expectedMsg2)) {
 	               
-	                MouseActions.clickElement(CouponConfirmedOKApplyBtn, "Clicked on CouponConfirmedOKApplyBtn");
+	                TouchActions.clickElement(CouponConfirmedOKApplyBtn, "Clicked on CouponConfirmedOKApplyBtn");
 	                logger.info("Coupon applied successfully with confirmation message: " + actualMessage);
 	            } else {
 	                logger.info("Unexpected message: " + actualMessage);
