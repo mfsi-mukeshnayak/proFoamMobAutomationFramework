@@ -424,11 +424,22 @@ public class BaseClass {
 		
 	}
 	
-	  // Start screen recording
+	  /**
+     * Method to start screen recording using the Appium driver.
+     *
+     * This method initiates screen recording, allowing the recording
+     * of the test execution for debugging and reporting purposes.
+     */
     public void startScreenRecording() {
         driver.startRecordingScreen();
     }
     
+    /**
+     * Stops the screen recording and saves the video in the specified location.
+     *
+     * @param testName Name of the test case to generate a unique video file name.
+     * @return The path of the saved video file.
+     */
     public String stopScreenRecording(String testName) {
         String videoPath = null;
         try {
@@ -452,16 +463,4 @@ public class BaseClass {
 
   
 
-	//			public Logger log() {
-	//				return LogManager.getLogger(Thread.currentThread().getStackTrace()[2].getClassName());
-	//			}
-
-
-	//	/**
-	//	 * Returns the instance of the webdriver.
-	//	 * @return webdriver instance
-	//	 */
-	//	public WebDriver getDriver() {
-	//		return wdriver;
-	//	}
 }

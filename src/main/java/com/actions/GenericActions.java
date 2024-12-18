@@ -163,7 +163,7 @@ public class GenericActions extends BaseClass{
 	                    + attributeValue + " for element: " + ele);
 	    } catch (Exception e) {
 	        // Log the exception details to the logger and ExtentReports
-	        logger.info("Failed to fetch attribute '" + attribute + "' for element: " + ele);
+	        logger.error("Failed to fetch attribute '" + attribute + "' for element: " + ele, e);
 	        ExtentReport.getTest().log(Status.FAIL, 
 	            "Failed to fetch attribute '" + attribute + "' for element: " + ele + ". Exception: " + e.getMessage());
 	    }
