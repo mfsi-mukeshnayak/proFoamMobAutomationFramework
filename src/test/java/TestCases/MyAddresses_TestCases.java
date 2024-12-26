@@ -9,7 +9,7 @@ import com.utills.PageObjectManager;
 public class MyAddresses_TestCases extends BaseClass {
 	PageObjectManager pageManager = new PageObjectManager();
 	
-	@Test (groups = {"smoke" , "NavigateToMyaddressPageandvalidateButtons"}, description = "Validating different buttons in MyAddress in sideMenu")
+	@Test (groups = { "Regression", "NavigateToMyaddressPageandvalidateButtons"}, description = "Validating different buttons in MyAddress in sideMenu")
 	public void NavigateToMyaddressPageandvalidateButtons() throws InterruptedException {
 		System.out.println("Application is launching");
 		
@@ -26,7 +26,7 @@ public class MyAddresses_TestCases extends BaseClass {
 	
 	}
 	
-	@Test (groups = {"smoke" ,"Regression", "AddAnewAddressInMyAddressPage"}, description = "Adding a newaddress in MyAddress in sideMenu")
+	@Test (groups = {"smoke","Regression", "AddAnewAddressInMyAddressPage"}, description = "Adding a newaddress in MyAddress in sideMenu")
 	public void AddAnewAddressInMyAddressPage() throws InterruptedException {
 		System.out.println("Application is launching");
 		

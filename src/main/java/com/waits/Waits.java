@@ -19,6 +19,8 @@ import com.utills.BaseClass;
 
 
 public class Waits extends BaseClass {
+	
+	public static final int timeOut = 40;
 	//WebDriverWait wait;
 	
 	/**
@@ -152,6 +154,47 @@ public class Waits extends BaseClass {
 	        logger.info("Element not visible: " + locator + ". Error: " + e.getMessage());
 	        return false;
 	    }
+	}
+	
+	/**
+	 * method to wait for an element to be visible
+	 *
+	 * @param targetElement element to be visible
+	 * @return true if element is visible else throws TimeoutException
+	 */
+	public static boolean waitForVisibility(By targetElement) {
+		try {
+			wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(targetElement));
+			logger.info("Webelement : " +targetElement + " - is Displayed");
+			ExtentReport.getTest().log(Status.INFO,"Webelement : " +targetElement + " - is Displayed" );
+			return true;
+		} catch (TimeoutException e) {
+			System.out.println("Element is not visible: " + targetElement);
+			throw e;
+
+		}
+	}
+
+	/**
+	 * method to wait for an element until it is invisible
+	 *
+	 * @param targetElement element to be invisible
+	 * @return true if element gets invisible else throws TimeoutException
+	 */
+	public boolean waitForInvisibility(By targetElement) {
+		try {
+			wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(targetElement));
+			logger.info("Webelement : " +targetElement + " - is Displayed");
+			ExtentReport.getTest().log(Status.INFO,"Webelement : " +targetElement + " - is Displayed" );
+			return true;
+		} catch (TimeoutException e) {
+			System.out.println("Element is still visible: " + targetElement);
+			System.out.println(e.getMessage());
+			throw e;
+
+		}
 	}
 
 	

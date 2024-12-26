@@ -70,9 +70,9 @@ public class BaseClass {
 	
 	
 //	protected static AppiumDriver driver;
-	public static AndroidDriver driver;
+//	public static AndroidDriver driver;
 	
-
+	public static AndroidDriver driver;
 	InputStream inputStream = null;
 	InputStream stringsis = null;
 	Properties props = new Properties();
@@ -220,12 +220,17 @@ public class BaseClass {
 	}
 	
 	
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void setup() throws IOException, InterruptedException {
-		
-	    initAndroidDriverAndApp();  
-	    LoginToApplication(); 
+	    try {
+	        initAndroidDriverAndApp();
+	        LoginToApplication();
+	    } catch (Exception e) {
+	        logger.error("Failed to initialize driver: " + e.getMessage(),e);
+	        throw e; 
+	    }
 	}
+
 	
 //	//public void setUp() throws InterruptedException, IOException {
 //	        initAndroidDriverAndApp();
@@ -329,94 +334,10 @@ public class BaseClass {
     }
 
 
-	/**
-	 * method to wait for an element to be visible
-	 *
-	 * @param targetElement element to be visible
-	 * @return true if element is visible else throws TimeoutException
-	 */
-	public boolean waitForVisibility(By targetElement) {
-		try {
-			wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
-			wait.until(ExpectedConditions.visibilityOfElementLocated(targetElement));
-			logger.info("Webelement : " +targetElement + " - is Displayed");
-			ExtentReport.getTest().log(Status.INFO,"Webelement : " +targetElement + " - is Displayed" );
-			return true;
-		} catch (TimeoutException e) {
-			System.out.println("Element is not visible: " + targetElement);
-			throw e;
-
-		}
-	}
-
-	/**
-	 * method to wait for an element until it is invisible
-	 *
-	 * @param targetElement element to be invisible
-	 * @return true if element gets invisible else throws TimeoutException
-	 */
-	public boolean waitForInvisibility(By targetElement) {
-		try {
-			wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(targetElement));
-			logger.info("Webelement : " +targetElement + " - is Displayed");
-			ExtentReport.getTest().log(Status.INFO,"Webelement : " +targetElement + " - is Displayed" );
-			return true;
-		} catch (TimeoutException e) {
-			System.out.println("Element is still visible: " + targetElement);
-			System.out.println(e.getMessage());
-			throw e;
-
-		}
-	}
-
-	/**
-	 * method to find an element
-	 *
-	 * @param locator element to be found
-	 * @return WebElement if found else throws NoSuchElementException
-	 */
-	public WebElement findElement(By locator) {
-		try {
-			WebElement element = driver.findElement(locator);
-			logger.info("Webelement is : " +locator );
-			ExtentReport.getTest().log(Status.INFO,"Webelement is : " +locator  );
-			return element;
-		} catch (NoSuchElementException e) {
-
-			//       log().info("element not found" + locator);
-			throw e;
-		}
-	}
-
-	/**
-	 * method to find all the elements of specific locator
-	 *
-	 * @param locator element to be found
-	 * @return return the list of elements if found else throws NoSuchElementException
-	 */
-	public List<WebElement> findElements(By locator) {
-		try {
-			List<WebElement> element = driver.findElements(locator);
-			logger.info("Webelement is : " +locator );
-			ExtentReport.getTest().log(Status.INFO,"Webelement is : " +locator );
-			return element;
-		} catch (NoSuchElementException e) {
-
-			//       log().info("element not found" + locator);
-			throw e;
-		}
-	}
 
 
-	public void click(By element,String str) {
-		waitForVisibility(element);
-		driver.findElement(element).click();
-		logger.info(str+" is clicked");
-		ExtentReport.getTest().log(Status.INFO, str );
 
-	}
-//	//@BeforeMethod(dependsOnMethods = {"initAndroidDriverAndApp"})
+	//@BeforeMethod(dependsOnMethods = {"initAndroidDriverAndApp"})
 	public void LoginToApplication() throws InterruptedException {
 		loginPage.ClickOnSkipButtonInWelcomePage();
 		loginPage.ClickOnLoginButtonInLoginButton();
@@ -424,13 +345,33 @@ public class BaseClass {
 		
 	}
 	
-	  /**
+	/**
      * Method to start screen recording using the Appium driver.
      *
      * This method initiates screen recording, allowing the recording
      * of the test execution for debugging and reporting purposes.
+     * It also ensures all old `.mp4` files are deleted before starting.
      */
     public void startScreenRecording() {
+//        // Path to the directory where recordings are stored
+//        String screenRecordsDirPath = System.getProperty("user.dir") + "/ScreenRecords";
+//        File screenRecordsDir = new File(screenRecordsDirPath);
+//
+//        // Delete all existing .mp4 files
+//        if (screenRecordsDir.exists() && screenRecordsDir.isDirectory()) {
+//            File[] files = screenRecordsDir.listFiles((dir, name) -> name.endsWith(".mp4"));
+//            if (files != null) {
+//                for (File file : files) {
+//                    if (file.delete()) {
+//                        logger.info("Deleted old screen recording: " + file.getName());
+//                    } else {
+//                        logger.info("Failed to delete old screen recording: " + file.getName());
+//                    }
+//                }
+//            }
+//        }
+
+        // Start the screen recording
         driver.startRecordingScreen();
     }
     

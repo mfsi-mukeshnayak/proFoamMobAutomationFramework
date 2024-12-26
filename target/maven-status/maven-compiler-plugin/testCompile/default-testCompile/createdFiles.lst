@@ -1,4 +1,3 @@
-TestCases\LoginPage_TestCase.class
 TestCases\OrderPage_TestCase.class
 TestCases\ProductPage_TestCase.class
 TestCases\MyAddresses_TestCases.class

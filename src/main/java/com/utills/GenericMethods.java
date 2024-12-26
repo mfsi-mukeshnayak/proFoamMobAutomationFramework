@@ -21,6 +21,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.aventstack.extentreports.Status;
 import com.logger.Log;
 import com.reports.ExtentReport;
+import com.waits.Waits;
 
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
@@ -152,7 +153,7 @@ public class GenericMethods extends BaseClass {
 	 * method to enter text into text box
 	 */
 	public void enterText(By element, String text) {
-		waitForVisibility(element);
+		Waits.waitForVisibility(element);
 		WebElement mobileElement = driver.findElement(element);
 		mobileElement.clear();
 		mobileElement.sendKeys(text);
@@ -305,10 +306,10 @@ public class GenericMethods extends BaseClass {
 	 */
 	public boolean verifyElemnt(By ele) {
 		try {
-			waitForVisibility(ele);
+			Waits.waitForVisibility(ele);
 			logger.info("Webelement : " +ele + " - is Displayed");
 			ExtentReport.getTest().log(Status.INFO,"Webelement : " +ele + " - is Displayed" );
-			return findElement(ele).isDisplayed();
+			return driver.findElement(ele).isDisplayed();
 
 		}catch(org.openqa.selenium.NoSuchElementException | org.openqa.selenium.StaleElementReferenceException e) {
 			return false;

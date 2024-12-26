@@ -4,17 +4,23 @@
 	<listeners>
 		<listener class-name="com.listeners.TestListener"/>
 	</listeners>
-  <test thread-count="5" name="Test">
+  <test name="Test">
+	  
+	     <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
 	  
     <classes>
-	 <!-- 	<class name="TestCases.MyAddresses_TestCases"/> -->
+	  	<class name="TestCases.MyAddresses_TestCases"/> 
 	 	<!-- <class name="TestCases.ProductPage_TestCase"/>-->
  
-	   	 <class name="TestCases.MyAddresses_TestCases">
+	   	<!-- <class name="TestCases.MyAddresses_TestCases">
 				<methods>
   		  <include name="NavigateToMyaddressPageandvalidateButtons()"/>    
 		  </methods>
-	  </class>
+	  </class>-->
 	  	    	<!-- <class name="TestCases.OrderPage_TestCase">
 		  <methods>
   		  <include name="ValidationOfACompleteOrderofAnItem()"/>    

@@ -5,11 +5,15 @@
     <listener class-name="com.listeners.TestListener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
     <classes>
       <class name="TestCases.MyAddresses_TestCases">
         <methods>
-          <include name="stopAppiumServer"/>
-          <include name="NavigateToMyaddressPageandvalidateButtons"/>
+          <include name="AddAnewAddressInMyAddressPage"/>
           <include name="setup"/>
         </methods>
       </class> <!-- TestCases.MyAddresses_TestCases -->

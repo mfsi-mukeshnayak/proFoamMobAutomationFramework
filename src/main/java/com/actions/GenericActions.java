@@ -10,6 +10,7 @@ import org.openqa.selenium.NoSuchElementException;
 import com.aventstack.extentreports.Status;
 import com.reports.ExtentReport;
 import com.utills.BaseClass;
+import com.waits.Waits;
 
 
 
@@ -153,7 +154,7 @@ public class GenericActions extends BaseClass{
 	    String attributeValue = null; // Initialize as null
 	    try {
 	        // Wait for the element to be visible
-	        waitForVisibility(ele);
+	        Waits.waitForVisibility(ele);
 	        
 	        // Fetch the attribute value
 	        attributeValue = driver.findElement(ele).getAttribute(attribute);

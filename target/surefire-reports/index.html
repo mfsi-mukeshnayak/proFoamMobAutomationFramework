@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>D:\Eclipse\Profoam\ProFoamApp\ProFoamApp\testng.xml</span>
+                    <span>D:\Eclipse\ProF\proFoamMobAutomationFramework\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>2 groups</span>
+                    <span>3 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="TestCases.LoginPage_TestCase" class="method navigator-link" hash-for-method="LoginValidation">LoginValidation</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="TestCases.MyAddresses_TestCases" class="method navigator-link" hash-for-method="NavigateToMyaddressPageandvalidateButtons">NavigateToMyaddressPageandvalidateButtons</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -121,16 +121,16 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">TestCases.LoginPage_TestCase</span>
+              <span class="class-name">TestCases.MyAddresses_TestCases</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="LoginValidation">
-                  </a> <!-- LoginValidation -->
-                  <span class="method-name">LoginValidation</span>
+                  <a name="NavigateToMyaddressPageandvalidateButtons">
+                  </a> <!-- NavigateToMyaddressPageandvalidateButtons -->
+                  <span class="method-name">NavigateToMyaddressPageandvalidateButtons</span>
                   <em>
-(Validating to launch the app and display LoginBtn)                  </em>
+(Validating different buttons in MyAddress in sideMenu)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -138,23 +138,29 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Eclipse\Profoam\ProFoamApp\ProFoamApp\testng.xml</span>
+            <span class="header-content">D:\Eclipse\ProF\proFoamMobAutomationFramework\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;groups&gt;
+    &lt;run&gt;
+      &lt;include name=&quot;smoke&quot;/&gt;
+    &lt;/run&gt;
+  &lt;/groups&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.listeners.TestListener&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;smoke&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;TestCases.LoginPage_TestCase&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;LoginValidation()&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- TestCases.LoginPage_TestCase --&gt;
+      &lt;class name=&quot;TestCases.MyAddresses_TestCases&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -179,10 +185,18 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">ValidateLaunching_App</span>
+              <span class="test-group-name">NavigateToMyaddressPageandvalidateButtons</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">LoginValidation</span>
+                <span class="method-in-group-name">NavigateToMyaddressPageandvalidateButtons</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
+              <span class="test-group-name">Regression</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">NavigateToMyaddressPageandvalidateButtons</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -190,7 +204,7 @@
               <span class="test-group-name">smoke</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">LoginValidation</span>
+                <span class="method-in-group-name">NavigateToMyaddressPageandvalidateButtons</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -212,14 +226,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'LoginValidation')
-data.setCell(0, 2, 'TestCases.LoginPage_TestCase')
-data.setCell(0, 3, 23984);
+data.setCell(0, 1, 'NavigateToMyaddressPageandvalidateButtons')
+data.setCell(0, 2, 'TestCases.MyAddresses_TestCases')
+data.setCell(0, 3, 18606);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 23 seconds</span>
+              <span class="suite-total-time">Total running time: 18 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -238,9 +252,9 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">TestCases.LoginPage_TestCase</span>
+              <span class="ignored-class-name">TestCases.MyAddresses_TestCases</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">LandingOnLoginPageValidation</span>
+                <span class="ignored-method-name">AddAnewAddressInMyAddressPage</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -252,19 +266,15 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">TestCases.LoginPage_TestCase</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">TestCases.MyAddresses_TestCases</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">initAndroidDriverAndApp</span>
+                <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">LoginValidation</span>
-                <span class="method-start">35205 ms</span>
+                <span class="method-name">NavigateToMyaddressPageandvalidateButtons</span>
+                <span class="method-start">42299 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">stopAppiumServer</span>
-                <span class="method-start">59192 ms</span>
-              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

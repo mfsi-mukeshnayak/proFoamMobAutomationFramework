@@ -5,14 +5,18 @@
     <listener class-name="com.listeners.TestListener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)" verbose="0">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
     <classes>
-      <class name="TestCases.LoginPage_TestCase">
+      <class name="TestCases.MyAddresses_TestCases">
         <methods>
-          <include name="LoginValidation"/>
-          <include name="initAndroidDriverAndApp"/>
-          <include name="stopAppiumServer"/>
+          <include name="AddAnewAddressInMyAddressPage"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- TestCases.LoginPage_TestCase -->
+      </class> <!-- TestCases.MyAddresses_TestCases -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
