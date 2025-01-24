@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import com.actions.GenericActions;
 import com.actions.KeyBoardActions;
 import com.actions.TouchActions;
+import com.actions.TouchActions.SwipeDirection;
 import com.assertions.MobWebAssertion;
 import com.utills.BaseClass;
 import com.utills.GenericMethods;
@@ -317,7 +318,7 @@ public void ClickedOnAvailableButton() throws InterruptedException {
 	}
 	
 	public void AppliedDiscountFoerTheOder(String couponName) throws InterruptedException {
-		TouchActions.scrollToElementUsingUIwithSwipe(AvailbleCoupnBtn);
+		TouchActions.scrollToElementUsingUIwithSwipe(SwipeDirection.DOWN,AvailbleCoupnBtn);
 		ClickedOnAvailableButton();
 		ClickedOnApplyCouponButton(couponName);
 		Waits.waitForGivenTime(4);
@@ -375,7 +376,7 @@ public void ClickedOnAvailableButton() throws InterruptedException {
 	    String expectedShippingString = null;
 
 	    // Scroll to the element with the total price
-	    TouchActions.scrollToElementUsingUIwithSwipe(OrderPrices("Total payable"));
+	    TouchActions.scrollToElementUsingUIwithSwipe(SwipeDirection.DOWN,OrderPrices("Total payable"));
 
 	    // Fetch the actual prices displayed on the screen
 	    String actualSubTotal = GenericActions.getElements(OrderPrices("Subtotal"), "Getting the text value").get(0).getText();

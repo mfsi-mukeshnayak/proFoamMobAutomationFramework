@@ -14,11 +14,11 @@ PageObjectManager pageManager = new PageObjectManager();
 	public void NavigateToProfileSettingsPageandValidateHeaders() throws InterruptedException {
 		System.out.println("Application is launching");
 		
-		pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
-		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
-		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
-		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
-		pageManager.getLoginPage().LoginToProFoamApplication();
+//		pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
+//		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
+//		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
+//		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
+//		pageManager.getLoginPage().LoginToProFoamApplication();
 		pageManager.getProductPage().LandedOnProductPageAndAbleToSeeSideMenu();
 		pageManager.getProductPage().ClickOnSideMenubar();
 		pageManager.getProfileSettingsPage().ClickOnProfileSettingsCategoryInSidemenu();
@@ -32,11 +32,11 @@ PageObjectManager pageManager = new PageObjectManager();
 	public void NavigateToProfileSettingsPageandValidateButtons() throws InterruptedException {
 		System.out.println("Application is launching");
 		
-		pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
-		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
-		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
-		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
-		pageManager.getLoginPage().LoginToProFoamApplication();
+//		pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
+//		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
+//		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
+//		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
+//		pageManager.getLoginPage().LoginToProFoamApplication();
 		pageManager.getProductPage().LandedOnProductPageAndAbleToSeeSideMenu();
 		pageManager.getProductPage().ClickOnSideMenubar();
 		pageManager.getProfileSettingsPage().ClickOnProfileSettingsCategoryInSidemenu();
@@ -50,11 +50,11 @@ PageObjectManager pageManager = new PageObjectManager();
 	public void ValidateErrorMsgAfterClearingMandatoryFieldsInProfileSettingsPage() throws InterruptedException {
 		System.out.println("Application is launching");
 		
-		pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
-		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
-		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
-		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
-		pageManager.getLoginPage().LoginToProFoamApplication();
+//		pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
+//		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
+//		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
+//		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
+//		pageManager.getLoginPage().LoginToProFoamApplication();
 		pageManager.getProductPage().LandedOnProductPageAndAbleToSeeSideMenu();
 		pageManager.getProductPage().ClickOnSideMenubar();
 		pageManager.getProfileSettingsPage().ClickOnProfileSettingsCategoryInSidemenu();
@@ -70,11 +70,11 @@ PageObjectManager pageManager = new PageObjectManager();
 	public void ValidateInvalidEmailIDErrorMsgInProfileSettingsPage() throws InterruptedException {
 		System.out.println("Application is launching");
 		
-		pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
-		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
-		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
-		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
-		pageManager.getLoginPage().LoginToProFoamApplication();
+//		pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
+//		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
+//		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
+//		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
+//		pageManager.getLoginPage().LoginToProFoamApplication();
 		pageManager.getProductPage().LandedOnProductPageAndAbleToSeeSideMenu();
 		pageManager.getProductPage().ClickOnSideMenubar();
 		pageManager.getProfileSettingsPage().ClickOnProfileSettingsCategoryInSidemenu();

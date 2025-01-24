@@ -21,6 +21,7 @@ import com.waits.Waits;
 import io.appium.java_client.AppiumBy;
 
 public class MyAddressesPage extends BaseClass {
+	
 	private static String MobNumber;
 	public static String Address;
 	private static String City;

@@ -11,12 +11,12 @@
       </run>
     </groups>
     <classes>
-      <class name="TestCases.MyAddresses_TestCases">
+      <class name="TestCases.OrderPage_TestCase">
         <methods>
-          <include name="AddAnewAddressInMyAddressPage"/>
+          <include name="ValidationOfACompleteOrderofAnItem"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- TestCases.MyAddresses_TestCases -->
+      </class> <!-- TestCases.OrderPage_TestCase -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

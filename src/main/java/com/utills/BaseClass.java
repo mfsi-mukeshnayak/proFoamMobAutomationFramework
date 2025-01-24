@@ -28,6 +28,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -137,27 +138,48 @@ public class BaseClass {
 
 
 
+//	/** 
+//	 *  this method stops the appium  server.
+//	 * @param os your machine OS (windows/mac).
+//
+//	 */
+//	@AfterMethod
+//	public void stopAppiumServer() {
+//		if (appiumService != null) {
+//			tearDown();
+//			appiumService.stop();
+//
+//			logger.info("Appium server stopped");
+//			//			logger.error("Appium server stopped");
+//			//			logger.debug("Appium server stopped");
+//		} else {
+//			//Log.logError(getClass().getName(), getClass().getEnclosingMethod().getName(),"Appium server fail to stopped");
+//			logger.info("Appium server fail to stopped");
+//
+//		}
+//
+//	}
+	
 	/** 
 	 *  this method stops the appium  server.
 	 * @param os your machine OS (windows/mac).
 
 	 */
-	@AfterMethod
+	@AfterClass
 	public void stopAppiumServer() {
-		if (appiumService != null) {
+		
 			tearDown();
 			appiumService.stop();
 
 			logger.info("Appium server stopped");
 			//			logger.error("Appium server stopped");
 			//			logger.debug("Appium server stopped");
-		} else {
-			//Log.logError(getClass().getName(), getClass().getEnclosingMethod().getName(),"Appium server fail to stopped");
-			logger.info("Appium server fail to stopped");
-
-		}
+	
 
 	}
+
+	
+	
 
 	public void tearDown() {
 		if(driver != null){
@@ -332,9 +354,6 @@ public class BaseClass {
 
         return value;
     }
-
-
-
 
 
 	//@BeforeMethod(dependsOnMethods = {"initAndroidDriverAndApp"})

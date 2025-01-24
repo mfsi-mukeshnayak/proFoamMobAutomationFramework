@@ -59,7 +59,7 @@ public class TestListener implements ITestListener {
     public void onTestFailure(ITestResult result) {
 
 
-        base.stopScreenRecording(result.getName());
+    	String videoPath= base.stopScreenRecording(result.getName());
         if (result.getThrowable() != null) {
             StringWriter sw = new StringWriter();
             PrintWriter pw = new PrintWriter(sw);
@@ -101,7 +101,16 @@ public class TestListener implements ITestListener {
                     MediaEntityBuilder.createScreenCaptureFromBase64String(new String(encoded, StandardCharsets.US_ASCII)).build());
             ExtentReport.getTest().fail(result.getThrowable());
             
-
+            // Attach video to Extent Report if available
+            if (videoPath != null) {
+               // String relativeVideoPath = videoPath.replace(System.getProperty("user.dir"), ".");
+                String videoHtml = "<video width='400' controls>" +
+                        "<source src='" + videoPath + "' type='video/mp4'>" +
+                        "Your browser does not support the video tag." +
+                        "</video>";
+                ExtentReport.getTest().fail("Test Failed. See the recorded video below:").fail(videoHtml);
+            
+            }
             
         } catch (Exception e) {
             e.printStackTrace();

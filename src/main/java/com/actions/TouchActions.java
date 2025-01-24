@@ -50,6 +50,9 @@ import java.util.Arrays;
 
 public class TouchActions extends BaseClass{
 	
+	  public enum SwipeDirection {
+	        UP, DOWN
+	    }
 	
 	/**
 	 * Method to Click an Element
@@ -58,7 +61,7 @@ public class TouchActions extends BaseClass{
 	 */
 	public static void clickElement(By locator, String LogMsg) throws InterruptedException {
 	    try {
-	        Waits.waiForAnElement(locator, "Wait for the Element to be displayed");
+	        Waits.waiForAnElement(locator, "Waiting for the element to be displayed: " + locator);
 	        driver.findElement(locator).click();
 	        
 	        // Log success message
@@ -69,7 +72,6 @@ public class TouchActions extends BaseClass{
 	        logger.info("Failed to click element: " + locator + ". Exception: " + e.getMessage());
 	        ExtentReport.getTest().log(Status.FAIL, "Failed to click element: " + locator + ". Exception: " + e.getMessage());
 	        
-	        // Optionally, you can rethrow the exception if needed
 	        throw e;
 	    }
 	}
@@ -230,7 +232,7 @@ public class TouchActions extends BaseClass{
 	    
 	}
 	
-	public static void scrollToElementUsingUIwithSwipe(By locator) {
+	public static void scrollToElementUsingUIwithSwipe(SwipeDirection action,By locator) {
 	    WebElement element = null;
 	    int maxScrolls = 5; // You can adjust this number as needed
 	    int currentScrolls = 0;
@@ -242,9 +244,9 @@ public class TouchActions extends BaseClass{
 	                // Element is found and displayed, exit the loop
 	                break;
 	            }
-	        } catch (NoSuchElementException e) {
+	        } catch (Exception e) {
 	            // Element not found yet, perform swipe
-	            verticalSwipeAction();
+	        	verticalSwipeAction(action);
 	        }
 	        currentScrolls++;
 	    }
@@ -256,28 +258,62 @@ public class TouchActions extends BaseClass{
 	    }
 	}
 
-	public static void verticalSwipeAction() {
-	    // Define input source for the touch
-	    PointerInput finger = new PointerInput(Kind.TOUCH, "finger");
+//	public static void verticalSwipeAction() {
+//	    // Define input source for the touch
+//	    PointerInput finger = new PointerInput(Kind.TOUCH, "finger");
+//
+//	    // Define screen height dimensions for swipe
+//	    int screenHeight = driver.manage().window().getSize().getHeight();
+//	    int screenWidth = driver.manage().window().getSize().getWidth();
+//
+//	    int startX = screenWidth / 2; // Horizontal center of the screen
+//	    int startY = (int) (screenHeight * 0.8); // Starting point, lower part of the screen
+//	    int endY = (int) (screenHeight * 0.2);   // End point, upper part of the screen
+//
+//	    // Create a swipe action using W3C Actions
+//	    Sequence swipe = new Sequence(finger, 1)
+//	            .addAction(finger.createPointerMove(Duration.ZERO, Origin.viewport(), startX, startY))
+//	            .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
+//	            .addAction(finger.createPointerMove(Duration.ofMillis(1000), Origin.viewport(), startX, endY))
+//	            .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+//
+//	    // Perform the swipe action
+//	    driver.perform(Arrays.asList(swipe));
+//	}
 
-	    // Define screen height dimensions for swipe
+	
+	public static void verticalSwipeAction(SwipeDirection action) {
+	    // Define input source for the touch
+	    PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+
+	    // Define screen dimensions for swipe
 	    int screenHeight = driver.manage().window().getSize().getHeight();
 	    int screenWidth = driver.manage().window().getSize().getWidth();
 
 	    int startX = screenWidth / 2; // Horizontal center of the screen
-	    int startY = (int) (screenHeight * 0.8); // Starting point, lower part of the screen
-	    int endY = (int) (screenHeight * 0.2);   // End point, upper part of the screen
+	    int startY, endY;
+
+	    if (action == SwipeDirection.UP) {  // Swipe from top to bottom
+            startY = (int) (screenHeight * 0.2); // Starting point, upper part of the screen
+            endY = (int) (screenHeight * 0.8);   // End point, lower part of the screen
+        } else if (action == SwipeDirection.DOWN) {// Swipe from bottom to top
+            startY = (int) (screenHeight * 0.8); // Starting point, lower part of the screen
+            endY = (int) (screenHeight * 0.2);   // End point, upper part of the screen
+	    } else {
+	        throw new IllegalArgumentException("Invalid action specified. Use 'UP' for top-to-bottom or 'DOWN' for bottom-to-top.");
+	    }
 
 	    // Create a swipe action using W3C Actions
 	    Sequence swipe = new Sequence(finger, 1)
-	            .addAction(finger.createPointerMove(Duration.ZERO, Origin.viewport(), startX, startY))
+	            .addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), startX, startY))
 	            .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
-	            .addAction(finger.createPointerMove(Duration.ofMillis(1000), Origin.viewport(), startX, endY))
+	            .addAction(finger.createPointerMove(Duration.ofMillis(1000), PointerInput.Origin.viewport(), startX, endY))
 	            .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 
 	    // Perform the swipe action
 	    driver.perform(Arrays.asList(swipe));
 	}
+
 	
 	 public static void scrollFromBottomRight(int endYPercentage) {
 	        // Obtain screen dimensions

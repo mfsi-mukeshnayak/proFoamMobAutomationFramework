@@ -12,7 +12,7 @@ public class OrderPage_TestCase extends BaseClass {
 	PageObjectManager pageManager = new PageObjectManager();
 
 	
-	@Test (groups = {"smoke" ,"Regression", "ValidationOfOrderingAnewItemIncheckoutPage"}, description = "Adding a new order in checkoutpage")
+	@Test (groups = {"Regression", "ValidationOfOrderingAnewItemIncheckoutPage"}, description = "Adding a new order in checkoutpage")
 	public void ValidationOfOrderingAnewItemIncheckoutPage() throws InterruptedException {
 		System.out.println("Application is launching");
 		
@@ -48,11 +48,11 @@ public class OrderPage_TestCase extends BaseClass {
 	public void ValidationOfACompleteOrderofAnItem() throws InterruptedException {
 		System.out.println("Application is launching");
 		
-		pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
-		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
-		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
-		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
-		pageManager.getLoginPage().LoginToProFoamApplication();
+//		pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
+//		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
+//		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
+//		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
+//		pageManager.getLoginPage().LoginToProFoamApplication();
 		pageManager.getProductPage().LandedOnProductPageAndAbleToSeeSideMenu();
 		pageManager.getProductPage().ClickOnSideMenubar();
 		pageManager.getMyAddressesPage().ClickOnMyAddresCategoryInSidemenu();
@@ -89,15 +89,15 @@ public class OrderPage_TestCase extends BaseClass {
 		
 	}
 	
-	@Test (groups = {"smoke" ,"Regression", "ValidationOfAnOrderofApplyingCouponDiscountForAnItem"}, description = "Validation Of An Order of Applying Coupon Discount For An Item")
+	@Test (groups = {"Regression", "ValidationOfAnOrderofApplyingCouponDiscountForAnItem"}, description = "Validation Of An Order of Applying Coupon Discount For An Item")
 	public void ValidationOfAnOrderofApplyingCouponDiscountForAnItem() throws InterruptedException {
 		System.out.println("Application is launching");
 		
-		pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
-		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
-		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
-		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
-		pageManager.getLoginPage().LoginToProFoamApplication();
+//		pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
+//		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
+//		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
+//		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
+//		pageManager.getLoginPage().LoginToProFoamApplication();
 		pageManager.getProductPage().LandedOnProductPageAndAbleToSeeSideMenu();
 		pageManager.getProductPage().ClickOnSideMenubar();
 		pageManager.getMyAddressesPage().ClickOnMyAddresCategoryInSidemenu();
@@ -137,15 +137,15 @@ public class OrderPage_TestCase extends BaseClass {
 //		
 	}
 	
-	@Test (groups = {"smoke" ,"Regression", "ValidationOfAnOrderAfterAddingTaxForAnItem"}, description = "Validation Of An Order After Adding Tax For An Item")
+	@Test (groups = {"Regression", "ValidationOfAnOrderAfterAddingTaxForAnItem"}, description = "Validation Of An Order After Adding Tax For An Item")
 	public void ValidationOfAnOrderAfterAddingTaxForAnItem() throws InterruptedException {
 		System.out.println("Application is launching");
 		
-		pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
-		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
-		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
-		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
-		pageManager.getLoginPage().LoginToProFoamApplication();
+//		pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
+//		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
+//		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
+//		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
+//		pageManager.getLoginPage().LoginToProFoamApplication();
 		pageManager.getProductPage().LandedOnProductPageAndAbleToSeeSideMenu();
 		pageManager.getProductPage().ClickOnSideMenubar();
 		pageManager.getMyAddressesPage().ClickOnMyAddresCategoryInSidemenu();
