@@ -1,14 +1,27 @@
 
-*.log
+# Ignore Eclipse project files
 .classpath
 .project
 .settings/
-/target/
-/test-output/
-*.class
+.metadata/
+
+# Ignore logs and error files
+*.log
+hs_err_pid*.log
+replay_pid*.log
+
+# Ignore build directories
+target/
+test-output/
+
+# Ignore reports and temporary files
+Reports/
+LogFile/
+Screenshots/
+ScreenRecords/
+
+# Ignore resource or binary artifacts
+*.zip
 *.jar
-.env
-Extent.html
-LogFile.txt
-/Screenshots/
-/test-output/
+*.war
+*.class
