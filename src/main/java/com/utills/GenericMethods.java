@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.Random;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -18,6 +21,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.aventstack.extentreports.Status;
 import com.logger.Log;
 import com.reports.ExtentReport;
+import com.waits.Waits;
 
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
@@ -35,6 +39,14 @@ public class GenericMethods extends BaseClass {
 
 	public static Log logger = new Log();
 	WebDriverWait wait;
+		// Create a date object for the current USA date and time
+	public static String getCurrentTimeInUS() {
+        
+        Date currentDate = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd, yyyy-HH:mm a");
+        dateFormat.setTimeZone(TimeZone.getTimeZone("America/New_York"));
+        return dateFormat.format(currentDate);
+    }
 	
 	
 	 public static String generateExpiryDateOfCard() {
@@ -47,10 +59,8 @@ public class GenericMethods extends BaseClass {
 	        // Add the random number of years to the current date
 	        LocalDate expiryDate = currentDate.plusYears(randomYearsToAdd);
 
-	        // Define the desired format
 	        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/yy");
 
-	        // Return the formatted expiry date
 	        return expiryDate.format(formatter);
 	    }
 
@@ -59,10 +69,17 @@ public class GenericMethods extends BaseClass {
     private static final String[] CITIES_IN_ALASKA = {
         "Anchorage", "Fairbanks", "Juneau", "Sitka", "Ketchikan", "Kenai", "Kodiak", "Bethel", "Wasilla", "Palmer"
     };
+    // Array of some cities in Georgia
+    private static final String[] CITIES_IN_GEORGIA = {
+        "Atlanta", "Augusta", "Savannah", "Columbus", "Macon", "Athens", "Roswell", "Albany", "Johns Creek", "Warner Robins"
+    };
 
     // Alaska ZIP code range is 99501 - 99950
     private static final int ALASKA_ZIP_MIN = 99501;
     private static final int ALASKA_ZIP_MAX = 99950;
+    // Georgia zip code range
+    private static final int GEORGIA_ZIP_MIN = 30002; // Minimum zip code for Georgia
+    private static final int GEORGIA_ZIP_MAX = 39901; // Maximum zip code for Georgia
 
     // Method to generate a random 10-digit mobile number
     public static String generateRandomMobileNumber() {
@@ -83,17 +100,33 @@ public class GenericMethods extends BaseClass {
         return houseNumber + " " + streetName;
     }
 
-    // Method to get a random city in Alaska
-    public static String getRandomCityInAlaska() {
+ // Method to get a random city based on the state
+    public static String getRandomCity(String state) {
         Random random = new Random();
-        return CITIES_IN_ALASKA[random.nextInt(CITIES_IN_ALASKA.length)];
+
+        switch (state.toLowerCase()) {
+            case "alaska":
+                return CITIES_IN_ALASKA[random.nextInt(CITIES_IN_ALASKA.length)];
+            case "georgia":
+                return CITIES_IN_GEORGIA[random.nextInt(CITIES_IN_GEORGIA.length)];
+            default:
+                throw new IllegalArgumentException("Unsupported state: " + state);
+        }
     }
 
-    // Method to generate a random ZIP code in Alaska
-    public static String generateRandomAlaskaZipCode() {
+    public static String generateRandomZipCode(String state) {
         Random random = new Random();
-        int zipCode= random.nextInt(ALASKA_ZIP_MAX - ALASKA_ZIP_MIN + 1) + ALASKA_ZIP_MIN;
-        return String.valueOf(zipCode);
+
+        switch (state.toLowerCase()) {
+            case "alaska":
+                int alaskaZipCode = random.nextInt(ALASKA_ZIP_MAX - ALASKA_ZIP_MIN + 1) + ALASKA_ZIP_MIN;
+                return String.valueOf(alaskaZipCode);
+            case "georgia":
+                int georgiaZipCode = random.nextInt(GEORGIA_ZIP_MAX - GEORGIA_ZIP_MIN + 1) + GEORGIA_ZIP_MIN;
+                return String.valueOf(georgiaZipCode);
+            default:
+                throw new IllegalArgumentException("Unsupported state: " + state);
+        }
     }
     
     public static String generateRandomNumber(int digitCount) {
@@ -120,7 +153,7 @@ public class GenericMethods extends BaseClass {
 	 * method to enter text into text box
 	 */
 	public void enterText(By element, String text) {
-		waitForVisibility(element);
+		Waits.waitForVisibility(element);
 		WebElement mobileElement = driver.findElement(element);
 		mobileElement.clear();
 		mobileElement.sendKeys(text);
@@ -273,16 +306,29 @@ public class GenericMethods extends BaseClass {
 	 */
 	public boolean verifyElemnt(By ele) {
 		try {
-			waitForVisibility(ele);
+			Waits.waitForVisibility(ele);
 			logger.info("Webelement : " +ele + " - is Displayed");
 			ExtentReport.getTest().log(Status.INFO,"Webelement : " +ele + " - is Displayed" );
-			return findElement(ele).isDisplayed();
+			return driver.findElement(ele).isDisplayed();
 
 		}catch(org.openqa.selenium.NoSuchElementException | org.openqa.selenium.StaleElementReferenceException e) {
 			return false;
 
 		}
 	}
+	
+    public static String generateRandomLetters(int length) {
+        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        StringBuilder randomLetters = new StringBuilder(length);
+        Random random = new Random();
+
+        for (int i = 0; i < length; i++) {
+            int index = random.nextInt(alphabet.length());
+            randomLetters.append(alphabet.charAt(index));
+        }
+
+        return randomLetters.toString();
+    }
 
 
 

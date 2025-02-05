@@ -4,7 +4,7 @@ package com.pageObjects;
 import org.openqa.selenium.By;
 
 import com.actions.GenericActions;
-import com.actions.MouseActions;
+import com.actions.TouchActions;
 import com.assertions.MobWebAssertion;
 import com.utills.BaseClass;
 import com.utills.CustomMethods;
@@ -12,10 +12,12 @@ import com.utills.GenericMethods;
 import com.waits.Waits;
 
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.AndroidDriver;
 
 
 
 public class LoginPage extends BaseClass {
+	
 	
 	GenericMethods generic = new GenericMethods();
 	CustomMethods custom = new CustomMethods();
@@ -39,9 +41,9 @@ public class LoginPage extends BaseClass {
 	}
 	
 	public void ClickOnSkipButtonInWelcomePage() throws InterruptedException {
-		Waits.waitUntilElementIsVisible(SkipButton);
-		MouseActions.clickElement(SkipButton, "Skip Button is clicked");
-		
+		//Waits.waitUntilElementIsVisible(SkipButton);
+		//MouseActions.clickElement(SkipButton, "Skip Button is clicked");
+		driver.findElement(SkipButton).click();
 	}
 	public void ValidateLogin_ButtonInLoginPage() {
 		
@@ -50,8 +52,10 @@ public class LoginPage extends BaseClass {
 	}
 	
 	public void ClickOnLoginButtonInLoginButton() throws InterruptedException {
-		Waits.waitUntilElementIsVisible(LoginBtn);
-		MouseActions.clickElement(LoginBtn, "Login Button is clicked");
+		//Waits.waitUntilElementIsVisible(LoginBtn);
+		//MouseActions.clickElement(LoginBtn, "Login Button is clicked");
+		Waits.waitForGivenTime(2);
+		driver.findElement(LoginBtn).click();
 		
 	}
 	
@@ -62,11 +66,14 @@ public class LoginPage extends BaseClass {
 		MobWebAssertion.elementDisplayed(LoginBtn, "LoginBtn is Displayed");
 		
 	}
-	
 	public void LoginToProFoamApplication() throws InterruptedException {
-		
-		Waits.waitUntilElementIsVisible(EmailIdTextBox);
-		custom.LoginToProFoamApplication(EmailIdTextBox , PasswordTextBox);
-		MouseActions.clickElement(LoginBtn, "Login Button is clicked");
+	   //Waits.waitUntilElementIsVisible(EmailIdTextBox);
+		Waits.waitForGivenTime(2);
+	    custom.LoginToProFoamApplication(EmailIdTextBox, PasswordTextBox);
+	   // MouseActions.clickElement(LoginBtn, "Login Button is clicked");
+	    driver.findElement(LoginBtn).click();
 	}
+	
+	
+
 }

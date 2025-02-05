@@ -7,7 +7,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 
 import com.actions.KeyBoardActions;
-import com.actions.MouseActions;
+import com.actions.TouchActions;
 import com.aventstack.extentreports.Status;
 import com.pageObjects.ProductPage;
 import com.reports.ExtentReport;
@@ -24,8 +24,11 @@ public class CustomMethods extends BaseClass {
 	 */
 	public void LoginToProFoamApplication(By emailIdElement , By passwordElement) throws InterruptedException {
 		
-		KeyBoardActions.enterText(emailIdElement, getPropertyValue("emailId") , "EmailId is entered");
-		KeyBoardActions.enterText(passwordElement, getPropertyValue("password"), "Password is entered");
+		//KeyBoardActions.enterText(emailIdElement, getPropertyValue("emailId") , "EmailId is entered");
+		//KeyBoardActions.enterText(passwordElement, getPropertyValue("password"), "Password is entered");
+		driver.findElement(emailIdElement).sendKeys(getPropertyValue("emailId"));
+		driver.findElement(passwordElement).sendKeys(getPropertyValue("password"));
+		
 		
 	}
 	

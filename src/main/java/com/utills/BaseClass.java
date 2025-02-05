@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.DateFormat;
@@ -27,6 +28,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -36,6 +38,7 @@ import org.testng.annotations.BeforeTest;
 //import com.actions.ChromeDriver;
 import com.aventstack.extentreports.Status;
 import com.logger.Log;
+import com.pageObjects.LoginPage;
 import com.reports.ExtentReport;
 
 import io.appium.java_client.AppiumDriver;
@@ -46,6 +49,9 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import java.io.FileOutputStream;
+import java.util.Base64;
+
 
 
 /**
@@ -61,20 +67,23 @@ public class BaseClass {
 	public AppiumDriverLocalService appiumService;
 	public static AppiumServiceBuilder builder;
 	public static WebDriver wdriver;
+	public static LoginPage loginPage = new LoginPage();
 	
 	
 //	protected static AppiumDriver driver;
-	protected static AndroidDriver driver;
-
+//	public static AndroidDriver driver;
+	
+	public static AndroidDriver driver;
 	InputStream inputStream = null;
 	InputStream stringsis = null;
 	Properties props = new Properties();
+	private ExtentReport test;
 	// common timeout for all tests can be set here
 	public static WebDriverWait wait;
 	public final int timeOut = 40;
 
 	
-	String ProFoamRelease =System.getProperty("user.dir")+ File.separator + "Resources"+ File.separator +"App"+ File.separator +"ProFoamApp-release.apk";
+	String ProFoamRelease =System.getProperty("user.dir")+ File.separator + "resources"+ File.separator +"App"+ File.separator +"ProFoamApp-release.apk";
 	//	static Logger logger = LogManager.getLogger(BaseClass.class.getName());
 	//	String packageName = driver.getCurrentPackage();
 	public static Log logger = new Log();
@@ -88,68 +97,89 @@ public class BaseClass {
 	}
 	
 
-	/** 
-	 *  this method starts the appium  server depending on your OS.
+	/**
+	 * This method starts the Appium server depending on your OS.
 	 * @param os your machine OS (windows/mac)
 	 **/
+	public void startAppiumServer(String os) {
+	    try {
+	        if (os.contains("windows")) {
+	            builder = new AppiumServiceBuilder();
+	            // Set the Appium server's capabilities
+	            builder.withIPAddress("192.168.29.23");
+	            builder.usingPort(4723);
+	            builder.withArgument(GeneralServerFlag.SESSION_OVERRIDE);
+	            builder.withArgument(GeneralServerFlag.LOG_LEVEL, "info");
+	            builder.withArgument(GeneralServerFlag.LOCAL_TIMEZONE);
 
-	public void startAppiumServer(String os) throws MalformedURLException {
+	            // Start the Appium server
+	            appiumService = AppiumDriverLocalService.buildService(builder);
+	            appiumService.start();
+	            logger.info("Appium Server started successfully on Windows.");
+	        } else if (os.contains("mac")) {
+	            builder = new AppiumServiceBuilder()
+	                    .usingAnyFreePort()
+	                    .withArgument(GeneralServerFlag.SESSION_OVERRIDE)
+	                    .withArgument(GeneralServerFlag.LOG_LEVEL, "error");
+	            logger.info("Appium Server configuration is under development for macOS.");
+	        } else {
+	            logger.info(os + " is not supported yet.");
+	        }
+	    } catch (Exception e) {
+	        logger.info("An unexpected error occurred while starting the Appium server: " + e.getMessage());
+	    } finally {
+	        if (appiumService != null && appiumService.isRunning()) {
+	            logger.info("Appium Server is running.");
+	        } else {
+	            logger.info("Appium Server did not start as expected.");
+	        }
+	    }
+	}	
 
 
-		if (os.contains("windows")){
-			builder = new AppiumServiceBuilder();
-			// Set the Appium server's capabilities
 
-			builder.withIPAddress("192.168.29.23");
-			builder.usingPort(4723);
-			builder.withArgument(GeneralServerFlag.SESSION_OVERRIDE);
-			builder.withArgument(GeneralServerFlag.LOG_LEVEL, "info");
-
-			// Start the Appium server
-			appiumService = AppiumDriverLocalService.buildService(builder);
-			appiumService.start();
-			logger.info("Server started Successfully");
-
-
-		}else if (os.contains("mac")){
-			builder = new AppiumServiceBuilder()
-					.usingAnyFreePort()
-					.withArgument(GeneralServerFlag.SESSION_OVERRIDE)
-					.withArgument(GeneralServerFlag.LOG_LEVEL, "error");
-			//logger.info("Need to write standard code for "+os );
-
-		}
-		else{
-					logger.info(os + "is not supported yet");
-		}
-
-		logger.info("Appium Server started");
-	}
+//	/** 
+//	 *  this method stops the appium  server.
+//	 * @param os your machine OS (windows/mac).
+//
+//	 */
+//	@AfterMethod
+//	public void stopAppiumServer() {
+//		if (appiumService != null) {
+//			tearDown();
+//			appiumService.stop();
+//
+//			logger.info("Appium server stopped");
+//			//			logger.error("Appium server stopped");
+//			//			logger.debug("Appium server stopped");
+//		} else {
+//			//Log.logError(getClass().getName(), getClass().getEnclosingMethod().getName(),"Appium server fail to stopped");
+//			logger.info("Appium server fail to stopped");
+//
+//		}
+//
+//	}
 	
-
-
-
 	/** 
 	 *  this method stops the appium  server.
 	 * @param os your machine OS (windows/mac).
 
 	 */
-	@AfterMethod
+	@AfterClass
 	public void stopAppiumServer() {
-		if (appiumService != null) {
+		
 			tearDown();
 			appiumService.stop();
 
 			logger.info("Appium server stopped");
 			//			logger.error("Appium server stopped");
 			//			logger.debug("Appium server stopped");
-		} else {
-			//Log.logError(getClass().getName(), getClass().getEnclosingMethod().getName(),"Appium server fail to stopped");
-			logger.info("Appium server fail to stopped");
-
-		}
+	
 
 	}
+
+	
+	
 
 	public void tearDown() {
 		if(driver != null){
@@ -161,17 +191,24 @@ public class BaseClass {
 	 *  this method creates the android driver
 	 *  @param buildPath - path to pick the location of the app 
 	 *  @throws IOException 
+	 * @throws InterruptedException 
 	 */
-	@BeforeMethod
+	
 	public void initAndroidDriverAndApp() throws IOException {
-
+	
+		try {
 		//props = new Properties();
 		String propFileName = "config.properties";
 
 		inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
 		props.load(inputStream);
 		//		  setProps(props);
-		
+		String automationName = props.getProperty("androidAutomationName");
+		if (automationName == null) {
+		    
+		} else {
+			logger.info("Automation name got found in properties file!");
+		}
 		startAppiumServer("windows");
 		File app = new File(ProFoamRelease);
 		DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -182,13 +219,45 @@ public class BaseClass {
 		capabilities.setCapability("automationName", props.getProperty("androidAutomationName"));
 		capabilities.setCapability("appPackage", props.getProperty("profoamAppPackage"));
 		capabilities.setCapability("appActivity", props.getProperty("proFoamAppActivity"));
+		capabilities.setCapability("newCommandTimeout", 3000); 
 		URL url = new URL(props.getProperty("appiumURL"));
 		driver = new AndroidDriver(url, capabilities);
+
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //		logger.info("Driver initiated");
-//		ExtentReport.getTest().log(Status.INFO,"Driver initiated" );
-		
+//		ExtentReport.getTest().log(Status.INFO,"Driver initiated" );}
+		} catch (IOException e) {
+	        logger.info("IOException occurred while loading properties or initializing the driver: " + e.getMessage());
+		}finally {
+	        try {
+	            if (inputStream != null) {
+	                inputStream.close();
+	            }
+	        } catch (IOException e) {
+	            logger.info("Failed to close the property file input stream: " + e.getMessage());
+	        }
+	      }
+		//LoginToProFoamApplication();
+
 	}
+	
+	
+	@BeforeMethod(alwaysRun = true)
+	public void setup() throws IOException, InterruptedException {
+	    try {
+	        initAndroidDriverAndApp();
+	        LoginToApplication();
+	    } catch (Exception e) {
+	        logger.error("Failed to initialize driver: " + e.getMessage(),e);
+	        throw e; 
+	    }
+	}
+
+	
+//	//public void setUp() throws InterruptedException, IOException {
+//	        initAndroidDriverAndApp();
+//	       // LoginToProFoamApplication();
+//	    }
 
 	
 	/** 
@@ -226,7 +295,7 @@ public class BaseClass {
 		wdriver.close();
 	}
 
-	public void launchApp() throws IOException {
+	public void launchApp() throws IOException, InterruptedException {
 
 		startAppiumServer("windows");
 		initAndroidDriverAndApp();
@@ -287,107 +356,71 @@ public class BaseClass {
     }
 
 
-	/**
-	 * method to wait for an element to be visible
-	 *
-	 * @param targetElement element to be visible
-	 * @return true if element is visible else throws TimeoutException
-	 */
-	public boolean waitForVisibility(By targetElement) {
-		try {
-			wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
-			wait.until(ExpectedConditions.visibilityOfElementLocated(targetElement));
-			logger.info("Webelement : " +targetElement + " - is Displayed");
-			ExtentReport.getTest().log(Status.INFO,"Webelement : " +targetElement + " - is Displayed" );
-			return true;
-		} catch (TimeoutException e) {
-			System.out.println("Element is not visible: " + targetElement);
-			throw e;
-
-		}
-	}
-
-	/**
-	 * method to wait for an element until it is invisible
-	 *
-	 * @param targetElement element to be invisible
-	 * @return true if element gets invisible else throws TimeoutException
-	 */
-	public boolean waitForInvisibility(By targetElement) {
-		try {
-			wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(targetElement));
-			logger.info("Webelement : " +targetElement + " - is Displayed");
-			ExtentReport.getTest().log(Status.INFO,"Webelement : " +targetElement + " - is Displayed" );
-			return true;
-		} catch (TimeoutException e) {
-			System.out.println("Element is still visible: " + targetElement);
-			System.out.println(e.getMessage());
-			throw e;
-
-		}
-	}
-
-	/**
-	 * method to find an element
-	 *
-	 * @param locator element to be found
-	 * @return WebElement if found else throws NoSuchElementException
-	 */
-	public WebElement findElement(By locator) {
-		try {
-			WebElement element = driver.findElement(locator);
-			logger.info("Webelement is : " +locator );
-			ExtentReport.getTest().log(Status.INFO,"Webelement is : " +locator  );
-			return element;
-		} catch (NoSuchElementException e) {
-
-			//       log().info("element not found" + locator);
-			throw e;
-		}
-	}
-
-	/**
-	 * method to find all the elements of specific locator
-	 *
-	 * @param locator element to be found
-	 * @return return the list of elements if found else throws NoSuchElementException
-	 */
-	public List<WebElement> findElements(By locator) {
-		try {
-			List<WebElement> element = driver.findElements(locator);
-			logger.info("Webelement is : " +locator );
-			ExtentReport.getTest().log(Status.INFO,"Webelement is : " +locator );
-			return element;
-		} catch (NoSuchElementException e) {
-
-			//       log().info("element not found" + locator);
-			throw e;
-		}
-	}
-
-
-	public void click(By element,String str) {
-		waitForVisibility(element);
-		driver.findElement(element).click();
-		logger.info(str+" is clicked");
-		ExtentReport.getTest().log(Status.INFO, str );
-
+	//@BeforeMethod(dependsOnMethods = {"initAndroidDriverAndApp"})
+	public void LoginToApplication() throws InterruptedException {
+		loginPage.ClickOnSkipButtonInWelcomePage();
+		loginPage.ClickOnLoginButtonInLoginButton();
+		loginPage.LoginToProFoamApplication();
+		
 	}
 	
+	/**
+     * Method to start screen recording using the Appium driver.
+     *
+     * This method initiates screen recording, allowing the recording
+     * of the test execution for debugging and reporting purposes.
+     * It also ensures all old `.mp4` files are deleted before starting.
+     */
+    public void startScreenRecording() {
+//        // Path to the directory where recordings are stored
+//        String screenRecordsDirPath = System.getProperty("user.dir") + "/ScreenRecords";
+//        File screenRecordsDir = new File(screenRecordsDirPath);
+//
+//        // Delete all existing .mp4 files
+//        if (screenRecordsDir.exists() && screenRecordsDir.isDirectory()) {
+//            File[] files = screenRecordsDir.listFiles((dir, name) -> name.endsWith(".mp4"));
+//            if (files != null) {
+//                for (File file : files) {
+//                    if (file.delete()) {
+//                        logger.info("Deleted old screen recording: " + file.getName());
+//                    } else {
+//                        logger.info("Failed to delete old screen recording: " + file.getName());
+//                    }
+//                }
+//            }
+//        }
+
+        // Start the screen recording
+        driver.startRecordingScreen();
+    }
+    
+    /**
+     * Stops the screen recording and saves the video in the specified location.
+     *
+     * @param testName Name of the test case to generate a unique video file name.
+     * @return The path of the saved video file.
+     */
+    public String stopScreenRecording(String testName) {
+        String videoPath = null;
+        try {
+            String media = driver.stopRecordingScreen();
+            byte[] decode = Base64.getDecoder().decode(media);
+
+            videoPath = System.getProperty("user.dir") + "/ScreenRecords/" + testName + ".mp4";
+            File videoFile = new File(videoPath);
+            videoFile.getParentFile().mkdirs();
+            
+            FileOutputStream stream = new FileOutputStream(videoFile);
+            stream.write(decode);
+            stream.close();
+
+            logger.info("Screen recording saved: " + videoPath);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return videoPath;
+    }
 
   
 
-	//			public Logger log() {
-	//				return LogManager.getLogger(Thread.currentThread().getStackTrace()[2].getClassName());
-	//			}
-
-
-	//	/**
-	//	 * Returns the instance of the webdriver.
-	//	 * @return webdriver instance
-	//	 */
-	//	public WebDriver getDriver() {
-	//		return wdriver;
-	//	}
 }

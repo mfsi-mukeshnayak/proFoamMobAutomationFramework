@@ -13,14 +13,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.actions.JavascriptActions;
 import com.aventstack.extentreports.Status;
 import com.reports.ExtentReport;
 import com.utills.BaseClass;
 
 
 public class Waits extends BaseClass {
+	
+	public static final int timeOut = 40;
 	//WebDriverWait wait;
 	
 	/**
@@ -96,27 +96,27 @@ public class Waits extends BaseClass {
 
 	}
 
-	public static void waitAndClick(WebDriver driver, By locator, int timeUnit) {
-		new Throwable().getStackTrace()[0].getMethodName();
-		int flag = 0;
-		try {
-			do {
-				try {
-
-					Waits.waitUntilElementIsVisible(locator);
-					Waits.waitForGivenTime(timeUnit);
-					JavascriptActions.clickUsingJS(locator , "clicked locator");
-					flag++;
-
-				} catch (Exception e) {
-					System.out.println(e.getLocalizedMessage());
-				}
-			} while (driver.findElement(locator).isDisplayed() && flag < 2);
-		} catch (Exception e) {
-
-		}
-
-	}
+//	public static void waitAndClick(WebDriver driver, By locator, int timeUnit) {
+//		new Throwable().getStackTrace()[0].getMethodName();
+//		int flag = 0;
+//		try {
+//			do {
+//				try {
+//
+//					Waits.waitUntilElementIsVisible(locator);
+//					Waits.waitForGivenTime(timeUnit);
+//					JavascriptActions.clickUsingJS(locator , "clicked locator");
+//					flag++;
+//
+//				} catch (Exception e) {
+//					System.out.println(e.getLocalizedMessage());
+//				}
+//			} while (driver.findElement(locator).isDisplayed() && flag < 2);
+//		} catch (Exception e) {
+//
+//		}
+//
+//	}
 	
 	public static boolean WaitTillElementisClickable(By elementLocator, int timeoutInSeconds) {
         try {
@@ -130,14 +130,73 @@ public class Waits extends BaseClass {
         }
 	}
 	
-	public static boolean isElementVisible(By element, String message) {
+//	public static boolean isElementVisible(By element, String message) {
+//	    try {
+//	        return driver.findElement(element).isDisplayed();
+//	    } catch (NoSuchElementException e) {
+//	        System.out.println(message + ": Element not found.");
+//	        return false;
+//	        }
+//	    }
+	
+	public static boolean isElementVisible(By locator ,String message) {
 	    try {
-	        return driver.findElement(element).isDisplayed();
-	    } catch (NoSuchElementException e) {
-	        System.out.println(message + ": Element not found.");
+	        // Wait for the element to be present in the DOM and visible
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));  // Adjust the timeout as needed
+	        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	        
+	        // If the element is found and visible, return true
+	        return driver.findElement(locator).isDisplayed();
+	        //logger.info("Waiting for Element to be Clickable :" +locator );
+	        
+	    } catch (TimeoutException | NoSuchElementException e) {
+	        // Log that the element was not found or is not visible and return false
+	        logger.info("Element not visible: " + locator + ". Error: " + e.getMessage());
 	        return false;
-	        }
 	    }
+	}
+	
+	/**
+	 * method to wait for an element to be visible
+	 *
+	 * @param targetElement element to be visible
+	 * @return true if element is visible else throws TimeoutException
+	 */
+	public static boolean waitForVisibility(By targetElement) {
+		try {
+			wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(targetElement));
+			logger.info("Webelement : " +targetElement + " - is Displayed");
+			ExtentReport.getTest().log(Status.INFO,"Webelement : " +targetElement + " - is Displayed" );
+			return true;
+		} catch (TimeoutException e) {
+			System.out.println("Element is not visible: " + targetElement);
+			throw e;
+
+		}
+	}
+
+	/**
+	 * method to wait for an element until it is invisible
+	 *
+	 * @param targetElement element to be invisible
+	 * @return true if element gets invisible else throws TimeoutException
+	 */
+	public boolean waitForInvisibility(By targetElement) {
+		try {
+			wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(targetElement));
+			logger.info("Webelement : " +targetElement + " - is Displayed");
+			ExtentReport.getTest().log(Status.INFO,"Webelement : " +targetElement + " - is Displayed" );
+			return true;
+		} catch (TimeoutException e) {
+			System.out.println("Element is still visible: " + targetElement);
+			System.out.println(e.getMessage());
+			throw e;
+
+		}
+	}
+
 	
 	
 }

@@ -3,7 +3,7 @@ package com.pageObjects;
 import org.openqa.selenium.By;
 
 import com.actions.GenericActions;
-import com.actions.MouseActions;
+import com.actions.TouchActions;
 import com.assertions.MobWebAssertion;
 import com.aventstack.extentreports.Status;
 import com.reports.ExtentReport;
@@ -87,7 +87,7 @@ public class ProductPage extends BaseClass {
 	public void ClickOnSideMenubar() throws InterruptedException {
 		Waits.waitForGivenTime(4);
 		Waits.waitUntilElementIsVisible(SideMenu);
-		MouseActions.clickElement(SideMenu, "SideMenu Button is clicked");
+		TouchActions.clickElement(SideMenu, "SideMenu Button is clicked");
 		
 	}
 	

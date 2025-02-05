@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Wait;
 
 import com.actions.GenericActions;
 import com.actions.KeyBoardActions;
-import com.actions.MouseActions;
+import com.actions.TouchActions;
 import com.assertions.MobWebAssertion;
 import com.utills.BaseClass;
 import com.waits.Waits;
@@ -33,18 +33,20 @@ public class SearchPage extends BaseClass {
 	private static final By SearchTab = AppiumBy.accessibilityId("Search for Products | Events");
 	private static final By productNameInSearchdPage(int index) { return AppiumBy.xpath("(((//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup)[1]/android.view.ViewGroup)[" + index + "]//android.widget.TextView)[1]");}
 	private static final By priductOurPriceInSearchdPage(int index) { return AppiumBy.xpath("(((//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup)[1]/android.view.ViewGroup)[" + index + "]//android.widget.TextView)[2]");}
-	private static final By priductListPriceInSearchdPage(int index) { return AppiumBy.xpath("(((//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup)[1]/android.view.ViewGroup)[" + index + "]//android.widget.TextView)[3]");}
-	private static final By searchBox = AppiumBy.xpath("//android.widget.EditText[starts-with(@text,'Search for Products')]");
+	private static final By priductPriceInSearchdPage = AppiumBy.xpath("(((//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup)[1]/android.view.ViewGroup)[1]//android.widget.TextView)[2]");
+	private static final By searchBox = AppiumBy.xpath("//android.widget.TextView[starts-with(@text,'Search for Products')]");
+	private static final By searchTextBox = AppiumBy.xpath("//android.widget.EditText[starts-with(@text,'Search for Products')]");
 	
 	
 	//Methods
 	
 	public void inputProductNameAndSearchTheItem(String productNmae) throws InterruptedException {
-		
+		Waits.waitForGivenTime(5);
 		Waits.waiForAnElement(SearchTab, "Wait for search btn");
-		MouseActions.clickElement(SearchTab, "Clicked on search Button");
-		Waits.waiForAnElement(searchBox, "clicked on search button");
-		KeyBoardActions.enterText(searchBox, productNmae, productNmae+" is entered");
+		TouchActions.clickElement(SearchTab, "Clicked on search Button");
+		Waits.waitForGivenTime(3);
+		Waits.waiForAnElement(searchTextBox, "waiting for search button");
+		KeyBoardActions.enterText(searchTextBox, productNmae, productNmae+" is entered");
 		
 		
 	}
@@ -53,7 +55,7 @@ public class SearchPage extends BaseClass {
 		
 		Waits.waitForGivenTime(3);
 		Waits.waiForAnElement(productNameFromTheDDlist(productNmae), "Wait for search btn");
-		MouseActions.clickElement(productNameFromTheDDlist(productNmae), "Clicked on " + productNmae);
+		TouchActions.clickElement(productNameFromTheDDlist(productNmae), "Clicked on " + productNmae);
 		
 	}
 	
@@ -61,16 +63,16 @@ public class SearchPage extends BaseClass {
 		
 		Waits.waitForGivenTime(3);
 		Waits.waiForAnElement(Searchbtn, "Wait for search btn");
-		MouseActions.clickElement(Searchbtn, "Clicked on Searchbtn");
+		TouchActions.clickElement(Searchbtn, "Clicked on Searchbtn");
 		
 	}
 	
 	public void ClickedOnProductInfromthesearchedList() throws InterruptedException {
-		GenericActions.hideKeyboardIfVisible();
+		KeyBoardActions.hideKeyboardIfVisible();
 		int productIndex =1;
 		Waits.waitForGivenTime(2);
 		//Waits.waiForAnElement(selectProductByIndex(productIndex), "Wait for search btn");
-		MouseActions.clickElement(selectProductByIndex(productIndex), "Clicked on Product");
+		TouchActions.clickElement(selectProductByIndex(productIndex), "Clicked on Product");
 		
 	}
 	
@@ -92,9 +94,9 @@ public class SearchPage extends BaseClass {
 	
 	public  void grabListPriceofSearchedItemName() throws InterruptedException {
 		Waits.waitForGivenTime(3);
-	Waits.waitUntilElementIsVisible(priductListPriceInSearchdPage(1));
-	MobWebAssertion.elementDisplayed(priductListPriceInSearchdPage(1), "priductListPriceInSearchdPage(1) is Displayed");
-	itemListPrice = GenericActions.getElements(priductListPriceInSearchdPage(1), "Getting the text value").get(0).getText();
+	Waits.waitUntilElementIsVisible(priductPriceInSearchdPage);
+	MobWebAssertion.elementDisplayed(priductPriceInSearchdPage, "priductListPriceInSearchdPage(1) is Displayed");
+	itemListPrice = GenericActions.getElements(priductPriceInSearchdPage, "Getting the text value").get(0).getText();
 
 	}
 	
