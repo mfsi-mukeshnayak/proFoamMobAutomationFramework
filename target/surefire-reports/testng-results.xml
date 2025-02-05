@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-12-23T18:34:37 IST" name="Suite" finished-at="2024-12-23T18:35:39 IST" duration-ms="62065">
+    <groups>
+      <group name="Regression">
+        <method signature="MyAddresses_TestCases.NavigateToMyaddressPageandvalidateButtons()[pri:0, instance:TestCases.MyAddresses_TestCases@7d322cad]" name="NavigateToMyaddressPageandvalidateButtons" class="TestCases.MyAddresses_TestCases"/>
+      </group> <!-- Regression -->
+      <group name="smoke">
+        <method signature="MyAddresses_TestCases.NavigateToMyaddressPageandvalidateButtons()[pri:0, instance:TestCases.MyAddresses_TestCases@7d322cad]" name="NavigateToMyaddressPageandvalidateButtons" class="TestCases.MyAddresses_TestCases"/>
+      </group> <!-- smoke -->
+      <group name="NavigateToMyaddressPageandvalidateButtons">
+        <method signature="MyAddresses_TestCases.NavigateToMyaddressPageandvalidateButtons()[pri:0, instance:TestCases.MyAddresses_TestCases@7d322cad]" name="NavigateToMyaddressPageandvalidateButtons" class="TestCases.MyAddresses_TestCases"/>
+      </group> <!-- NavigateToMyaddressPageandvalidateButtons -->
+    </groups>
+    <test started-at="2024-12-23T18:34:37 IST" name="Test" finished-at="2024-12-23T18:35:39 IST" duration-ms="62065">
+      <class name="TestCases.MyAddresses_TestCases">
+        <test-method is-config="true" signature="setup()[pri:0, instance:TestCases.MyAddresses_TestCases@7d322cad]" started-at="2024-12-23T18:34:37 IST" name="setup" finished-at="2024-12-23T18:35:19 IST" duration-ms="42294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="NavigateToMyaddressPageandvalidateButtons()[pri:0, instance:TestCases.MyAddresses_TestCases@7d322cad]" started-at="2024-12-23T18:35:19 IST" name="NavigateToMyaddressPageandvalidateButtons" description="Validating different buttons in MyAddress in sideMenu" finished-at="2024-12-23T18:35:38 IST" duration-ms="18606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToMyaddressPageandvalidateButtons -->
+      </class> <!-- TestCases.MyAddresses_TestCases -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
