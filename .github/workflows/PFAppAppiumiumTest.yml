@@ -15,11 +15,6 @@ on:
       - master  # ✅ Runs when merged into "master"
   pull_request:
 
-jobs:
-  appium-test:
-    runs-on: ubuntu-latest
-    timeout-minutes: 40  # Increased timeout for stability
-
 
     steps:
       - name: Checkout repository
