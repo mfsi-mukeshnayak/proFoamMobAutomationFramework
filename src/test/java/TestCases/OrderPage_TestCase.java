@@ -12,7 +12,7 @@ public class OrderPage_TestCase extends BaseClass {
 	PageObjectManager pageManager = new PageObjectManager();
 
 	
-	@Test (groups = {"Regression", "ValidationOfOrderingAnewItemIncheckoutPage"}, description = "Adding a new order in checkoutpage")
+	@Test (groups = {"Regression", "ValidationOfOrderingAnewItemIncheckoutPage."}, description = "Adding a new order in checkoutpage")
 	public void ValidationOfOrderingAnewItemIncheckoutPage() throws InterruptedException {
 		System.out.println("Application is launching");
 		

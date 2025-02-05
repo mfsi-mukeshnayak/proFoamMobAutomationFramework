@@ -11,7 +11,7 @@ hs_err_pid*.log
 replay_pid*.log
 
 # Ignore build directories
-target/
+
 test-output/
 
 # Ignore reports and temporary files
