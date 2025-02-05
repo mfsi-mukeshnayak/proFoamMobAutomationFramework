@@ -12,7 +12,7 @@ public class WishListPage_TestCases extends BaseClass{
 		
 		@Test (groups = {"smoke" ,"Regression", "ValidationOfLandingOnWishListPageAndAttributesOfWishListPage"}, description = "Landing on WishListPage and validating its attributes")
 		public void ValidationOfLandingOnWishListPageAndAttributesOfWishListPage() throws InterruptedException {
-			System.out.println("Application is launching");
+			System.out.println("Application is launching.");
 			
 			pageManager.getProductPage().LandedOnProductPageAndAbleToSeeSideMenu();
 			pageManager.getProductPage().ClickOnSideMenubar();
