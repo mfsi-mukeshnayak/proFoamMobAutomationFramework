@@ -82,6 +82,16 @@ jobs:
       - name: Run Appium Tests
         run: mvn clean test
 
+      - name: Check if Appium is running and save logs  # ✅ Check if Appium is running before saving logs
+        run: |
+          if ps aux | grep -v grep | grep appium; then
+            echo "Appium is running, saving logs..."
+            cp appium.log appium.log.backup  # Backup the log if necessary
+            ls -l appium.log
+          else
+            echo "Appium is not running, skipping log upload."
+          fi
+
       - name: Save Test Reports  # ✅ Store test reports for debugging
         if: always()
         uses: actions/upload-artifact@v4  # ✅ Updated to v4
@@ -89,8 +99,8 @@ jobs:
           name: test-reports
           path: target/surefire-reports/*.xml  # Adjust path based on your framework
 
-      - name: Save Appium Logs  # ✅ Stores Appium logs
-        if: always()
+      - name: Save Appium Logs  # ✅ Stores Appium logs only if Appium was running
+        if: always() && success() && steps.check-if-appium-running.outputs.appium-status == 'running'
         uses: actions/upload-artifact@v4  # ✅ Updated to v4
         with:
           name: appium-logs
