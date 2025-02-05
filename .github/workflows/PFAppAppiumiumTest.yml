@@ -14,8 +14,7 @@ on:
       - test  # ✅ Runs on "test" branch
       - master  # ✅ Runs when merged into "master"
   pull_request:
-
-
+  
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
