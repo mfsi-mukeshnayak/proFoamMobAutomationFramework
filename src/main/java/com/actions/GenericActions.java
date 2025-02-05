@@ -148,7 +148,7 @@ public class GenericActions extends BaseClass{
 	 * Method to get the attribute value of an element
 	 * @param ele Locator for the element
 	 * @param attribute Attribute name to fetch
-	 * @return The attribute value as a String, or null if an exception occurs
+	 * @return The attribute value as a String, or null if an exception occurs.
 	 */
 	public String getAttribute(By ele, String attribute) {
 	    String attributeValue = null; // Initialize as null
