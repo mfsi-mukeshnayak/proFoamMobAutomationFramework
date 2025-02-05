@@ -92,8 +92,20 @@ jobs:
             echo "Appium is not running, skipping log upload."
           fi
 
-      - name: Save Test Reports  # ✅ Store test reports for debugging
-        if: always()
+      # Skip saving test reports if no reports found
+      - name: Check if test reports exist
+        id: check_reports
+        run: |
+          if [ -z "$(ls -A target/surefire-reports/*.xml 2>/dev/null)" ]; then
+            echo "No test reports found, skipping artifact upload."
+            echo "reports_found=false" >> $GITHUB_ENV
+          else
+            echo "Test reports found."
+            echo "reports_found=true" >> $GITHUB_ENV
+          fi
+
+      - name: Save Test Reports  # ✅ Store test reports for debugging only if found
+        if: env.reports_found == 'true'
         uses: actions/upload-artifact@v4  # ✅ Updated to v4
         with:
           name: test-reports
