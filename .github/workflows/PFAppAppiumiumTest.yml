@@ -1,0 +1,101 @@
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Appium Tests
+
+on:
+  push:
+    branches:  
+      - test  # ✅ Runs on "test" branch
+      - master  # ✅ Runs when merged into "master"
+  pull_request:
+
+jobs:
+  appium-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40  # Increased timeout for stability
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java (for Appium tests)
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Set up Node.js (for Appium Server)
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Maven Dependencies  # ✅ Ensures all required packages are available
+        run: mvn clean install -DskipTests
+
+      - name: Install Appium & Dependencies
+        run: |
+          npm install -g appium
+          appium -v
+          npm install -g appium-doctor
+          appium-doctor
+
+      - name: Start Appium Server in Background
+        run: |
+          appium --log appium.log &
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install Required Android System Image & Platform Tools
+        run: |
+          echo "y" | sdkmanager --install "platform-tools" "platforms;android-31" "system-images;android-31;google_apis;x86_64"
+          echo "y" | sdkmanager --install "build-tools;31.0.0" "emulator"
+
+      - name: Create & Start Android Emulator (MFSEmulator)
+        run: |
+          echo "no" | avdmanager create avd -n MFSEmulator -k "system-images;android-31;google_apis;x86_64" --device "pixel_4"
+          nohup emulator -avd MFSEmulator -no-window -no-audio -gpu swiftshader_indirect &
+
+      - name: Wait for Emulator to Boot
+        run: |
+          adb wait-for-device
+          boot_completed=""
+          while [ -z "$boot_completed" ]; do
+            boot_completed=$(adb shell getprop sys.boot_completed 2>&1 | tr -d '\r')
+            echo "Waiting for emulator to fully boot..."
+            sleep 10
+          done
+          echo "Emulator is ready!"
+          adb devices
+
+      - name: Verify Emulator is Running
+        run: adb shell getprop ro.build.version.release
+
+      - name: Install ProFoamApp APK on Emulator  # ✅ New Step
+        run: adb install resources/App/ProFoamApp-release.apk
+
+      - name: Run Appium Tests
+        run: mvn clean test
+
+      - name: Save Test Reports  # ✅ Store test reports for debugging
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-reports
+          path: target/surefire-reports/*.xml  # Adjust path based on your framework
+
+      - name: Save Appium Logs  # ✅ Stores Appium logs
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: appium-logs
+          path: appium.log
+
+    - name: Update dependency graph
+      uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
