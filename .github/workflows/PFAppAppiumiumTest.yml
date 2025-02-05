@@ -84,14 +84,14 @@ jobs:
 
       - name: Save Test Reports  # ✅ Store test reports for debugging
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4  # ✅ Updated to v4
         with:
           name: test-reports
           path: target/surefire-reports/*.xml  # Adjust path based on your framework
 
       - name: Save Appium Logs  # ✅ Stores Appium logs
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4  # ✅ Updated to v4
         with:
           name: appium-logs
           path: appium.log
