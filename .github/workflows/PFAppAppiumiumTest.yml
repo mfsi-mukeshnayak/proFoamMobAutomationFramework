@@ -45,7 +45,7 @@ jobs:
 
       - name: Install Required Android System Image & Platform Tools
         run: |
-          echo "y" | sdkmanager --install "platform-tools" "platforms;android-31" "system-images;android-31;google_apis;x86_64"
+          echo "y" | sdkmanager --install "platform-tools" "platforms;android-31" "system-images;android-31;google_apis_playstore;arm64-v8a"
           echo "y" | sdkmanager --install "build-tools;31.0.0" "cmdline-tools;latest" "emulator"
 
       - name: Install Missing Dependencies
@@ -76,8 +76,8 @@ jobs:
             echo "AVD already exists, skipping creation."
           else
             echo "Creating AVD..."
-            echo "y" | sdkmanager --install "system-images;android-31;google_apis;x86_64"
-            echo "no" | avdmanager create avd -n MFSEmulator -k "system-images;android-31;google_apis;x86_64" --device "pixel_4" --force
+            echo "y" | sdkmanager --install "system-images;android-31;google_apis_playstore;arm64-v8a"
+            echo "no" | avdmanager create avd -n MFSEmulator -k "system-images;android-31;google_apis_playstore;arm64-v8a" --device "pixel_4" --force
           fi
 
       - name: Verify Emulator Availability
@@ -101,7 +101,7 @@ jobs:
           while [ -z "$boot_completed" ]; do
             boot_completed=$(adb shell getprop sys.boot_completed 2>&1 | tr -d '\r')
             echo "Waiting for emulator to fully boot..."
-            sleep 10
+            sleep 15
           done
           echo "Emulator is ready!"
           adb devices
