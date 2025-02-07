@@ -1,5 +1,3 @@
-# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve execution time
-
 name: Appium Tests
 
 on:
@@ -40,8 +38,7 @@ jobs:
           appium-doctor
 
       - name: Start Appium Server in Background
-        run: |
-          appium --log appium.log &
+        run: appium --log appium.log &
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
@@ -59,20 +56,32 @@ jobs:
           export PATH=$PATH:$ANDROID_HOME/tools/bin
           echo "Updated PATH: $PATH"
 
-      - name: Create AVD
-        run: |
-          mkdir -p $ANDROID_AVD_HOME
-          echo "no" | avdmanager create avd -n MFSEmulator -k "system-images;android-31;google_apis;x86_64" --device "pixel_4"
-          echo "AVD successfully created!"
+      - name: Ensure AVD Directory Exists
+        run: mkdir -p $ANDROID_AVD_HOME
 
-      - name: Verify Available AVDs
+      - name: Create Android Emulator (MFSEmulator)
+        run: |
+          if emulator -list-avds | grep -q "MFSEmulator"; then
+            echo "AVD already exists, skipping creation."
+          else
+            echo "Creating AVD..."
+            echo "y" | sdkmanager --install "system-images;android-31;google_apis;x86_64"
+            echo "no" | avdmanager create avd -n MFSEmulator -k "system-images;android-31;google_apis;x86_64" --device "pixel_4" --force
+          fi
+
+      - name: Verify Emulator Availability
         run: |
           echo "Checking available AVDs..."
           emulator -list-avds
+          
+          if ! emulator -list-avds | grep -q "MFSEmulator"; then
+            echo "ERROR: AVD 'MFSEmulator' was not created successfully!"
+            exit 1
+          fi
 
       - name: Start Android Emulator
         run: |
-          nohup $ANDROID_HOME/emulator/emulator -avd MFSEmulator -no-window -no-audio -gpu swiftshader_indirect -no-snapshot &
+          nohup $ANDROID_HOME/emulator/emulator -avd MFSEmulator -no-window -no-audio -gpu swiftshader_indirect &
 
       - name: Wait for Emulator to Boot
         run: |
