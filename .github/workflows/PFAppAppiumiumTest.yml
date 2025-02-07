@@ -51,17 +51,23 @@ jobs:
       - name: Add Android SDK Tools to PATH
         run: |
           echo "ANDROID_AVD_HOME=$HOME/.android/avd" >> $GITHUB_ENV
-          export PATH=$PATH:$ANDROID_HOME/emulator
-          export PATH=$PATH:$ANDROID_HOME/tools
-          export PATH=$PATH:$ANDROID_HOME/tools/bin
+          export PATH=$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$PATH
           echo "Updated PATH: $PATH"
 
       - name: Ensure AVD Directory Exists
         run: mkdir -p $ANDROID_AVD_HOME
 
+      - name: Verify Emulator Installation
+        run: |
+          if [ ! -f "$ANDROID_HOME/emulator/emulator" ]; then
+            echo "ERROR: Emulator binary not found!"
+            exit 1
+          fi
+          emulator -version
+
       - name: Create Android Emulator (MFSEmulator)
         run: |
-          if emulator -list-avds | grep -q "MFSEmulator"; then
+          if $ANDROID_HOME/emulator/emulator -list-avds | grep -q "MFSEmulator"; then
             echo "AVD already exists, skipping creation."
           else
             echo "Creating AVD..."
@@ -72,9 +78,9 @@ jobs:
       - name: Verify Emulator Availability
         run: |
           echo "Checking available AVDs..."
-          emulator -list-avds
+          $ANDROID_HOME/emulator/emulator -list-avds
           
-          if ! emulator -list-avds | grep -q "MFSEmulator"; then
+          if ! $ANDROID_HOME/emulator/emulator -list-avds | grep -q "MFSEmulator"; then
             echo "ERROR: AVD 'MFSEmulator' was not created successfully!"
             exit 1
           fi
@@ -111,33 +117,4 @@ jobs:
             cp appium.log appium.log.backup
             ls -l appium.log
           else
-            echo "Appium is not running, skipping log upload."
-          fi
-
-      - name: Check if test reports exist
-        id: check_reports
-        run: |
-          if [ -z "$(ls -A target/surefire-reports/*.xml 2>/dev/null)" ]; then
-            echo "No test reports found, skipping artifact upload."
-            echo "reports_found=false" >> $GITHUB_ENV
-          else
-            echo "Test reports found."
-            echo "reports_found=true" >> $GITHUB_ENV
-          fi
-
-      - name: Save Test Reports
-        if: env.reports_found == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-reports
-          path: target/surefire-reports/*.xml
-
-      - name: Save Appium Logs
-        if: always() && success() && steps.check-if-appium-running.outputs.appium-status == 'running'
-        uses: actions/upload-artifact@v4
-        with:
-          name: appium-logs
-          path: appium.log
-
-      - name: Update dependency graph
-        uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
+            echo "Appium is not 
