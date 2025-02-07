@@ -48,6 +48,9 @@ jobs:
           echo "y" | sdkmanager --install "platform-tools" "platforms;android-31" "system-images;android-31;google_apis;x86_64"
           echo "y" | sdkmanager --install "build-tools;31.0.0" "cmdline-tools;latest" "emulator"
 
+      - name: Install Missing Dependencies
+        run: sudo apt-get update && sudo apt-get install -y libpulse0
+
       - name: Add Android SDK Tools to PATH
         run: |
           echo "ANDROID_HOME=/usr/local/lib/android/sdk" >> $GITHUB_ENV
