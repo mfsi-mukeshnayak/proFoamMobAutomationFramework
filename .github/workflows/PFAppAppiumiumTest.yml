@@ -17,7 +17,7 @@ on:
 jobs:
   appium-test:
     runs-on: ubuntu-latest
-    timeout-minutes: 40  # Increased timeout for stability
+    timeout-minutes: 40
 
     steps:
       - name: Checkout repository
@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install Maven Dependencies  # ✅ Ensures all required packages are available
+      - name: Install Maven Dependencies
         run: mvn clean install -DskipTests
 
       - name: Install Appium & Dependencies
@@ -45,8 +45,7 @@ jobs:
           appium-doctor
 
       - name: Start Appium Server in Background
-        run: |
-          appium --log appium.log &
+        run: appium --log appium.log &
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
@@ -56,17 +55,20 @@ jobs:
           echo "y" | sdkmanager --install "platform-tools" "platforms;android-31" "system-images;android-31;google_apis;x86_64"
           echo "y" | sdkmanager --install "build-tools;31.0.0" "emulator"
 
-      - name: Add Android SDK Tools to PATH  # ✅ Add SDK paths to PATH
+      - name: Add Android SDK Tools to PATH
         run: |
-          export PATH=$PATH:$ANDROID_HOME/emulator
-          export PATH=$PATH:$ANDROID_HOME/tools
-          export PATH=$PATH:$ANDROID_HOME/tools/bin
-          echo "PATH=$PATH"
+          echo "PATH=$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$PATH" >> $GITHUB_ENV
+
+      - name: Verify Emulator Installation
+        run: |
+          ls -l $ANDROID_HOME/emulator/
+          ls -l $ANDROID_HOME/tools/
+          which emulator || echo "Emulator not found!"
 
       - name: Create & Start Android Emulator (MFSEmulator)
         run: |
           echo "no" | avdmanager create avd -n MFSEmulator -k "system-images;android-31;google_apis;x86_64" --device "pixel_4"
-          nohup emulator -avd MFSEmulator -no-window -no-audio -gpu swiftshader_indirect &
+          nohup $ANDROID_HOME/emulator/emulator -avd MFSEmulator -no-window -no-audio -gpu swiftshader_indirect &
 
       - name: Wait for Emulator to Boot
         run: |
@@ -83,23 +85,22 @@ jobs:
       - name: Verify Emulator is Running
         run: adb shell getprop ro.build.version.release
 
-      - name: Install ProFoamApp APK on Emulator  # ✅ New Step
+      - name: Install ProFoamApp APK on Emulator
         run: adb install resources/App/ProFoamApp-release.apk
 
       - name: Run Appium Tests
         run: mvn clean test
 
-      - name: Check if Appium is running and save logs  # ✅ Check if Appium is running before saving logs
+      - name: Check if Appium is running and save logs
         run: |
           if ps aux | grep -v grep | grep appium; then
             echo "Appium is running, saving logs..."
-            cp appium.log appium.log.backup  # Backup the log if necessary
+            cp appium.log appium.log.backup
             ls -l appium.log
           else
             echo "Appium is not running, skipping log upload."
           fi
 
-      # Skip saving test reports if no reports found
       - name: Check if test reports exist
         id: check_reports
         run: |
@@ -111,20 +112,21 @@ jobs:
             echo "reports_found=true" >> $GITHUB_ENV
           fi
 
-      - name: Save Test Reports  # ✅ Store test reports for debugging only if found
+      - name: Save Test Reports
         if: env.reports_found == 'true'
-        uses: actions/upload-artifact@v4  # ✅ Updated to v4
+        uses: actions/upload-artifact@v4
         with:
           name: test-reports
-          path: target/surefire-reports/*.xml  # Adjust path based on your framework
+          path: target/surefire-reports/*.xml
 
-      - name: Save Appium Logs  # ✅ Stores Appium logs only if Appium was running
+      - name: Save Appium Logs
         if: always() && success() && steps.check-if-appium-running.outputs.appium-status == 'running'
-        uses: actions/upload-artifact@v4  # ✅ Updated to v4
+        uses: actions/upload-artifact@v4
         with:
           name: appium-logs
           path: appium.log
 
-      - name: Update dependency graph  # ✅ Fixed indentation issue
+      - name: Update dependency graph
         uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
+
 
