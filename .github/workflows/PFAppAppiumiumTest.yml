@@ -1,11 +1,4 @@
-# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
-
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support documentation.
-
-# This workflow will build a Java project with Maven and run Appium tests on an Android emulator.
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve execution time
 
 name: Appium Tests
 
@@ -36,7 +29,7 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install Maven Dependencies  # ✅ Ensures all required packages are available
+      - name: Install Maven Dependencies
         run: mvn clean install -DskipTests
 
       - name: Install Appium & Dependencies
@@ -58,35 +51,28 @@ jobs:
           echo "y" | sdkmanager --install "platform-tools" "platforms;android-31" "system-images;android-31;google_apis;x86_64"
           echo "y" | sdkmanager --install "build-tools;31.0.0" "emulator"
 
-      - name: Add Android SDK Tools to PATH  # ✅ Add SDK paths to PATH
+      - name: Add Android SDK Tools to PATH
         run: |
-          echo "PATH=$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$PATH" >> $GITHUB_ENV
+          echo "ANDROID_AVD_HOME=$HOME/.android/avd" >> $GITHUB_ENV
+          export PATH=$PATH:$ANDROID_HOME/emulator
+          export PATH=$PATH:$ANDROID_HOME/tools
+          export PATH=$PATH:$ANDROID_HOME/tools/bin
+          echo "Updated PATH: $PATH"
 
-      - name: Ensure AVD Directory Exists
-        run: mkdir -p ~/.android/avd
-
-      - name: Create Android Emulator (MFSEmulator)
+      - name: Create AVD
         run: |
-          echo "y" | sdkmanager --install "system-images;android-31;google_apis;x86_64"
-          echo "no" | avdmanager create avd -n MFSEmulator -k "system-images;android-31;google_apis;x86_64" --device "pixel_4" --force
+          mkdir -p $ANDROID_AVD_HOME
+          echo "no" | avdmanager create avd -n MFSEmulator -k "system-images;android-31;google_apis;x86_64" --device "pixel_4"
+          echo "AVD successfully created!"
 
-          # Verify AVD creation
-          echo "Checking if AVD was created..."
-          avdmanager list avd
-
-      - name: Verify Emulator Availability
+      - name: Verify Available AVDs
         run: |
           echo "Checking available AVDs..."
           emulator -list-avds
-          
-          if ! emulator -list-avds | grep -q "MFSEmulator"; then
-            echo "ERROR: AVD 'MFSEmulator' was not created successfully!"
-            exit 1
-          fi
 
       - name: Start Android Emulator
         run: |
-          nohup $ANDROID_HOME/emulator/emulator -avd MFSEmulator -no-window -no-audio -gpu swiftshader_indirect &
+          nohup $ANDROID_HOME/emulator/emulator -avd MFSEmulator -no-window -no-audio -gpu swiftshader_indirect -no-snapshot &
 
       - name: Wait for Emulator to Boot
         run: |
@@ -103,23 +89,22 @@ jobs:
       - name: Verify Emulator is Running
         run: adb shell getprop ro.build.version.release
 
-      - name: Install ProFoamApp APK on Emulator  # ✅ New Step
+      - name: Install ProFoamApp APK on Emulator
         run: adb install resources/App/ProFoamApp-release.apk
 
       - name: Run Appium Tests
         run: mvn clean test
 
-      - name: Check if Appium is running and save logs  # ✅ Check if Appium is running before saving logs
+      - name: Check if Appium is running and save logs
         run: |
           if ps aux | grep -v grep | grep appium; then
             echo "Appium is running, saving logs..."
-            cp appium.log appium.log.backup  # Backup the log if necessary
+            cp appium.log appium.log.backup
             ls -l appium.log
           else
             echo "Appium is not running, skipping log upload."
           fi
 
-      # Skip saving test reports if no reports found
       - name: Check if test reports exist
         id: check_reports
         run: |
@@ -131,21 +116,19 @@ jobs:
             echo "reports_found=true" >> $GITHUB_ENV
           fi
 
-      - name: Save Test Reports  # ✅ Store test reports for debugging only if found
+      - name: Save Test Reports
         if: env.reports_found == 'true'
-        uses: actions/upload-artifact@v4  # ✅ Updated to v4
+        uses: actions/upload-artifact@v4
         with:
           name: test-reports
-          path: target/surefire-reports/*.xml  # Adjust path based on your framework
+          path: target/surefire-reports/*.xml
 
-      - name: Save Appium Logs  # ✅ Stores Appium logs only if Appium was running
+      - name: Save Appium Logs
         if: always() && success() && steps.check-if-appium-running.outputs.appium-status == 'running'
-        uses: actions/upload-artifact@v4  # ✅ Updated to v4
+        uses: actions/upload-artifact@v4
         with:
           name: appium-logs
           path: appium.log
 
-      - name: Update dependency graph  # ✅ Fixed indentation issue
+      - name: Update dependency graph
         uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
-
-
