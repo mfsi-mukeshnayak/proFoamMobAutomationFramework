@@ -77,7 +77,9 @@ public class SearchPage extends BaseClass {
 	}
 	
 	public  void grabTheNameofSearchedItemName() throws InterruptedException {
+		
 		Waits.waitForGivenTime(3);
+		KeyBoardActions.hideKeyboardIfVisible();
 	Waits.waitUntilElementIsVisible(productNameInSearchdPage(1));
 	MobWebAssertion.elementDisplayed(productNameInSearchdPage(1), "productNameInSearchdPage(1) is Displayed");
 	itemName = GenericActions.getElements(productNameInSearchdPage(1), "Getting the text value").get(0).getText();

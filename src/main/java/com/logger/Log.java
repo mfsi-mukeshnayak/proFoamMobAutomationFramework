@@ -74,4 +74,13 @@ public class Log {
     public static void info(String message) {
         LOGGER.info(message);
     }
+    
+    /**
+     * Method to log warnings in logs.
+     * 
+     * @param message Warning message to be displayed.
+     */
+    public static void warn(String message) {
+        LOGGER.warn(message);
+    }
 }

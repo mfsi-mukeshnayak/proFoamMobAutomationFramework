@@ -193,6 +193,13 @@ public class TouchActions extends BaseClass{
 	}
 	
 	
+	/**
+	 * Scrolls through the side menu vertically until the specified element is found.
+	 * If the element is found within the max swipe attempts, the method returns.
+	 * Otherwise, logs a message that the element was not found.
+	 *
+	 * @param elementText The text of the element to search for within the side menu.
+	 */
 	public static void scrollSideMenuToElement(String elementText) {
 	    Dimension size = driver.manage().window().getSize();
 	    
@@ -200,38 +207,47 @@ public class TouchActions extends BaseClass{
 	    int startY = (int) (size.height * 0.8); // Start swipe near the bottom edge (80% of screen height)
 	    int endY = (int) (size.height * 0.2);   // End swipe near the top edge (20% of screen height)
 	    
-	    // Number of swipe attempts
+	    // Number of swipe attempts before giving up
 	    int maxSwipes = 5;
 
 	    for (int i = 0; i < maxSwipes; i++) {
 	        try {
-	            // Try to find the element in the currently visible side menu
+	            
 	            WebElement element = driver.findElement(By.xpath("//*[contains(@text, '" + elementText + "')]"));
 	            if (element.isDisplayed()) {
-	            	logger.info("Element found: " + elementText);
+	                logger.info("Element found: " + elementText);
 	                return;
 	            }
+	        } catch (NoSuchElementException e) {
+	            logger.info("Element not found. Performing swipe attempt " + (i + 1));
 	        } catch (Exception e) {
-	        	logger.info("Element not found. Performing swipe: " + (i + 1));
+	            logger.error("Unexpected error during search: ", e);
+	            break; // Exit the loop on unexpected error
 	        }
 
-	        // Use the W3C Actions to perform vertical swipe action
-	        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
-	        Sequence swipe = new Sequence(finger, 1);
-	        
-	        // Start swipe at the bottom (startY) and move towards the top (endY)
-	        swipe.addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), x, startY));
-	        swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
-	        swipe.addAction(finger.createPointerMove(Duration.ofMillis(1000), PointerInput.Origin.viewport(), x, endY));
-	        swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+	        try {
+	            
+	            PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+	            Sequence swipe = new Sequence(finger, 1);
+	            
+	            // Start swipe at the bottom (startY) and move towards the top (endY)
+	            swipe.addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), x, startY));
+	            swipe.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
+	            swipe.addAction(finger.createPointerMove(Duration.ofMillis(1000), PointerInput.Origin.viewport(), x, endY));
+	            swipe.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 
-	        driver.perform(Arrays.asList(swipe));
+	            driver.perform(Arrays.asList(swipe));
+
+	            logger.info("Swipe " + (i + 1) + " performed.");
+	        } catch (Exception e) {
+	            logger.error("Error during swipe action: ", e);
+	            break; // If swiping fails, stop further attempts
+	        }
 	    }
 
 	    logger.info("Element not found after " + maxSwipes + " swipes.");
-	    
 	}
-	
+
 	public static void scrollToElementUsingUIwithSwipe(SwipeDirection action,By locator) {
 	    WebElement element = null;
 	    int maxScrolls = 5; // You can adjust this number as needed
@@ -336,24 +352,32 @@ public class TouchActions extends BaseClass{
 	    }
 	 
 	 /**
-	     * Swipes from the specified bottom coordinates to the specified top coordinates.
+	     * Swipes from the specified bottom coordinates to the specified top coordinates for dropdown to select state in AddressPage.
 	     */
-	    public static void swipeBottomToTop() {
-	        // Define the coordinates for swiping
-	        int startX = 1196; // Bottom starting X coordinate
-	        int startY = 2854; // Bottom starting Y coordinate
-	        int endX = 1217;   // Top ending X coordinate (kept the same for vertical swipe)
-	        int endY = 2187;   // Top ending Y coordinate
+	 public static void swipeBottomToTop() {
+	        try {
+	            // Define the coordinates for swiping
+	            int startX = 826;  // Bottom starting X coordinate
+	            int startY = 2304; // Bottom starting Y coordinate
+	            int endX = 766;    // Top ending X coordinate (kept the same for vertical swipe)
+	            int endY = 1996;   // Top ending Y coordinate
 
-	        // Perform the swipe action
-	        new TouchAction<>(driver)
-	                .press(PointOption.point(startX, startY)) // Start at the specified bottom coordinates
-	                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(1000))) // Wait for smoother swipe
-	                .moveTo(PointOption.point(endX, endY)) // Move to the specified top coordinates
-	                .release()
-	                .perform();
-	    }
+	            logger.info("Starting swipe from ({}, {}) to ({}, {})"+ " startX " + startX + "  startY " + startY + "  endX " + endX + "  endY " +  endY);
+
+	            // Perform the swipe action
+	            new TouchAction<>(driver)
+	                    .press(PointOption.point(startX, startY)) // Start at the specified bottom coordinates
+	                    .waitAction(WaitOptions.waitOptions(Duration.ofMillis(1000))) // Wait for smoother swipe
+	                    .moveTo(PointOption.point(endX, endY)) // Move to the specified top coordinates
+	                    .release()
+	                    .perform();
+
+	            logger.info("Swipe action completed successfully.");
+	        } catch (Exception e) {
+	            logger.error("Error while performing swipe action: ", e);
+	        }
 	    
+	}	    
 	    /**
 	     * Swipes until the specified locator is displayed.
 	     * 

@@ -51,6 +51,7 @@ import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import java.io.FileOutputStream;
 import java.util.Base64;
+import io.appium.java_client.android.options.UiAutomator2Options;
 
 
 
@@ -138,11 +139,11 @@ public class BaseClass {
 
 
 
-//	/** 
-//	 *  this method stops the appium  server.
-//	 * @param os your machine OS (windows/mac).
-//
-//	 */
+	/** 
+	 *  this method stops the appium  server.
+	 * @param os your machine OS (windows/mac).
+
+	 */
 //	@AfterMethod
 //	public void stopAppiumServer() {
 //		if (appiumService != null) {
@@ -165,18 +166,21 @@ public class BaseClass {
 	 * @param os your machine OS (windows/mac).
 
 	 */
-	@AfterClass
+	@AfterMethod(alwaysRun = true)
 	public void stopAppiumServer() {
-		
-			tearDown();
-			appiumService.stop();
-
-			logger.info("Appium server stopped");
-			//			logger.error("Appium server stopped");
-			//			logger.debug("Appium server stopped");
-	
-
+	    logger.info("Attempting to stop the Appium server...");
+	    try {
+	        if (appiumService != null && appiumService.isRunning()) {
+	            appiumService.stop();
+	            logger.info("Appium server stopped successfully.");
+	        } else {
+	            logger.info("Appium server was not running or already stopped.");
+	        }
+	    } catch (Exception e) {
+	        logger.error("Failed to stop the Appium server: " + e.getMessage(), e);
+	    }
 	}
+
 
 	
 	
@@ -187,59 +191,132 @@ public class BaseClass {
 		}
 	}
 
-	/** 
-	 *  this method creates the android driver
-	 *  @param buildPath - path to pick the location of the app 
-	 *  @throws IOException 
-	 * @throws InterruptedException 
+//	/** 
+//	 *  this method creates the android driver
+//	 *  @param buildPath - path to pick the location of the app 
+//	 *  @throws IOException 
+//	 * @throws InterruptedException 
+//	 */
+//	
+//	public void initAndroidDriverAndApp() throws IOException {
+//	
+//		try {
+//		//props = new Properties();
+//		String propFileName = "config.properties";
+//
+//		inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
+//		props.load(inputStream);
+//		//		  setProps(props);
+//		String automationName = props.getProperty("androidAutomationName");
+//		if (automationName == null) {
+//		    
+//		} else {
+//			logger.info("Automation name got found in properties file!");
+//		}
+//		startAppiumServer("windows");
+//		File app = new File(ProFoamRelease);
+//		DesiredCapabilities capabilities = new DesiredCapabilities();
+//		capabilities.setCapability("deviceName", "MFSEmulator");
+//		capabilities.setCapability("platformName","Android");
+//		capabilities.setCapability("app", app.getAbsolutePath());
+//		capabilities.setCapability(MobileCapabilityType.NO_RESET, false);
+//		capabilities.setCapability("automationName", props.getProperty("androidAutomationName"));
+//		capabilities.setCapability("appPackage", props.getProperty("profoamAppPackage"));
+//		capabilities.setCapability("appActivity", props.getProperty("proFoamAppActivity"));
+//		capabilities.setCapability("newCommandTimeout", 3000); 
+//		URL url = new URL(props.getProperty("appiumURL"));
+//		driver = new AndroidDriver(url, capabilities);
+//
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+////		logger.info("Driver initiated");
+////		ExtentReport.getTest().log(Status.INFO,"Driver initiated" );}
+//		} catch (IOException e) {
+//	        logger.info("IOException occurred while loading properties or initializing the driver: " + e.getMessage());
+//		}finally {
+//	        try {
+//	            if (inputStream != null) {
+//	                inputStream.close();
+//	            }
+//	        } catch (IOException e) {
+//	            logger.info("Failed to close the property file input stream: " + e.getMessage());
+//	        }
+//	      }
+//		//LoginToProFoamApplication();
+//
+//	}
+	
+	
+	/**
+	 * This method initializes the Android driver and launches the app.
+	 * @throws IOException if there is an issue loading properties or initializing the driver.
 	 */
-	
 	public void initAndroidDriverAndApp() throws IOException {
-	
-		try {
-		//props = new Properties();
-		String propFileName = "config.properties";
-
-		inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
-		props.load(inputStream);
-		//		  setProps(props);
-		String automationName = props.getProperty("androidAutomationName");
-		if (automationName == null) {
-		    
-		} else {
-			logger.info("Automation name got found in properties file!");
-		}
-		startAppiumServer("windows");
-		File app = new File(ProFoamRelease);
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability("deviceName", "MFSEmulator");
-		capabilities.setCapability("platformName","Android");
-		capabilities.setCapability("app", app.getAbsolutePath());
-		capabilities.setCapability(MobileCapabilityType.NO_RESET, false);
-		capabilities.setCapability("automationName", props.getProperty("androidAutomationName"));
-		capabilities.setCapability("appPackage", props.getProperty("profoamAppPackage"));
-		capabilities.setCapability("appActivity", props.getProperty("proFoamAppActivity"));
-		capabilities.setCapability("newCommandTimeout", 3000); 
-		URL url = new URL(props.getProperty("appiumURL"));
-		driver = new AndroidDriver(url, capabilities);
-
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//		logger.info("Driver initiated");
-//		ExtentReport.getTest().log(Status.INFO,"Driver initiated" );}
-		} catch (IOException e) {
-	        logger.info("IOException occurred while loading properties or initializing the driver: " + e.getMessage());
-		}finally {
-	        try {
-	            if (inputStream != null) {
-	                inputStream.close();
-	            }
-	        } catch (IOException e) {
-	            logger.info("Failed to close the property file input stream: " + e.getMessage());
+	    Properties props = new Properties();
+	    InputStream inputStream = null;
+	    
+	    try {
+	        // Load properties from config file
+	        String propFileName = "config.properties";
+	        inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
+	        if (inputStream == null) {
+	            throw new IOException("Property file '" + propFileName + "' not found.");
 	        }
-	      }
-		//LoginToProFoamApplication();
+	        props.load(inputStream);
 
+	        // Fetch required properties
+	        String automationName = props.getProperty("androidAutomationName", "UiAutomator2");
+	        String appiumURL = props.getProperty("appiumURL");
+	        String appPackage = props.getProperty("profoamAppPackage");
+	        String appActivity = props.getProperty("proFoamAppActivity");
+	        
+	        if (automationName != null) {
+	            logger.info("Automation name found in properties file: " + automationName);
+	        } else {
+	            logger.info("Automation name is missing in properties file, using default: UiAutomator2"); //warn
+	        }
+
+	        // Start Appium server (if needed)
+	        startAppiumServer("windows");
+
+	        // Define the app path
+	        File app = new File(ProFoamRelease);
+	        if (!app.exists()) {
+	            throw new IOException("App file not found at: " + app.getAbsolutePath());
+	        }
+
+	        // Set up Appium options instead of DesiredCapabilities
+	        UiAutomator2Options options = new UiAutomator2Options()
+	                .setDeviceName("MFSEmulator")
+	                .setPlatformName("Android")
+	                .setApp(app.getAbsolutePath())
+	                .setNoReset(false)
+	                .setAutomationName(automationName)
+	                .setAppPackage(appPackage)
+	                .setAppActivity(appActivity)
+	                .setNewCommandTimeout(Duration.ofSeconds(3000));
+
+	        // Initialize AndroidDriver
+	        driver = new AndroidDriver(new URL(appiumURL), options);
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+	        logger.info("Android Driver initialized successfully.");
+
+	    } catch (IOException e) {
+	        logger.error("IOException occurred while loading properties or initializing the driver: " + e.getMessage(), e);
+	    } finally {
+	        // Close the input stream if it was opened
+	        if (inputStream != null) {
+	            try {
+	                inputStream.close();
+	            } catch (IOException e) {
+	                logger.info("Failed to close the property file input stream: " + e.getMessage()); //warn
+	            }
+	        }
+	    }
 	}
+	
+	
+	
 	
 	
 	@BeforeMethod(alwaysRun = true)

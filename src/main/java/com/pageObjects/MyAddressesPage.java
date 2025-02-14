@@ -35,6 +35,7 @@ public class MyAddressesPage extends BaseClass {
 	private static final By AddressDltBtn = AppiumBy.xpath("//android.view.ViewGroup[@content-desc='Delete']/android.widget.TextView");
 	private static final By AddNewAddressBtn = AppiumBy.xpath("//android.view.ViewGroup[@content-desc=\"Add new address\"]/android.widget.TextView");
 	private static final By EditAddressBtn = AppiumBy.xpath("(//android.view.ViewGroup[@content-desc=\"Edit Address\"])[1]");
+	private static final By TextBoxForMobNum = AppiumBy.xpath("(//android.widget.TextView[starts-with(@text,'Mobile number')]//following-sibling::android.widget.EditText)[1]");
 	private static By AddressTextBox(String textboxName) {
 	    int index;
 	    // Using a switch case to determine the index based on the textboxName
@@ -42,25 +43,28 @@ public class MyAddressesPage extends BaseClass {
 	        case "addresstype":
 	            index = 1; // AddressType is the first textbox
 	            break;
-	        case "mobilenumber":
-	            index = 2; //  MobileNumber is the second textbox
+	        case "firstname":
+	            index = 2; //  Firstname is the second textbox
+	            break;
+	        case "lastname":
+	            index = 3; //  LastName is the second textbox
 	            break;
 	        case "addressline1":
-	            index = 3; //  AddressLine1 is the third textbox
+	            index = 5; //  AddressLine1 is the third textbox
 	            break;
 	        case "addressline2":
-	            index = 4; //  AddressLine2 is the fourth textbox
+	            index = 6; //  AddressLine2 is the fourth textbox
 	            break;
 	        case "city":
-	            index = 5; //  city is the fifth textbox
+	            index = 7; //  city is the fifth textbox
 	            break;
 	        case "zipcode":
-	            index = 6; //  ZipCode is the sixth textbox
+	            index = 8; //  ZipCode is the sixth textbox
 	            break;
 	        default:
 	            throw new IllegalArgumentException("Invalid textbox name: " + textboxName);
 	    }
-	    // Constructing the XPath with the determined index
+	    
 	    return AppiumBy.xpath("(//android.widget.TextView/following-sibling::android.widget.EditText)[" + index + "]");
 	}
 	
@@ -186,9 +190,15 @@ public class MyAddressesPage extends BaseClass {
 		KeyBoardActions.enterText(AddressTextBox("AddressType"), HomeOroffice , HomeOroffice+" is entered");
 	}
 	
+	public void FilledFirstnameandlastnameAddressTypeField(String Firstname , String LastName  ) throws InterruptedException {
+		Waits.waitForGivenTime(2);
+		KeyBoardActions.enterText(AddressTextBox("firstName"), Firstname , Firstname+" is entered");
+		KeyBoardActions.enterText(AddressTextBox("lastName"), LastName , LastName+" is entered");
+	}
+	
 	public void FilledMobileNumber(String MobNum ) throws InterruptedException {
 		Waits.waitForGivenTime(2);
-		KeyBoardActions.enterText(AddressTextBox("MobileNumber"), MobNum , MobNum+" is entered");
+		KeyBoardActions.enterText(TextBoxForMobNum, MobNum , MobNum+" is entered");
 	}
 	public void FilledAddressLine(String AdressLine1 ) throws InterruptedException {
 		Waits.waitForGivenTime(2);
@@ -230,6 +240,7 @@ public class MyAddressesPage extends BaseClass {
 		ZipCode = generic.generateRandomZipCode(State); 
 		
 		FilledAddressTypeField("Home");
+		FilledFirstnameandlastnameAddressTypeField("Mukesh" ,"Nayak");
 		FilledMobileNumber(MobNumber);
 		FilledAddressLine(Address);
 		SelectCountryInAddressFieldDropDown("United States");

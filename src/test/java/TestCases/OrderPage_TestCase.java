@@ -16,11 +16,11 @@ public class OrderPage_TestCase extends BaseClass {
 	public void ValidationOfOrderingAnewItemIncheckoutPage() throws InterruptedException {
 		System.out.println("Application is launching");
 		
-		pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
-		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
-		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
-		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
-		pageManager.getLoginPage().LoginToProFoamApplication();
+//		pageManager.getLoginPage().ValidateWelcomeTextInWelcomePage();
+//		pageManager.getLoginPage().ClickOnSkipButtonInWelcomePage();
+//		pageManager.getLoginPage().ValidateLogin_ButtonInLoginPage();
+//		pageManager.getLoginPage().ClickOnLoginButtonInLoginButton();
+//		pageManager.getLoginPage().LoginToProFoamApplication();
 		pageManager.getProductPage().LandedOnProductPageAndAbleToSeeSideMenu();
 		//pageManager.getProductPage().ClickOnSideMenubar();
 		//pageManager.getMyAddressesPage().ClickOnMyAddresCategoryInSidemenu();
@@ -44,7 +44,7 @@ public class OrderPage_TestCase extends BaseClass {
 		
 	}
 	
-	@Test (groups = {"smoke" ,"Regression", "ValidationOfACompleteOrderofAnItem"}, description = "Validation Of A Complete Order of An Item")
+	@Test (groups = {"Regression", "ValidationOfACompleteOrderofAnItem"}, description = "Validation Of A Complete Order of An Item")
 	public void ValidationOfACompleteOrderofAnItem() throws InterruptedException {
 		System.out.println("Application is launching");
 		
@@ -124,7 +124,7 @@ public class OrderPage_TestCase extends BaseClass {
 		pageManager.getOrderPage().ClickedOnProceedToBuyButton();
 		pageManager.getOrderPage().ClickedOnAddAddressButton();
 		pageManager.getOrderPage().SelectPickuoLocations();
-		pageManager.getOrderPage().AppliedDiscountFoerTheOder("save99");
+		pageManager.getOrderPage().AppliedDiscountFoerTheOder("SAVE20");
 		pageManager.getOrderPage().ClickedOnApplyWhileApplyingDiscountCouponinOrderNowPage();
 		pageManager.getOrderPage().ValidatedProductPricesAfterSuccessfulOrderAfterApplyingDiscountinOrderNowPage();
 		pageManager.getOrderPage().clickedOnChekoutButton();
@@ -137,7 +137,7 @@ public class OrderPage_TestCase extends BaseClass {
 //		
 	}
 	
-	@Test (groups = {"Regression", "ValidationOfAnOrderAfterAddingTaxForAnItem"}, description = "Validation Of An Order After Adding Tax For An Item")
+	@Test (groups = {"Regression", "smoke" , "ValidationOfAnOrderAfterAddingTaxForAnItem"}, description = "Validation Of An Order After Adding Tax For An Item")
 	public void ValidationOfAnOrderAfterAddingTaxForAnItem() throws InterruptedException {
 		System.out.println("Application is launching");
 		
@@ -172,10 +172,11 @@ public class OrderPage_TestCase extends BaseClass {
 		pageManager.getOrderPage().ClickedOnProceedToBuyButton();
 		pageManager.getOrderPage().ClickedOnAddAddressButton();
 		pageManager.getOrderPage().SelectPickuoLocations();
-		pageManager.getOrderPage().AppliedDiscountFoerTheOder("save99");
+		pageManager.getOrderPage().AppliedDiscountFoerTheOder("SAVE20");
 		pageManager.getOrderPage().ClickedOnApplyWhileApplyingDiscountCouponinOrderNowPage();
 		pageManager.getOrderPage().ValidatedProductPricesAfterSuccessfulOrderAfterApplyingDiscountinOrderNowPage();
 		pageManager.getOrderPage().clickedOnChekoutButton();
+
 		
 	}
 

@@ -13,7 +13,7 @@
         </groups>
 	  
     <classes>
-	  	<class name="TestCases.MyAddresses_TestCases"/> 
+	  	<class name="TestCases.OrderPage_TestCase"/> 
 	 	<!-- <class name="TestCases.ProductPage_TestCase"/>-->
  
 	   	<!-- <class name="TestCases.MyAddresses_TestCases">

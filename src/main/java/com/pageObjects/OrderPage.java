@@ -205,8 +205,8 @@ public class OrderPage extends BaseClass {
 	}
 	
 	public void EnterTheZipcodeToPurchase() throws InterruptedException {
-		String ZipCode = generic.generateRandomZipCode("");
-		Waits.waiForAnElement(ZipCodeInCheckoutPage, "wait for CVV textbox");
+		String ZipCode = generic.generateRandomZipCode("Alaska");
+		Waits.waiForAnElement(ZipCodeInCheckoutPage, "wait for ZipCode textbox");
 		KeyBoardActions.enterText(ZipCodeInCheckoutPage, ZipCode, ZipCode+" is entered");
 		
 	}
