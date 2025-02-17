@@ -172,6 +172,7 @@ public class BaseClass {
 	    try {
 	        if (appiumService != null && appiumService.isRunning()) {
 	            appiumService.stop();
+	            tearDown();
 	            logger.info("Appium server stopped successfully.");
 	        } else {
 	            logger.info("Appium server was not running or already stopped.");
@@ -181,10 +182,7 @@ public class BaseClass {
 	    }
 	}
 
-
 	
-	
-
 	public void tearDown() {
 		if(driver != null){
 			driver.quit();
